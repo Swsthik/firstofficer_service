@@ -1,7 +1,7 @@
-# app.py
 import streamlit as st
 from agent import classifier_agent
-from rag import retrieval  # your retrieval.py
+from agent import mquery_agent   # new conversational agent
+from rag import retrieval        # retrieval for RAG pipeline
 
 # Allowed topics for RAG response
 RAG_TOPICS = ["How-to", "Product", "API/SDK", "SSO", "Best practices"]
@@ -22,25 +22,30 @@ if uploaded_file:
         st.markdown(f"**Ticket {i}:** {ticket}")
         st.json(result)
 
-# --- Main: Interactive AI Agent ---
+# --- Main: Interactive Conversational Agent ---
 st.subheader("🤖 Interactive AI Agent")
-user_query = st.text_area("Enter a new ticket or customer question here:")
 
-if st.button("Submit Query") and user_query.strip():
-    with st.spinner("Analyzing ticket..."):
-        # Step 1: Classify the ticket
-        classification = classifier_agent.classify_ticket(user_query)
-        
-        st.markdown("### 🔍 Internal Analysis")
-        st.json(classification)
-        
-        topic = classification.get("topic", "Unknown")
-        
-        # Step 2: Generate RAG response if topic is in allowed list
-        if topic in RAG_TOPICS:
-            st.markdown("### 💬 Final Response (RAG Generated)")
-            answer = retrieval.retrieve_and_answer(user_query, k=3)
-            st.text(answer)
-        else:
-            st.markdown("### 💬 Final Response")
-            st.info(f"This ticket has been classified as '{topic}' and routed to the appropriate team.")
+# Keep conversation history
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+# Display past conversation
+for msg in st.session_state.messages:
+    if msg["role"] == "user":
+        st.markdown(f"🧑 **You:** {msg['content']}")
+    else:
+        st.markdown(f"🤖 **Agent:** {msg['content']}")
+
+# Input box
+user_query = st.text_input("Enter your message:")
+
+if st.button("Send") and user_query.strip():
+    st.session_state.messages.append({"role": "user", "content": user_query})
+    
+    with st.spinner("Agent is thinking..."):
+        # Use the conversational agent logic
+        response = mquery_agent.handle_message(user_query, retrieval, classifier_agent, RAG_TOPICS)
+    
+    st.session_state.messages.append({"role": "assistant", "content": response})
+    st.rerun()
+

@@ -1,4 +1,3 @@
-# agents/mquery_agent.py
 import os
 from typing import List, Dict
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -52,7 +51,6 @@ class MultiQueryAgent:
             return reply
 
         # Otherwise, check if the query should trigger RAG
-        # We'll use a small LLM prompt to decide if RAG is needed
         prompt = f"""
 You are a Customer Support Copilot. Given the following conversation, decide whether the user query requires knowledge from documentation or developer resources.
 Respond with either "RAG" or "NO_RAG".
@@ -80,15 +78,21 @@ Respond conversationally and politely.
         return answer
 
 
-# Example usage
+# ---- Wrapper for app.py ----
+_agent_instance = MultiQueryAgent()
+
+def handle_message(user_query, retrieval, classifier_agent=None, RAG_TOPICS=None):
+    """
+    Wrapper for app.py compatibility.
+    Uses MultiQueryAgent.generate_response() internally.
+    """
+    return _agent_instance.generate_response(user_query)
+
+
+# Example standalone usage
 if __name__ == "__main__":
     agent = MultiQueryAgent()
 
-    # User starts with casual greeting
     print(agent.generate_response("hi"))
-
-    # Then asks a technical question
     print(agent.generate_response("What are the system requirements for installing the virtual machine?"))
-
-    # Follow-up conversation continues seamlessly
     print(agent.generate_response("Do I need admin rights for this installation?"))
