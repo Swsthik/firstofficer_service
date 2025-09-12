@@ -10,7 +10,7 @@ load_dotenv()
 api_key = os.getenv("GOOGLE_API_KEY")
 llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", api_key=api_key)
 
-VECTOR_STORE_PATH = "rag/vector_store/faiss_index"
+VECTOR_STORE_PATH = "rag/rag/vector_store/faiss_index"
 
 embedding = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2",
