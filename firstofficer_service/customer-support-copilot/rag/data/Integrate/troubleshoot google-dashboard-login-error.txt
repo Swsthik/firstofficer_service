@@ -1,0 +1,39 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQ
+- SCIM
+- SSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQ
+- Get Started
+- Guides
+- References
+- TroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO error
+- Troubleshooting SSO
+- Troubleshooting connector-specific SSO authentication
+- PingFederate SSO 404 error
+- Okta first-time login authentication error
+- Google Dashboard login error
+- Microsoft Defender SSO error
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- Troubleshooting
+- Google Dashboard login error
+
+
+# Google Dashboard login error
+
+
+
+# Why do I get an error while logging in via Google Dashboard?â
+
+When logging in from your Google Dashboard, you may receive anInvalid requesterror.
+This is a known problem with Google for which there isn't a clear solution. Here are some references about this known issue:reference 1andreference 2.
+While the login initiated via your Atlan URL works, the IdP initiated login unfortunately doesn't due to the problem described in the above links. We currently do not have a path to resolution from Google.
+- atlan
+- documentation
+- faq-integrations

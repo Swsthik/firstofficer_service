@@ -1,0 +1,34 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQ
+- SCIM
+- SSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQ
+- Get Started
+- Guides
+- References
+- TroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO error
+- Troubleshooting SSO
+- Troubleshooting connector-specific SSO authentication
+- PingFederate SSO 404 error
+- Okta first-time login authentication error
+- Google Dashboard login error
+- Microsoft Defender SSO error
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- Troubleshooting
+- Microsoft Defender SSO error
+
+
+# Microsoft Defender SSO error
+
+If you are getting an error message from Microsoft Defender that the Atlan login page cannot be loaded, it's possible that the wrapping URL prefix   -  for example, _https://nam02.safelinks.protection.outlook.com/- _ is causing the error.
+To get around this, you shouldadd a Safe Links policyto whitelist Atlan's invitation emails and URLs. Otherwise, the Safe Links function will need to be turned off.
+- security
+- access-control
+- permissions

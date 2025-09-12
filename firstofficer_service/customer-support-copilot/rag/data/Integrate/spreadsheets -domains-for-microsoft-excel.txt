@@ -1,0 +1,114 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsSlackSpreadsheetsHow-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft ExcelTroubleshootingSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsSlackSpreadsheetsHow-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft ExcelTroubleshootingSend alerts for workflow events
+- Microsoft Teams
+- Slack
+- SpreadsheetsHow-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft ExcelTroubleshooting
+- How-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft Excel
+- Bulk enrich metadata
+- Configure custom domains for Microsoft Excel
+- Download impacted assets in Google Sheets
+- Download impacted assets in Microsoft Excel
+- How to export assets
+- How to integrate Atlan with Google Sheets
+- How to integrate Atlan with Microsoft Excel
+- Link your account
+- How to update column metadata in Google Sheets
+- How to update column metadata in Microsoft Excel
+- Troubleshooting
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Spreadsheets
+- How-tos
+- Configure custom domains for Microsoft Excel
+
+
+# Configure custom domains for Microsoft Excel
+
+You will need your Microsoft 365 administrator to complete these steps   -  you may not have access yourself. Before you begin, you may need toDetermine if Centralized Deployment of add-ins works for your organization.
+If your Atlan tenant is hosted on a custom domain   -  for example,https://<your-tenant-name>.mycompany.comÂ   -  you will need to configure your Atlan tenant to deploy the Atlan add-in for Microsoft Excel.
+
+
+# Prerequisitesâ
+
+- The Atlan add-in must be centrally deployed from the Microsoft 365 admin center.
+- You must have access to a Windows machine to install Microsoft PowerShell.
+
+
+# Install PowerShellâ
+
+Install PowerShell to deploy the Atlan add-in for custom domains:
+- Windows: PowerShell comes pre-installed on most modern Windows systems. If you need to upgrade the package, you can download it from theMicrosoft website.
+Windows: PowerShell comes pre-installed on most modern Windows systems. If you need to upgrade the package, you can download it from theMicrosoft website.
+- macOS: Open Terminal and run:brew install --cask powershell
+macOS: Open Terminal and run:
+- Linux: Open Ubuntu and run:sudo apt-get updatesudo apt-get install -y powershell
+Linux: Open Ubuntu and run:
+For other distributions, refer to Microsoft'sPowerShell installation guide.
+
+
+# Configure the add-in for Microsoft Excelâ
+
+To install the Atlan add-in directly in Microsoft Excel:
+- Open PowerShell and run the following command to install the required module:Install-Module -Name O365CentralizedAddInDeployment -Scope CurrentUser
+Open PowerShell and run the following command to install the required module:
+- Run the following command to import the module:Import-Module -Name O365CentralizedAddInDeployment
+Run the following command to import the module:
+- Run the following command to connect to the organization add-in service:Connect-OrganizationAddInService
+Run the following command to connect to the organization add-in service:
+- In theMicrosoftauthorization dialog, select an account to authenticate the connection.
+In theMicrosoftauthorization dialog, select an account to authenticate the connection.
+- (Optional) Run the following command to list existing add-ins in the organization:Get-OrganizationAddIn
+(Optional) Run the following command to list existing add-ins in the organization:
+- Run the following command to set a custom domain for the Atlan add-in:Set-OrganizationAddInOverrides -ProductId <your-product-ID>  -AppDomains "<your-custom-domain>"Replace<your-product-ID>with the product ID of the Atlan add-in.Replace<your-custom-domain>with your organization's custom domain.
+Run the following command to set a custom domain for the Atlan add-in:
+- Replace<your-product-ID>with the product ID of the Atlan add-in.
+- Replace<your-custom-domain>with your organization's custom domain.
+
+
+# (Optional) Troubleshooting add-in connectivityâ
+
+Any individual in your organization with access to Microsoft Excel and Atlan tenant on a custom domain.
+This section is optional if you deployed the Atlan add-in for the first time in your organization after completing the steps above. Your users will be able toconnect Atlan to Microsoft Excelfrom your custom domain.
+However, if any user tried to set up the add-in prior to the configuration above, they may not able to connect Atlan to Microsoft Excel. In that case, Atlan recommends clearing the add-in cache using the following steps.
+
+
+# Clear Microsoft Excel Online cacheÂâ
+
+To clear the local storage of your Microsoft Excel online app, from Google Chrome:
+- Open a blank Microsoft Excel workbook.
+- From the top right of your browser, click the vertical three dots icon for more menu options.
+- From the more options menu, clickMore Toolsand then clickDeveloper Tools.
+- In the top menu of developer tools, clickApplication.
+- In the left menu of theApplicationtab, underStorage, clickLocal storage.
+- Find an entry forhttps://***-excel.officeapps.live.com. Right-click on the entry and then clickClear.
+- Refresh the Microsoft Excel Online app in your browser.
+
+
+# Clear Microsoft Excel cache on Macâ
+
+To clear the Microsoft Excel cache on Mac:
+- Close Microsoft Excel.
+- Use theFinderto navigate to the/Users/<user>/Library/Containers/com.microsoft.Excel/Data/Library/Application   Support/Microsoft/Office/16.0/Wef.folder.
+- Search fora313dc5c-6ca5-4346-abfc-c84c57d4b9dcand delete all the files and folders returned in the search results.
+- Restart your Microsoft Excel app.
+
+
+# Clear Microsoft Excel cache on Windowsâ
+
+To clear the Microsoft Excel cache on Windows:
+- Open Microsoft Excel.
+- From the ribbon, navigate toFile>Options>Trust Center>Trust Center Settings>Trusted Add-in Catalogs.
+- InTrusted Web Add-in Catalogs, select the checkboxNext time Office starts, clear all previously-started web add-ins cache.
+- Close Microsoft Excel and then restart it to clear the add-in cache. Once it has restarted, the checkbox will be deselected automatically.
+- atlan
+- documentation
+- Prerequisites
+- Install PowerShell
+- Configure the add-in for Microsoft Excel
+- (Optional) Troubleshooting add-in connectivity

@@ -1,0 +1,132 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementProject ManagementJiraServiceNowGet StartedHow to integrate ServiceNowLink your ServiceNow accountTroubleshooting
+- Automation
+- Collaboration
+- Communication
+- Identity Management
+- Project ManagementJiraServiceNowGet StartedHow to integrate ServiceNowLink your ServiceNow accountTroubleshooting
+- Jira
+- ServiceNowGet StartedHow to integrate ServiceNowLink your ServiceNow accountTroubleshooting
+- Get StartedHow to integrate ServiceNowLink your ServiceNow account
+- How to integrate ServiceNow
+- Link your ServiceNow account
+- Troubleshooting
+- Configure Atlan
+- Integrations
+- Project Management
+- ServiceNow
+- Get Started
+- How to integrate ServiceNow
+
+
+# Integrate ServiceNow
+
+You will need to be anadminin Atlan to configure the ServiceNow integration. You will also need inputs and approval from a System Administrator of your ServiceNow instance with asecurity_admin role.
+If your ServiceNow instance is behind a VPN or firewall, you must add the Atlan IP to your allowlist. Please raise a support ticket from within Atlan orsubmit a request. (If you are not using the IP allowlist, you can skip this step.)
+If your Atlan admin hasenabled the governance workflows and inbox modulein your Atlan workspace, you can create a ServiceNow integration to allow your users togrant or revoke data accessfor governed assets in Atlan or any other data source.
+This is only applicable if you:
+- Enable governance workflows
+- Want to use the data access approval workflow
+To integrate ServiceNow and Atlan, follow these st
+eps.
+
+
+# Create an OAuth application in ServiceNowâ
+
+You will need to create an OAuth application endpoint for Atlan to access your ServiceNow instance.
+Tocreate an OAuth application, from within ServiceNow:
+- Log in to your ServiceNow instance as a System Administrator with a security_admin role.
+- From the address bar at the top of your browser window, copy the ServiceNow instance URL   -  for example,https://<instance_name>.service-now.com. This will be required toconnect Atlan to your ServiceNow instance.
+- From the top header of your ServiceNow instance, clickAll. From the dropdown, search for and selectSystem OAuthand then clickApplication Registry.
+- In the top-right corner of theApplication Registriespage, clickNewto create a new OAuth application.
+- In the corresponding screen, forWhat kind of OAuth application?, clickCreate an OAuth API endpoint for external clients.
+- In theApplication Registries New recordform, enter the following details:ForName, enterAtlan OAuth App.ForRedirect URL, enter the redirect URL in the following format   -https://<atlan_instance_name>/oauth-callback. Replace<atlan_instance_name>with the name of your Atlan instance.ForLogo URL, copy and pastehttps://assets.atlan.com/assets/atlan-primary-logo-png.png.ClickSubmitto create the OAuth application in ServiceNow.
+- ForName, enterAtlan OAuth App.
+- ForRedirect URL, enter the redirect URL in the following format   -https://<atlan_instance_name>/oauth-callback. Replace<atlan_instance_name>with the name of your Atlan instance.
+- ForLogo URL, copy and pastehttps://assets.atlan.com/assets/atlan-primary-logo-png.png.
+- ClickSubmitto create the OAuth application in ServiceNow.
+- From theApplication Registriespage, select the OAuth application you created above. Copy the values forClient IDandClient Secretand store them in a secure location.
+
+
+# Connect Atlan to ServiceNowâ
+
+To connect Atlan to ServiceNow, you will need the following:
+- ServiceNow instance URL   -  for example,https://<instance_name>.service-now.com
+- Client ID and client secret of the OAuth application you created in ServiceNow
+To connect Atlan to ServiceNow, from within Atlan:
+- Log in to your Atlan instance as an admin user.
+- From the left menu, clickAdmin.
+- UnderWorkspace, clickIntegrations.
+- In theServiceNowtile, click theConnectbutton.
+- In the correspondingAdd to ServiceNowdialog, forServiceNow URL, enter theURL of your ServiceNow instance-  for example,https://<instance_name>.service-now.com.
+- ClickNextto proceed.
+- This step requires the creation of an OAuth application in ServiceNow,follow the steps to do so. If you have already created it, in theCreate OAuth appsection, forCopy the Client ID and Secret from the new OAuth app and paste below, enter the following:ForClient ID, enter theclient ID you copied from ServiceNow.ForClient Secret, enter theclient secret you copied from ServiceNow.
+- ForClient ID, enter theclient ID you copied from ServiceNow.
+- ForClient Secret, enter theclient secret you copied from ServiceNow.
+- ClickNextto proceed.
+- In theCommit update setsection, clickAtlan Update Set.xmlto download the update set XML file from Atlan toimport and commit in ServiceNow.
+
+
+# Configure the Atlan integration in ServiceNowâ
+
+To configure the Atlan integration in ServiceNow, your ServiceNow System Administrator with a security_admin role will need to complete the following two steps:
+- Import and commit the update set XML filedownloaded from Atlan to create an Atlan data access catalog and business rule in ServiceNow.
+- Create a new userin ServiceNow for the Atlan integration.
+
+
+# Import and commit the update set XML fileâ
+
+Toimport and commit the update set XML file, from within ServiceNow:
+- Log in to your ServiceNow instance as a System Administrator with a security_admin role.
+- From the top header of your ServiceNow instance, clickAll. From the dropdown, search for and selectSystem Update Setsand then clickRetrieved Update Sets.
+- On theRetrieved Update Setspage, underRelated Links, click theImport Update Set from XMLlink.
+- On theImport XMLpage, to upload theupdate set XML file downloaded from Atlan:ForStep 1: Choose file to upload, clickChoose fileto upload theAtlan Update Set.xmlfile.ForStep 2: Upload the file, click theUploadbutton.
+- ForStep 1: Choose file to upload, clickChoose fileto upload theAtlan Update Set.xmlfile.
+- ForStep 2: Upload the file, click theUploadbutton.
+- In the top-left corner of your screen, click the back button to return to theRetrieved Update Setspage. The Atlan update set will appear on theRetrieved Update Setlist in aLoadedstate. Once the XML file has successfully loaded, select theAtlan Update Set.
+- ClickPreview Update Setto preview the update set and address any issues. The update set includes the following:Atlan Data Accesscatalog   -  Atlan will create data access requests in this catalog.Atlan Business Rule-  this is required for Atlan to receive events from your ServiceNow instance to detect any changes in the status of data access requests created in Atlan and automatically update governance workflow requests.Atlan service role and access control list (ACL) updates   -  the Atlan service account requires a role with write access on thesc_requesttable to update specific fields such asdescription,short_description, and more. This operation especially requires the security_admin role to commit the update set from Atlan in ServiceNow.Scripted REST API-  this is initially required to retrieve the username and sys_id of the Atlan user completing the ServiceNow integration. Atlan creates a Scripted REST API/api/snc/oauth_userinfothat returns the username and sys_id for an authenticated user. Once the integration has been completed, Atlan will have the access token required for the integration to continue working.
+- Atlan Data Accesscatalog   -  Atlan will create data access requests in this catalog.
+- Atlan Business Rule-  this is required for Atlan to receive events from your ServiceNow instance to detect any changes in the status of data access requests created in Atlan and automatically update governance workflow requests.
+- Atlan service role and access control list (ACL) updates   -  the Atlan service account requires a role with write access on thesc_requesttable to update specific fields such asdescription,short_description, and more. This operation especially requires the security_admin role to commit the update set from Atlan in ServiceNow.
+- Scripted REST API-  this is initially required to retrieve the username and sys_id of the Atlan user completing the ServiceNow integration. Atlan creates a Scripted REST API/api/snc/oauth_userinfothat returns the username and sys_id for an authenticated user. Once the integration has been completed, Atlan will have the access token required for the integration to continue working.
+- ClickCommit Update Set.
+If the commit action fails,contact Atlan support.
+
+
+# Create a new userâ
+
+Tocreate a new user, from within ServiceNow:
+- Log in to your ServiceNow instance as a System Administrator with a security_admin role.
+- From the top header of your ServiceNow instance, clickAll. From the dropdown, search for and selectUser Administrationand then clickUsers.
+- In the top-right corner of theUserspage, clickNewto create a new user.
+- In theUser New recordform, enter the following details:ForUser ID, enteratlan.service.ForFirst nameandLast name, enterAtlanandService, respectively.ClickSubmitto create the new user.
+- ForUser ID, enteratlan.service.
+- ForFirst nameandLast name, enterAtlanandService, respectively.
+- ClickSubmitto create the new user.
+- From theUserspage, search for and select theatlan.serviceuser you created.
+- On theUser atlan.servicepage, scroll down to the table at the bottom of the screen. In the table, change to theRolestab and then click theEditbutton.
+- On theEdit Memberspage, configure the following:In theCollectionlist, search for and selectatlan_service_account_role.Click the greater than icon to add the role to theatlan.serviceuser you created.ClickSaveto save your role assignment for the new user.
+- In theCollectionlist, search for and selectatlan_service_account_role.
+- Click the greater than icon to add the role to theatlan.serviceuser you created.
+- ClickSaveto save your role assignment for the new user.
+- In theUser atlan.servicepage, click theSet Passwordbutton to create a password for the new user.
+- In theSet Passworddialog, click theGeneratebutton to generate a password. Once a password has been generated, click the clipboard icon to copy the value and store it in a secure location. ClickSave Password. This password will be required toconfigure the ServiceNow integration in Atlan.
+
+
+# Configure the ServiceNow integration in Atlanâ
+
+To configure the ServiceNow integration in Atlan, from within Atlan:
+- Log in to your Atlan instance as an admin user.
+- From the left menu, clickAdmin.
+- UnderWorkspace, clickIntegrations.
+- Expand theServiceNowtile.
+- In theCommit update setsection, forPassword, enter thepassword you copied from ServiceNow for the new user.
+- Click theConnect and testbutton to test the ServiceNow integration. This ensures that the update set was committed successfully in ServiceNow and Atlan can receive webhook events. To test the latter, Atlan will create a sample request in ServiceNow, wait for a few seconds to receive a webhook event, and then display the status of the connection asCONNECTED.
+- (Optional) Under theConfigurationstab, forTest Connection, click theRun testbutton to verify that the ServiceNow integration is working properly in Atlan at any time.
+- (Optional) At any future time, you can review theOverviewtab to see the number of linked issues between ServiceNow and Atlan.
+Atlan is now connected to ServiceNow! ð
+- data
+- integration
+- Create an OAuth application in ServiceNow
+- Connect Atlan to ServiceNow
+- Configure the Atlan integration in ServiceNow
+- Configure the ServiceNow integration in Atlan

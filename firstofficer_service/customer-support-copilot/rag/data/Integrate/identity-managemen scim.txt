@@ -1,0 +1,43 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioningSSOProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioningSSO
+- SCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioning
+- Configure SCIM provisioning
+- How to enable Azure AD for SCIM provisioning
+- How to enable Okta for SCIM provisioning
+- Troubleshooting SCIM provisioning
+- SSO
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SCIM
+
+
+# SCIM Integration
+
+Overview:Connect Atlan with SCIM to automate user provisioning and streamline identity management.
+
+
+# Get startedâ
+
+- How to configure SCIM provisioning: Learn how to set up SCIM provisioning in Atlan.
+
+
+# Guidesâ
+
+- How to enable Azure AD for SCIM provisioning: Step-by-step instructions to enable SCIM provisioning with Azure AD.
+- How to enable Okta for SCIM provisioning: Step-by-step instructions to enable SCIM provisioning with Okta.
+
+
+# Troubleshooting & FAQâ
+
+- Troubleshooting SCIM provisioning: Answers to common questions and troubleshooting tips for SCIM provisioning.
+- integrations
+- identity management
+- scim
+- Get started
+- Guides
+- Troubleshooting & FAQ

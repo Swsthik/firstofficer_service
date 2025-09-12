@@ -1,0 +1,76 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsSlackSpreadsheetsSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsSlackSpreadsheetsSend alerts for workflow events
+- Microsoft Teams
+- Slack
+- Spreadsheets
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Send alerts for workflow events
+
+
+# Send alerts for workflow eventsApp
+
+You can send workflow alerts toEmailandGoogle Chatto notify your team when workflows in Atlan complete or fail. You can also send alerts toSlackandMicrosoft Teamsusing Atlanâs built-in notification capabilities.
+
+
+# Prerequisitesâ
+
+Before you begin, make sure you have:
+- Access to the Workflow Alerting app. You can verify this by searching for Workflow Alerting in the Atlan marketplace. If you don't have access, contactAtlan supportor your Atlan customer team to request it.
+
+
+# Setup workflowâ
+
+- In your Atlan workspace, go to the homepage and clickNew workflowin the top navigation bar.
+In your Atlan workspace, go to the homepage and clickNew workflowin the top navigation bar.
+- Search forWorkflow Alerting, and then selectSet up workflow.
+Search forWorkflow Alerting, and then selectSet up workflow.
+- In theModeoption, select the alert delivery method:
+In theModeoption, select the alert delivery method:
+- Email
+- Google Chat
+Sends workflow alerts as a tabular report to one or more email addresses, including details of the selected workflow runs.
+- Enter one or more email addresses in theEmail IDsfield, separated by commas. Use valid addresses for recipients who need to receive workflow alerts.[email protected],[email protected]
+Enter one or more email addresses in theEmail IDsfield, separated by commas. Use valid addresses for recipients who need to receive workflow alerts.
+- In theEmail subjectfield, enter a clear, concise subject line for the alert email so recipients can quickly identify the notification.Atlan Workflow Failure Alert
+In theEmail subjectfield, enter a clear, concise subject line for the alert email so recipients can quickly identify the notification.
+Sends workflow alerts to a Google Chat space using a webhook URL. Alerts appear as structured Google Chat cards, which include the workflow name, status (for example,FailedorCompleted), and other run details.
+- Enter the Google Chat webhook URL in theWebhook URLfield. You can generate a webhook URL by navigating to yourGoogle Chatspace, selectingSettingsâApps & integrations, and adding an incoming webhook. For more information, see theGoogle Chat documentation.https://chat.googleapis.com/v1/spaces/AAAA123456/messages?key=abc123&token=xyz456
+Enter the Google Chat webhook URL in theWebhook URLfield. You can generate a webhook URL by navigating to yourGoogle Chatspace, selectingSettingsâApps & integrations, and adding an incoming webhook. For more information, see theGoogle Chat documentation.
+- InWorkflows Created By, select the users whose workflows trigger alerts. Leave blank to monitor workflows from all users.SelectFailedto receive alerts only for failed runs, orAll Workflowsto receive alerts for every workflow execution.infoWorkflows that are still running are ignored. The package only captures workflows that have finished, either successfully or with a failure.
+InWorkflows Created By, select the users whose workflows trigger alerts. Leave blank to monitor workflows from all users.
+SelectFailedto receive alerts only for failed runs, orAll Workflowsto receive alerts for every workflow execution.
+Workflows that are still running are ignored. The package only captures workflows that have finished, either successfully or with a failure.
+- InScheduling Status, choose one of the following options to specify which workflows to monitor:Scheduled: Includes only workflows with a defined run schedule.Unscheduled: Includes only workflows without a set schedule.All: Includes both scheduled and unscheduled workflows.
+InScheduling Status, choose one of the following options to specify which workflows to monitor:
+- Scheduled: Includes only workflows with a defined run schedule.
+Scheduled: Includes only workflows with a defined run schedule.
+- Unscheduled: Includes only workflows without a set schedule.
+Unscheduled: Includes only workflows without a set schedule.
+- All: Includes both scheduled and unscheduled workflows.
+All: Includes both scheduled and unscheduled workflows.
+- InWorkflow Type, select the categories of workflows you want to monitor. Multiple categories can be selected if needed.
+InWorkflow Type, select the categories of workflows you want to monitor. Multiple categories can be selected if needed.
+- InMonitoring interval for workflow completions, select the time range to track workflow completions. Atlan evaluates workflows completed within the chosen interval and triggers alerts if they meet the configured criteria, enabling timely detection of issues and faster response.IfLast 24 Hoursis selected, the alert includes all workflows that completed or failed within the past day, listed together in a single notification.
+InMonitoring interval for workflow completions, select the time range to track workflow completions. Atlan evaluates workflows completed within the chosen interval and triggers alerts if they meet the configured criteria, enabling timely detection of issues and faster response.
+IfLast 24 Hoursis selected, the alert includes all workflows that completed or failed within the past day, listed together in a single notification.
+- Schedule and runthe workflow. Run the workflow manually or set a recurring schedule to send alerts at regular intervals.
+Schedule and runthe workflow. Run the workflow manually or set a recurring schedule to send alerts at regular intervals.
+
+
+# Need help?â
+
+If you have any issues related to configuring the app, contactAtlan support.
+- automation
+- alerts
+- workflows
+- app
+- Prerequisites
+- Setup workflow
+- Need help?

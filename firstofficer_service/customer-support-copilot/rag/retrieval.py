@@ -16,15 +16,29 @@ embedding = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2",
 )
 
+from langchain.prompts import PromptTemplate
+
 assistant_prompt = PromptTemplate(
     input_variables=["context", "query"],
     template=(
-        "You are an AI assistant. Use the provided context to answer the question.\n\n"
-        "Context:\n{context}\n\n"
-        "Question: {query}\n\n"
-        "Answer concisely and clearly. If the context does not contain enough information, say so."
+        "You are a Customer Support Copilot for a software product. "
+        "Your role is to assist the support team by answering customer queries using ONLY the provided context. "
+        "Follow these rules strictly:\n"
+        "1. Use the context to generate a clear and concise answer to the customer's question.\n"
+        "2. If the context does not provide enough information, respond with: "
+        "'No relevant information found in the documentation. This ticket should be routed to the support team.'\n"
+        "3. Always include the sources (URLs) from the context that support your answer.\n"
+        "4. Never invent information or cite non-existent sources.\n\n"
+
+        "Context (with sources):\n{context}\n\n"
+        "Customer Query: {query}\n\n"
+
+        "Provide your response in this format:\n"
+        "Answer: <clear and concise answer to the customer>\n"
+        "Sources: <comma-separated list of URLs used>\n"
     ),
 )
+
 
 def retrieve_and_answer(query, k=3):
     # Load FAISS index
@@ -48,7 +62,7 @@ def retrieve_and_answer(query, k=3):
 
 
 if __name__ == "__main__":
-    query = "What are the steps to modify a playbook?"
+    query = "What are the system requirements for installing the virtual machine?"
     answer = retrieve_and_answer(query, k=3)
 
     print("🔎 Answer:")

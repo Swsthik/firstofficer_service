@@ -1,0 +1,33 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementProject ManagementJiraServiceNowGet StartedTroubleshootingTroubleshooting ServiceNow
+- Automation
+- Collaboration
+- Communication
+- Identity Management
+- Project ManagementJiraServiceNowGet StartedTroubleshootingTroubleshooting ServiceNow
+- Jira
+- ServiceNowGet StartedTroubleshootingTroubleshooting ServiceNow
+- Get Started
+- TroubleshootingTroubleshooting ServiceNow
+- Troubleshooting ServiceNow
+- Configure Atlan
+- Integrations
+- Project Management
+- ServiceNow
+- Troubleshooting
+- Troubleshooting ServiceNow
+
+
+# Troubleshooting ServiceNow
+
+Atlan strongly recommends that a System Administrator with asecurity_admin rolecompletes the integration from start to finish. However, it is not necessary and may depend on the rules or policies configured on your ServiceNow instance.
+For example, while a default System AdministratorÂ cancreate an OAuth application, they may not be permitted to modify access control lists (ACLs)Â onÂ ServiceNow. The security_admin role has elevated privileges precisely for creating or modifying ACLs.Â This is required toconfigure the Atlan integration in ServiceNow.
+The Atlan auto-approve workflow is a basic workflow that auto-approves the Requested Item (RITM) for requests created in the Atlan Data Access catalog. This does not mean that requests have been auto-completed. Atlan will wait for the final request state to be updated to the state selected in the governance workflow before completing the request. For example, if you have selectedClosed Complete, the request state in ServiceNow must reflect that state before Atlan can mark the request as completed.
+Yes, you can remove the Atlan auto-approve workflow from your ServiceNow instance. You can configure the Process Engine setup for any requests in the Atlan Data Access catalog to adhere to existing processes in your organization.
+If your custom request states from ServiceNow are not showing up in Atlan, pleasecontact Atlan support.
+If the commit update set action is failing, pleasecontact Atlan supportas this may be due to conflicts. The Atlan team may need to generate a different update set or work with your ServiceNow System Administrator to set up the process manually.
+Atlan strongly recommends that you refrain from modifying the Atlan Data Access catalog in ServiceNow. Removing any existing variables used by Atlan can cause errors in the request creation process. However, you can add any non-mandatory variables to the catalog. Bear in mind that Atlan will not populate such variables.
+- integration
+- connectors
+- security
+- access-control
+- permissions

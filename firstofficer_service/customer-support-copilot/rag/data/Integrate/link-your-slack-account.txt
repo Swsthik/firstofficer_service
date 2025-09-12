@@ -1,0 +1,48 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsSlackHow-tosHow to integrate SlackLink your Slack accountTroubleshootingFAQSpreadsheetsSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsSlackHow-tosHow to integrate SlackLink your Slack accountTroubleshootingFAQSpreadsheetsSend alerts for workflow events
+- Microsoft Teams
+- SlackHow-tosHow to integrate SlackLink your Slack accountTroubleshootingFAQ
+- How-tosHow to integrate SlackLink your Slack account
+- How to integrate Slack
+- Link your Slack account
+- Troubleshooting
+- FAQ
+- Spreadsheets
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Slack
+- How-tos
+- Link your Slack account
+
+
+# Link your Slack account
+
+To see previews of Slack messages inside Atlan, you may need to first link your Slack account. This is done automatically for the user thatset up the Slack integration, but not for other users.
+
+
+# Link your Slack accountâ
+
+To link your Slack account:
+- From any screen, in the upper right navigate to your name, then clickProfile.
+- Click the four dots icon in the resulting dialog to get to integrations.
+- UnderÂSlack,Â click theÂConnectlink.
+- In the resulting popup, scroll to the bottom and clickÂAllow.
+
+
+# Unlink your Slack accountâ
+
+To unlink your Slack account:
+- From any screen, in the upper right navigate to your name, then clickÂProfile.
+- Click the four dots icon in the resulting dialog to get to integrations.
+- UnderÂSlack, click theÂDisconnectlink.
+- In the confirmation dialog, clickÂConfirm.
+- integration
+- connectors
+- Link your Slack account
+- Unlink your Slack account

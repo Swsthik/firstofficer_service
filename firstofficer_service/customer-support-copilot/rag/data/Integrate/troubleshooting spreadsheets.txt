@@ -1,0 +1,31 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsSlackSpreadsheetsHow-tosTroubleshootingTroubleshooting spreadsheetsSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsSlackSpreadsheetsHow-tosTroubleshootingTroubleshooting spreadsheetsSend alerts for workflow events
+- Microsoft Teams
+- Slack
+- SpreadsheetsHow-tosTroubleshootingTroubleshooting spreadsheets
+- How-tos
+- TroubleshootingTroubleshooting spreadsheets
+- Troubleshooting spreadsheets
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Spreadsheets
+- Troubleshooting
+- Troubleshooting spreadsheets
+
+
+# Troubleshooting spreadsheets
+
+You are likely torequire admin consentfor exporting assets to Microsoft Excel in the following scenarios:
+- If your Microsoft Entra admin has turned on theAssignment requiredsetting for the app, each user in the organization will require admin approval to provide consent to Atlan for exporting assets. Learn more about the setting inMicrosoft documentation.
+- If the app has been uninstalled by your Microsoft Entra admin, this request will automatically reinstall the app once your admin has approved it.
+Atlan recommends that you try again after disconnecting and then reconnecting the spreadsheet tool integration from your user profile. If the issue persists,contact Atlan support.
+Microsoft Excel may take longer to autosave changes on the workbook. If you notice that zero changes were detected, retry syncing after a few seconds.
+No, theDescriptioncolumn on the spreadsheet only shows one value, the latestdescription, whether youexport assets from Atlanor use the Atlan extension in spreadsheets.
+- integration
+- connectors

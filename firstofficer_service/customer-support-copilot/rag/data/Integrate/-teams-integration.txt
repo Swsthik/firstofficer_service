@@ -1,0 +1,118 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsHow-tosTroubleshootingFAQWhat is included in the Microsoft Teams integration?SlackSpreadsheetsSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsHow-tosTroubleshootingFAQWhat is included in the Microsoft Teams integration?SlackSpreadsheetsSend alerts for workflow events
+- Microsoft TeamsHow-tosTroubleshootingFAQWhat is included in the Microsoft Teams integration?
+- How-tos
+- Troubleshooting
+- FAQWhat is included in the Microsoft Teams integration?
+- What is included in the Microsoft Teams integration?
+- Slack
+- Spreadsheets
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Microsoft Teams
+- FAQ
+- What is included in the Microsoft Teams integration?
+
+
+# What is included in the Microsoft Teams integration?
+
+With two of your most important workspaces connected, you can save time and improve the way you share data assets with your team.
+Once you'veintegrated Microsoft Teams with Atlan, you can do all of the following   -  all without leaving Atlan!
+- Share data assets on Microsoft Teams
+- Link important Microsoft Teams threads to Atlan assets
+- Set up Microsoft Teams notifications forannouncements,glossary updates,starred assets, andplaybook runs
+When users share assets on Microsoft Teams   -  including asset links, glossaries, and saved queries   -  Atlan will provide an embedded preview and context for the asset directly in Microsoft Teams.
+
+
+# Share assets without leaving Atlanâ
+
+To share assets on Microsoft Teams, without leaving Atlan:
+- From any asset in Atlan, in the asset sidebar, click theShare on Teamsicon.
+- In theShare on Teamsdialog:ForChannel, choose the Microsoft Teams channel where you want to post.ForMessage, enter the message you want to share for the asset on the channel. (Note that tagging another user from your Atlan workspace in the message is currently not supported.)(Optional) ForAdd as a resource, toggle the slider on to add the message as a resource to your asset. When you add the message as a resource, anyone viewing the asset in Atlan will be able to see previous discussions in Microsoft Teams about that asset.
+- ForChannel, choose the Microsoft Teams channel where you want to post.
+- ForMessage, enter the message you want to share for the asset on the channel. (Note that tagging another user from your Atlan workspace in the message is currently not supported.)
+- (Optional) ForAdd as a resource, toggle the slider on to add the message as a resource to your asset. When you add the message as a resource, anyone viewing the asset in Atlan will be able to see previous discussions in Microsoft Teams about that asset.
+- ClickShareÂ to post on Microsoft Teams.
+Your message is now on Microsoft Teams and linked to the asset for future reference! ð
+
+
+# Add existing Microsoft Teams discussions to assetsâ
+
+Anynon-guest user with edit access to an asset's metadatacan add existing Microsoft Teams discussions to assets.
+If you've ever discussed a data asset in Microsoft Teams, it could be helpful to bring that context back to your asset.
+To add existing discussions from Microsoft Teams, within Atlan:
+- From the asset, on the right of the screen, click theÂTeamssidebar icon:If there are existing discussions on the asset, to the right ofTeams conversations, click theAddlink.If there are no existing discussions on the asset, click the+Add Teams threadbutton.
+- If there are existing discussions on the asset, to the right ofTeams conversations, click theAddlink.
+- If there are no existing discussions on the asset, click the+Add Teams threadbutton.
+- In theAdd Teams threaddialog, under theLinkheading, paste the link to the Microsoft Teams thread.
+- Under theTitleheading, write a brief description of the thread.
+- At the bottom of the dialog, click theAddbutton.
+Your existing discussion on Microsoft Teams is now linked to the asset for future reference! ð
+
+
+# Enable alerts for glossary updates in Atlanâ
+
+ð¤ Who can do this?You will need to be anadmin userin Atlan to enable Microsoft Teams notifications for glossary updates. Once enabled, anyone in the selected channel will be able to view these alerts directly in Microsoft Teams.
+You can set up Microsoft Teams notifications for updates made to yourglossariesin Atlan. You can also customize the type of change alerts you want to receive. With real-time alerts sent to aMicrosoft Teams channel of your choice, you'll be able to stay informed about the latest changes to your glossaries.
+Microsoft Teams notifications can only be set up at the glossary level. Even if configured from a specific term or category profile, the notification settings will be applicable to the entire glossary.
+To enable Microsoft Teams notifications for glossary updates, from Atlan:
+- From the left menu on any screen, clickGlossary.
+- UnderGlossaryin the left menu, click the name of the glossary for which you want to set up change notifications.
+- From the top right of the glossary profile, click the bell icon to set up notifications for glossary updates.
+- In the notifications setup dialog, clickTeamsand then enter the following details:ForNotification channel, click the dropdown to select a Microsoft Teams channel where you want to receive notifications from the channel(s) configured in yourMicrosoft Teams integration in Atlan.ÂForNotify me about, you can either:ClickAll updatesto receive notifications for all the changes listed inCustom updatesmade to your glossary.ClickCustom updatesto limit notifications to specific types of updates:Click+ New term or categoryto receive an alert when a new term or category is added to the glossary.ClickNameto receive an alert when the name of the glossary or that of a nested category or term is updated.ClickDescriptionto receive an alert when adescriptionis added to, updated, or removed from the glossary or a nested category or term.ClickAnnouncementto receive an alert when anannouncementis added to, updated, or removed from the glossary or a nested category or term.ClickCertificateto receive an alert when acertificateis added to, updated, or removed from the glossary or a nested category or term.ClickOwnersto receive an alert when anowneris assigned toÂ or removed from the glossary or a nested category or term.ClickReadmeto receive an alert when aREADMEÂ is added to, updated, or removed from the glossary or a nested category or term.ClickTags (for terms)to receive an alert when a tag isattached toorremoved froma term within the glossary.ClickCategories updated (for terms)to receive an alert when aterm is assigned to a different categorywithin the same glossary. (Notifications for moving terms across glossaries are currently not supported.)ClickRemove termto receive an alert when a term is removed from the glossary. (Notifications for removal of categories are currently not supported.)Â ClickSaveto save your notification preferences.
+- ForNotification channel, click the dropdown to select a Microsoft Teams channel where you want to receive notifications from the channel(s) configured in yourMicrosoft Teams integration in Atlan.Â
+- ForNotify me about, you can either:ClickAll updatesto receive notifications for all the changes listed inCustom updatesmade to your glossary.ClickCustom updatesto limit notifications to specific types of updates:Click+ New term or categoryto receive an alert when a new term or category is added to the glossary.ClickNameto receive an alert when the name of the glossary or that of a nested category or term is updated.ClickDescriptionto receive an alert when adescriptionis added to, updated, or removed from the glossary or a nested category or term.ClickAnnouncementto receive an alert when anannouncementis added to, updated, or removed from the glossary or a nested category or term.ClickCertificateto receive an alert when acertificateis added to, updated, or removed from the glossary or a nested category or term.ClickOwnersto receive an alert when anowneris assigned toÂ or removed from the glossary or a nested category or term.ClickReadmeto receive an alert when aREADMEÂ is added to, updated, or removed from the glossary or a nested category or term.ClickTags (for terms)to receive an alert when a tag isattached toorremoved froma term within the glossary.ClickCategories updated (for terms)to receive an alert when aterm is assigned to a different categorywithin the same glossary. (Notifications for moving terms across glossaries are currently not supported.)ClickRemove termto receive an alert when a term is removed from the glossary. (Notifications for removal of categories are currently not supported.)
+- ClickAll updatesto receive notifications for all the changes listed inCustom updatesmade to your glossary.
+- ClickCustom updatesto limit notifications to specific types of updates:Click+ New term or categoryto receive an alert when a new term or category is added to the glossary.ClickNameto receive an alert when the name of the glossary or that of a nested category or term is updated.ClickDescriptionto receive an alert when adescriptionis added to, updated, or removed from the glossary or a nested category or term.ClickAnnouncementto receive an alert when anannouncementis added to, updated, or removed from the glossary or a nested category or term.ClickCertificateto receive an alert when acertificateis added to, updated, or removed from the glossary or a nested category or term.ClickOwnersto receive an alert when anowneris assigned toÂ or removed from the glossary or a nested category or term.ClickReadmeto receive an alert when aREADMEÂ is added to, updated, or removed from the glossary or a nested category or term.ClickTags (for terms)to receive an alert when a tag isattached toorremoved froma term within the glossary.ClickCategories updated (for terms)to receive an alert when aterm is assigned to a different categorywithin the same glossary. (Notifications for moving terms across glossaries are currently not supported.)ClickRemove termto receive an alert when a term is removed from the glossary. (Notifications for removal of categories are currently not supported.)
+- Click+ New term or categoryto receive an alert when a new term or category is added to the glossary.
+- ClickNameto receive an alert when the name of the glossary or that of a nested category or term is updated.
+- ClickDescriptionto receive an alert when adescriptionis added to, updated, or removed from the glossary or a nested category or term.
+- ClickAnnouncementto receive an alert when anannouncementis added to, updated, or removed from the glossary or a nested category or term.
+- ClickCertificateto receive an alert when acertificateis added to, updated, or removed from the glossary or a nested category or term.
+- ClickOwnersto receive an alert when anowneris assigned toÂ or removed from the glossary or a nested category or term.
+- ClickReadmeto receive an alert when aREADMEÂ is added to, updated, or removed from the glossary or a nested category or term.
+- ClickTags (for terms)to receive an alert when a tag isattached toorremoved froma term within the glossary.
+- ClickCategories updated (for terms)to receive an alert when aterm is assigned to a different categorywithin the same glossary. (Notifications for moving terms across glossaries are currently not supported.)
+- ClickRemove termto receive an alert when a term is removed from the glossary. (Notifications for removal of categories are currently not supported.)
+- Â ClickSaveto save your notification preferences.
+- (Optional) To edit notification settings, click the bell icon. In the notifications setup dialog, you can change the channel or further customize your notifications.
+- (Optional) To remove notifications, click the bell icon. In the notifications setup dialog, click theEnabled (by username)dropdown. ClickRemove notificationto reset your notification settings.
+You will now receive Microsoft Teams notifications for changes made to your glossary! ð
+If theMicrosoft Teams channelyou selected for sending notifications is removed from your Microsoft Teams integration in Atlan, glossary alerts will continue to be sent to that channel. In that case, you can either remove the notifications or select a different channel.
+You can also set up Microsoft Teams notifications for metadata updates on all yourstarred assetsin Atlan.
+
+
+# Expand any asset link in Microsoft Teamsâ
+
+If you share an asset link in Microsoft Teams, Atlan's bot will expand that link directly in the Microsoft Teams channel and provide an embedded preview of the asset.
+To provide detail for an asset in Microsoft Teams:
+- Paste an asset link into Microsoft Teams, along with any other context in your message.
+- The Atlan bot will expand the link with a card of contextual metadata.
+- (Optional) ClickView in Atlanto open the asset link in Atlan.
+The channel can now understand basic information about the asset without leaving Microsoft Teams! ð
+
+
+# View workflow alerts in Microsoft Teamsâ
+
+You canconfigure the Microsoft Teams integrationto receive alerts for workflow activities from Atlan. This can help youmonitor your workflowsdirectly in Microsoft Teams. You can also choose to receive failure alerts only.
+To view workflow alerts in Microsoft Teams:
+- Open the Microsoft Teams channel youconfiguredto view workflow notifications.
+- The Atlan bot will share workflow alerts   -  including details like run status, start time, run time, trigger type, and last three runs.
+- (Optional) ClickView in Atlanto open the workflow link in Atlan.
+You can now inspect crawled assets or troubleshoot in case of any failed workflows.
+Atlan also supports workflow alerts for allcustom packages. If you have set up any custom packages on your Atlan instance, you will be able to monitor your workflows directly in Microsoft Teams.
+- data
+- integration
+- faq
+- faq-integrations
+- Share assets without leaving Atlan
+- Add existing Microsoft Teams discussions to assets
+- Enable alerts for glossary updates in Atlan
+- Expand any asset link in Microsoft Teams
+- View workflow alerts in Microsoft Teams

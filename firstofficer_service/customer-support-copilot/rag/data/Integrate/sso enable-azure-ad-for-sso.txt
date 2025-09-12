@@ -1,0 +1,153 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQ
+- SCIM
+- SSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQ
+- Get StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSO
+- How to enable Azure AD for SSO
+- How to enable Google for SSO
+- How to enable JumpCloud for SSO
+- How to enable Okta for SSO
+- How to enable OneLogin for SSO
+- How to enable SAML 2.0 for SSO
+- Guides
+- References
+- Troubleshooting
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- Get Started
+- How to enable Azure AD for SSO
+
+
+# Enable  Azure AD for SSO
+
+You will need to be an admin user within Atlan to configure SSO. You will also need to work with your Azure AD administrator to carry out the tasks below in Azure AD.
+SSO group mappings are triggered every time a user authenticates in Atlan. A user may need to log out and then log into Atlan again to view the changes. If a user is added to a new group or removed from an existing one in Azure AD, the updates will also be reflected in Atlan. To ensure that the sync is successful, the groups that the user belongs to should be mapped in Atlan, and if a group name has changed in Azure AD, you will need to update the group name in Atlan as well. For any questions about group mapping sync, head overhere.
+To integrate Azure AD SSO for Atlan, complete the
+following steps.
+
+
+# Choose SSO provider (in Atlan)â
+
+To choose Azure AD as your SSO provider, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- UnderÂChoose SAML provider, selectÂAzure ADand then clickÂConfigure.
+- UnderÂService provider metadata, copy theÂIdentifier (Entity ID),Reply URL (Assert Consumer Service URL), andLogout Url.
+
+
+# Set up SAML app (in Azure AD)â
+
+To set up a SAML app, withinAzure's portal:
+- From the menu on the left, openAzure Active Directory.
+From the menu on the left, openAzure Active Directory.
+- UnderÂAzure Active Directory | Overviewclick theÂAddbutton and thenÂEnterprise application.
+UnderÂAzure Active Directory | Overviewclick theÂAddbutton and thenÂEnterprise application.
+- UnderÂBrowser Azure AD Galleryclick theÂCreate your own applicationbutton:ForÂWhat's the name of your app?enter a name, such asÂAtlan.ForÂWhat are you looking to do with your application?selectÂIntegrate any other application you don't find in the gallery (Non-gallery).At the bottom of theÂCreate your own applicationdialog, click theCreatebutton.
+UnderÂBrowser Azure AD Galleryclick theÂCreate your own applicationbutton:
+- ForÂWhat's the name of your app?enter a name, such asÂAtlan.
+- ForÂWhat are you looking to do with your application?selectÂIntegrate any other application you don't find in the gallery (Non-gallery).
+- At the bottom of theÂCreate your own applicationdialog, click theCreatebutton.
+- Wait for the application details to be shown   -  this can take around 1 minute.
+Wait for the application details to be shown   -  this can take around 1 minute.
+- UnderÂGetting Startedand within theSet up single sign ontile, click theGet startedlink.
+UnderÂGetting Startedand within theSet up single sign ontile, click theGet startedlink.
+- UnderÂSelect a single sign-on methodclick theÂSAMLtile.
+UnderÂSelect a single sign-on methodclick theÂSAMLtile.
+- In the upper-right of theBasic SAML Configurationcard, click theEditbutton and enter:ForÂIdentifier (Entity ID)clickAdd identifierand enter the value you copied from Atlan above.ForÂReply URL (Assertion Consumer Service URL)clickAdd reply URL(twice) and enter the two values you copied from Atlan above. The longer URL should be enabled under theDefaultcolumn.ForÂLogout Url (Optional)enter the value you copied from Atlan above.
+In the upper-right of theBasic SAML Configurationcard, click theEditbutton and enter:
+- ForÂIdentifier (Entity ID)clickAdd identifierand enter the value you copied from Atlan above.
+- ForÂReply URL (Assertion Consumer Service URL)clickAdd reply URL(twice) and enter the two values you copied from Atlan above. The longer URL should be enabled under theDefaultcolumn.
+- ForÂLogout Url (Optional)enter the value you copied from Atlan above.
+- At the top of the page, underÂBasic SAML Configuration, click theÂSavebutton.
+At the top of the page, underÂBasic SAML Configuration, click theÂSavebutton.
+- Close theÂBasic SAML Configurationdialog by clickingXin the upper-right.
+Close theÂBasic SAML Configurationdialog by clickingXin the upper-right.
+- In the upper-right of theAttributes & Claimscard, click theEditbutton:
+In the upper-right of theAttributes & Claimscard, click theEditbutton:
+- Navigate to theAdditional claimssection, click each of the following claims to modify theirNameexactly as suggested below and remove theNamespacevalue:email   - > user.mailfirstName   - > user.givennamelastName   - > user.surname(Optional) username   - > ExtractMailPrefix(user.mail)infoðªDid you know?For users assigned to Atlan through SSO, the username will be populated from the username mapping. Otherwise, the username will be the email prefix by default, which users can update while registering on Atlan for the first time.
+Navigate to theAdditional claimssection, click each of the following claims to modify theirNameexactly as suggested below and remove theNamespacevalue:
+- email   - > user.mail
+email   - > user.mail
+- firstName   - > user.givenname
+firstName   - > user.givenname
+- lastName   - > user.surname
+lastName   - > user.surname
+- (Optional) username   - > ExtractMailPrefix(user.mail)infoðªDid you know?For users assigned to Atlan through SSO, the username will be populated from the username mapping. Otherwise, the username will be the email prefix by default, which users can update while registering on Atlan for the first time.
+(Optional) username   - > ExtractMailPrefix(user.mail)
+ðªDid you know?For users assigned to Atlan through SSO, the username will be populated from the username mapping. Otherwise, the username will be the email prefix by default, which users can update while registering on Atlan for the first time.
+- To configure group claims:ÂFrom the options along the top, click+ Add a group claim.In the popover, underWhich groups associated with the user should be returned in the claim?, selectGroups assigned to the application.From theSource attributedropdown, selectCloud-only group display names (Preview). If you have ahybrid setup, selectsAMAccountNameinstead and then check theEmit group name for cloud-only groupscheckbox.dangerPlease ensure that theCloud-only group display namesattribute contains the actual group display names. If not, you will need to update the source attribute with the relevant one that contains group display names.ClickAdvanced optionsto expand the dropdown menu:Check theCustomize the name of the group claimbox.ForName, entermemberOf. This is required if you want to retain group membership in Atlan.ClickSaveand close the popover by clickingÂXin the upper-right.
+To configure group claims:Â
+- From the options along the top, click+ Add a group claim.
+From the options along the top, click+ Add a group claim.
+- In the popover, underWhich groups associated with the user should be returned in the claim?, selectGroups assigned to the application.
+In the popover, underWhich groups associated with the user should be returned in the claim?, selectGroups assigned to the application.
+- From theSource attributedropdown, selectCloud-only group display names (Preview). If you have ahybrid setup, selectsAMAccountNameinstead and then check theEmit group name for cloud-only groupscheckbox.dangerPlease ensure that theCloud-only group display namesattribute contains the actual group display names. If not, you will need to update the source attribute with the relevant one that contains group display names.
+From theSource attributedropdown, selectCloud-only group display names (Preview). If you have ahybrid setup, selectsAMAccountNameinstead and then check theEmit group name for cloud-only groupscheckbox.
+Please ensure that theCloud-only group display namesattribute contains the actual group display names. If not, you will need to update the source attribute with the relevant one that contains group display names.
+- ClickAdvanced optionsto expand the dropdown menu:Check theCustomize the name of the group claimbox.ForName, entermemberOf. This is required if you want to retain group membership in Atlan.
+ClickAdvanced optionsto expand the dropdown menu:
+- Check theCustomize the name of the group claimbox.
+- ForName, entermemberOf. This is required if you want to retain group membership in Atlan.
+- ClickSaveand close the popover by clickingÂXin the upper-right.
+ClickSaveand close the popover by clickingÂXin the upper-right.
+
+
+# Download Azure AD's metadata file (in Azure AD)â
+
+To download Azure AD's metadata file, within the same Azure AD app'sSAML-based Sign-onpage:
+- Within theÂSAML Signing Certificatecard, to the right ofÂFederation Metadata XML, click theÂDownloadlink.
+- Within theÂSet up<application>card, copy theÂLogout URL.
+
+
+# Assign users or groups to the app (in Azure AD)â
+
+To assign users or groups to the app, within the Azure AD application's page:
+- UnderÂManage,clickUsers and groups.
+- At the top of the table, click theÂAdd user/groupbutton.
+- In the resultingAdd Assignmentdialog, under theUsersorGroupsÂ heading, click theNone Selectedlink.
+- In the resultingUsersorGroupsÂ dialog, search for users or groups to add and click to select them.
+- When finished, at the bottom of theÂUsersorGroupsdialog, click theSelectbutton.
+- At the bottom of theÂAdd Assignmentdialog, click theÂAssignbutton.
+
+
+# Upload Azure AD's metadata file (in Atlan)â
+
+To complete the configuration of Azure AD SSO, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- UnderÂChoose SAML provider, selectÂAzure ADand then clickÂConfigure.
+- To the right ofÂIdentity provider metadataclick theImport from XMLbutton.
+- Select the XML file downloaded from Azure AD above.
+- UnderÂSingle Logout Service URL, enter the logout URL copied from Azure AD above.
+- At the bottom of the screen, clickÂSave.
+Congratulations   -  you have successfully set up Azure AD SSO in Atlan! ð
+By default, users can now log into Atlan with either Azure AD SSO or a local Atlan account (via email). To only allow logins via SSO, enable theEnforce SSOoption in Atlan. Once SSO is enforced, we recommend asking your Azure AD administrator to provision access to users through the Azure portal andnot directly from Atlan. When access has been provided, a user will be able to log into Atlan directly and their profile will be generated automatically.
+
+
+# (Optional) Configure group mappingsâ
+
+Before you can configure group mapping, you will first need tocreate groups in Atlanthat correspond to the groups you want to map from Azure AD to Atlan. In addition, you must configure thememberOfattribute and group mapping to retain group membership in Atlan   -  irrespective of whether or not youenable SCIM.
+To automatically assign Azure AD users to Atlan groups based on their Azure AD groups, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- Change to theGroups Mappingtab.
+- To the right of each Atlan group listed:Under theSSO Groupscolumn, type the name of the corresponding group in Azure AD to map to the Atlan group on that row   -  for example,Data Engineering,Business Analysts, and so on. You will need to provide each Azure AD group with access to Atlan.Click theÂSavebutton on that row.
+- Under theSSO Groupscolumn, type the name of the corresponding group in Azure AD to map to the Atlan group on that row   -  for example,Data Engineering,Business Analysts, and so on. You will need to provide each Azure AD group with access to Atlan.
+- Click theÂSavebutton on that row.
+As each user signs up to Atlan, they will be automatically assigned groups in Atlan based on these mappings! ð
+You can configureSCIM provisioning in Azure ADto manage your users and groups in Atlan. Plus, once you've configured group mapping, you can add the mapped groups to apersonaorpurposeto auto-assign relevant permissions to users as they sign up in Atlan.
+- integration
+- connectors
+- Choose SSO provider (in Atlan)
+- Set up SAML app (in Azure AD)
+- Download Azure AD's metadata file (in Azure AD)
+- Assign users or groups to the app (in Azure AD)
+- Upload Azure AD's metadata file (in Atlan)
+- (Optional) Configure group mappings

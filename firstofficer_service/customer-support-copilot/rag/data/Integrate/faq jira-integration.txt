@@ -1,0 +1,64 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementProject ManagementJiraGet StartedTroubleshootingFAQWhat is included in the Jira integration?Can I configure additional fields or auto-assign owners to Jira tickets created from Atlan?Can site renaming affect the Jira integration?ServiceNow
+- Automation
+- Collaboration
+- Communication
+- Identity Management
+- Project ManagementJiraGet StartedTroubleshootingFAQWhat is included in the Jira integration?Can I configure additional fields or auto-assign owners to Jira tickets created from Atlan?Can site renaming affect the Jira integration?ServiceNow
+- JiraGet StartedTroubleshootingFAQWhat is included in the Jira integration?Can I configure additional fields or auto-assign owners to Jira tickets created from Atlan?Can site renaming affect the Jira integration?
+- Get Started
+- Troubleshooting
+- FAQWhat is included in the Jira integration?Can I configure additional fields or auto-assign owners to Jira tickets created from Atlan?Can site renaming affect the Jira integration?
+- What is included in the Jira integration?
+- Can I configure additional fields or auto-assign owners to Jira tickets created from Atlan?
+- Can site renaming affect the Jira integration?
+- ServiceNow
+- Configure Atlan
+- Integrations
+- Project Management
+- Jira
+- FAQ
+- What is included in the Jira integration?
+
+
+# What is included in the Jira integration?
+
+With two of your most important workspaces connected, you can save time and improve the way you track issues for your data.
+Once you integrate Jira with Atlan you can do all of the following   -  all without leaving Atlan!
+- Create new Jira issues on assets
+- Link existing Jira issues to assets
+- See the complete history of Jira issues for each asset
+To use all of the features outlined, each user needs toconnect their individual Jira accountto their Atlan profile.
+
+
+# Create new Jira issues on assetsâ
+
+You will first need toadd a labels fieldto yourCreate issueform in Jira to be able to create Jira issues on your assets in Atlan.
+To create issues in Jira, without leaving Atlan:
+- From any asset, on the right of the screen, click theJirasidebar icon.
+- Click theÂAdd Issuebutton, and thenCreate Issue.
+- From theCreating issuedialog:(Optional) ForÂProjectselect the project for the issue. (By default, the projectconfigured during integrationwill be selected.)(Optional) ForÂIssue typeselect the type of issue being created in Jira.ForÂTitleenter a brief summary of the issue.ForÂDescriptionenter the detailed explanation of the issue.
+- (Optional) ForÂProjectselect the project for the issue. (By default, the projectconfigured during integrationwill be selected.)
+- (Optional) ForÂIssue typeselect the type of issue being created in Jira.
+- ForÂTitleenter a brief summary of the issue.
+- ForÂDescriptionenter the detailed explanation of the issue.
+- Click theÂCreatebutton to submit your issue to Jira.
+Your issue is now on Jira and linked to the asset for future reference! ð
+
+
+# Link existing Jira issues to assetsâ
+
+Ever determine that an issue in Jira is related to multiple data assets? It's important to bring that context back to your assets.
+To add existing issues in Jira into Atlan:
+- From the asset, on the right of the screen, click theJirasidebar icon.
+- Click theÂAdd Issuebutton, and thenLink Issue.
+- From theÂLink Issuesdialog:(Optional) Search for any issues in Jira to link.Check each issue that should be added to the asset.At the top of the dialog, click theLinkbutton.
+- (Optional) Search for any issues in Jira to link.
+- Check each issue that should be added to the asset.
+- At the top of the dialog, click theLinkbutton.
+Your existing issue on Jira is now linked to the asset for future reference! ð
+- data
+- integration
+- faq
+- faq-integrations
+- Create new Jira issues on assets
+- Link existing Jira issues to assets

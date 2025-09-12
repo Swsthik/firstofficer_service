@@ -1,0 +1,29 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioningSSOProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioningSSO
+- SCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioning
+- Configure SCIM provisioning
+- How to enable Azure AD for SCIM provisioning
+- How to enable Okta for SCIM provisioning
+- Troubleshooting SCIM provisioning
+- SSO
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SCIM
+- Configure SCIM provisioning
+
+
+# Configure SCIM provisioning
+
+You can automate the process of provisioning and deprovisioning your users and groups in Atlan withSystem for Cross-domain Identity Management(SCIM). Atlan supportsSCIM 2.0for SCIM provisioning.
+SCIM provisioning works in combination with your single sign-on (SSO) setup. Setting up SCIM enables you to manage all your users from one central location.
+Atlan currently supports SCIM provisioning for the following SSO providers:
+- Azure AD
+- Okta
+For more questions about SCIM provisioning, head over toTroubleshooting SCIM provisioning.
+- integration
+- setup

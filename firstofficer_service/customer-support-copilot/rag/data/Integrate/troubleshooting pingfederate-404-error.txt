@@ -1,0 +1,41 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQ
+- SCIM
+- SSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQ
+- Get Started
+- Guides
+- References
+- TroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO error
+- Troubleshooting SSO
+- Troubleshooting connector-specific SSO authentication
+- PingFederate SSO 404 error
+- Okta first-time login authentication error
+- Google Dashboard login error
+- Microsoft Defender SSO error
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- Troubleshooting
+- PingFederate SSO 404 error
+
+
+# PingFederate SSO 404 error
+
+
+
+# Why do I get a 404 error when using PingFederate SSO?â
+
+If you're encountering a 404 error while using PingFederate single sign-on (SSO), it is possible that the authentication request requires a signed assertion.
+Toreconfigure the signature policy:
+- Navigate to theSignature Policytab in PingFederate and uncheck theAlways Sign Assertionbox.
+By disabling theAlways Sign Assertionsetting, the authentication request will be able to proceed without requiring a signed assertion.
+If you encounter any further issues or have questions, refer to thePingFederate documentationorcontact Atlan supportfor assistance.
+- integration
+- authentication
+- faq-integrations

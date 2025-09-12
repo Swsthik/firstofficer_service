@@ -1,0 +1,27 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsHow-tosTroubleshootingTroubleshooting Microsoft TeamsFAQSlackSpreadsheetsSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsHow-tosTroubleshootingTroubleshooting Microsoft TeamsFAQSlackSpreadsheetsSend alerts for workflow events
+- Microsoft TeamsHow-tosTroubleshootingTroubleshooting Microsoft TeamsFAQ
+- How-tos
+- TroubleshootingTroubleshooting Microsoft Teams
+- Troubleshooting Microsoft Teams
+- FAQ
+- Slack
+- Spreadsheets
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Microsoft Teams
+- Troubleshooting
+- Troubleshooting Microsoft Teams
+
+
+# Troubleshooting Microsoft Teams
+
+If you get an error message   -  for example,App not found-  whileadding the Atlan appfrom theAppspage to your team in Microsoft Teams, it may be due to caching issues. In that case, youÂ can try installing the app directly from the Teams admin center. Search for the Atlan app in the Teams admin center, click the button to the left of the Atlan logo and select theAdd to a teamoption to integrate the Atlan app with your team.
+- integration
+- connectors

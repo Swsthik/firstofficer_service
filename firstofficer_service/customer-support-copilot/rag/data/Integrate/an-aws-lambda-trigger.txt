@@ -1,0 +1,68 @@
+- IntegrationsAutomationAWS LambdaSet up AWS LambdaCreate an AWS Lambda triggerAlways OnBrowser ExtensionConnectionsWebhooksCollaborationCommunicationIdentity ManagementProject Management
+- AutomationAWS LambdaSet up AWS LambdaCreate an AWS Lambda triggerAlways OnBrowser ExtensionConnectionsWebhooks
+- AWS LambdaSet up AWS LambdaCreate an AWS Lambda trigger
+- Set up AWS Lambda
+- Create an AWS Lambda trigger
+- Always On
+- Browser Extension
+- Connections
+- Webhooks
+- Collaboration
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Automation
+- AWS Lambda
+- Create an AWS Lambda trigger
+
+
+# Create an AWS Lambda trigger
+
+Once you have configured theAWS Lambda permissions, you can run an AWS Lambda function.
+To run a Lambda function, complete the following s
+teps.
+
+
+# Select the utilityâ
+
+To select the AWS Lambda trigger utility:
+- In the top right of any screen, navigate toNewand then clickNew Workflow.
+- From the filters along the top, clickUtility.
+- From the list of packages, selectAWS Lambda Triggerand click onSetup Workflow.
+
+
+# Provide credentialsâ
+
+To enter your AWS credentials:
+- ForAuthenticationchoose the method to authenticate with AWS:ForIAM Userauthentication, enter theAWS Access Key,AWS Secret Key, andRegionof AWS to use.ForIAM Roleauthentication, enter theÂRegionof AWS and (optional)AWS Role ARNto use.
+- ForIAM Userauthentication, enter theAWS Access Key,AWS Secret Key, andRegionof AWS to use.
+- ForIAM Roleauthentication, enter theÂRegionof AWS and (optional)AWS Role ARNto use.
+- ClickTest Authenticationto confirm connectivity to AWS using these details.
+- When successful, at the bottom of the screen clickNext.
+
+
+# Configure the Lambda functionâ
+
+To configure the Lambda function:
+- UnderFunction ARNenter the ARN for the Lambda function to call.
+- (Optional) UnderQualifierenter a specific version of the Lambda function to call. (Or leave this as$LATESTto always run the latest version of the function.)
+- (Optional) UnderPayloadenter a minimized (compact) form of anyJSON payloadto pass to the Lambda function. (Leave this as an empty JSON object{}if you have nothing to pass to the Lambda function.)
+- UnderInvocation Typeselect how you would like call the Lambda function:UseSynchronouslyto usesynchronous invocation. With this approach, the response body and headers include details about the response, including errors.UseAsynchronouslyto useasynchronous invocation. With this approach, AWS queues events and they could be skipped or processed more than once.
+- UseSynchronouslyto usesynchronous invocation. With this approach, the response body and headers include details about the response, including errors.
+- UseAsynchronouslyto useasynchronous invocation. With this approach, AWS queues events and they could be skipped or processed more than once.
+
+
+# Run the Lambda functionâ
+
+You can now run the Lambda function.
+- At the bottom of the screen, clickRunto run the function once, immediately.
+- ClickSchedule & Runto scheduled the function to run hourly, daily, weekly, or monthly.
+- integration
+- authentication
+- setup
+- Select the utility
+- Provide credentials
+- Configure the Lambda function
+- Run the Lambda function

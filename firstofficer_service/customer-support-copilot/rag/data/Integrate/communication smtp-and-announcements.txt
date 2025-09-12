@@ -1,0 +1,31 @@
+- IntegrationsAutomationCollaborationCommunicationSMTP and AnnouncementsConfigure SMTPCreate announcementsManage system announcementsIdentity ManagementProject Management
+- Automation
+- Collaboration
+- CommunicationSMTP and AnnouncementsConfigure SMTPCreate announcementsManage system announcements
+- SMTP and AnnouncementsConfigure SMTPCreate announcementsManage system announcements
+- Configure SMTP
+- Create announcements
+- Manage system announcements
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Communication
+- SMTP and Announcements
+
+
+# SMTP and Announcements Integration
+
+Overview:Connect Atlan with SMTP to send system announcements and notifications, keeping your teams up to date with important information.
+
+
+# Guidesâ
+
+- How to configure SMTP: Step-by-step instructions to configure SMTP for sending notifications.
+- How to create announcements: How to create and manage announcements for your data assets.
+- How to manage system announcements: How to add and remove system-wide announcements in Atlan.
+- integrations
+- communication
+- smtp
+- announcements
+- Guides

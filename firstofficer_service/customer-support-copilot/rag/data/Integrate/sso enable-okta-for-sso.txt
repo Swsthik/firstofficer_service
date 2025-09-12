@@ -1,0 +1,134 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQ
+- SCIM
+- SSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQ
+- Get StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSO
+- How to enable Azure AD for SSO
+- How to enable Google for SSO
+- How to enable JumpCloud for SSO
+- How to enable Okta for SSO
+- How to enable OneLogin for SSO
+- How to enable SAML 2.0 for SSO
+- Guides
+- References
+- Troubleshooting
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- Get Started
+- How to enable Okta for SSO
+
+
+# Enable  Okta for SSO
+
+You will need to be an admin user within Atlan to configure SSO. You will also need to work with your Okta administrator to carry out the tasks below in Okta.
+SSO group mappings are triggered every time a user authenticates in Atlan. A user may need to log out and then log into Atlan again to view the changes. If a user is added to a new group or removed from an existing one in Okta, the updates will also be reflected in Atlan. To ensure that the sync is successful, the groups that the user belongs to should be mapped in Atlan, and if a group name has changed in Okta, you will need to update the group name in Atlan as well. For any questions about group mapping sync, head overhere.
+To integrate Okta SSO for Atlan, complete the foll
+owing steps.
+
+
+# Choose SSO provider (in Atlan)â
+
+To choose Okta as your SSO provider, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- UnderÂChoose SAML provider, selectÂOktaand then clickÂConfigure.
+- UnderÂService provider metadata, copy theÂSingle sign on URLÂ andÂAudience URI (SP Entity ID).
+
+
+# Set up SAML app (in Okta)â
+
+To set up a SAML app, within Okta's administration console:
+- From the menu on the left, expandÂApplicationsand then click onÂApplications.
+From the menu on the left, expandÂApplicationsand then click onÂApplications.
+- At the top of the table, click theÂCreate App Integrationbutton.
+At the top of the table, click theÂCreate App Integrationbutton.
+- In theÂCreate a new app integrationdialog, selectÂSAML 2.0and then clickNext.
+In theÂCreate a new app integrationdialog, selectÂSAML 2.0and then clickNext.
+- UnderÂGeneral Settingsenter:ForÂApp name, enter a name for the application, such asÂAtlan.Click theÂNextbutton.
+UnderÂGeneral Settingsenter:
+- ForÂApp name, enter a name for the application, such asÂAtlan.
+- Click theÂNextbutton.
+- UnderÂSAML Settings - Generalenter:ForÂSingle sign on URLenter the value you copied from the field of the same name in Atlan above.EnsureÂUse this for Recipient URL and Destination URLis enabled.ForÂAudience URI (SP Entity ID)enter the value you copied from the field of the same name in Atlan above.
+UnderÂSAML Settings - Generalenter:
+- ForÂSingle sign on URLenter the value you copied from the field of the same name in Atlan above.
+- EnsureÂUse this for Recipient URL and Destination URLis enabled.
+- ForÂAudience URI (SP Entity ID)enter the value you copied from the field of the same name in Atlan above.
+- UnderÂAttribute Statements (optional)define the following mappings fromName (Name format)on the left toValueon the right:firstName (Basic)   - > user.firstNamelastName (Basic)   - > user.lastNameemail (Basic)   - > user.emailgroup (Basic)   - > user.groupinfoðªDid you know?For users assigned to Atlan through SSO, the username will be populated from the username mapping. Otherwise, the username will be the email prefix by default, which users can update while registering on Atlan for the first time.
+UnderÂAttribute Statements (optional)define the following mappings fromName (Name format)on the left toValueon the right:
+- firstName (Basic)   - > user.firstName
+- lastName (Basic)   - > user.lastName
+- email (Basic)   - > user.email
+- group (Basic)   - > user.group
+ðªDid you know?For users assigned to Atlan through SSO, the username will be populated from the username mapping. Otherwise, the username will be the email prefix by default, which users can update while registering on Atlan for the first time.
+- UnderÂGroup Attribute Statements (optional for SSO login, required for group sync)define the following mappings fromÂName (Name format)on the left toFilteron the right:memberOf (Unspecified)   - > Matches regex[\s\S]+-  for examples of how to filter groups with regex in Okta, refer toOkta documentation. This is required if you want to retain group membership in Atlan.While this step is optional for basic SSO authentication, you must configure the memberOf attribute if you want to sync Okta groups to Atlan and use group-based access control
+UnderÂGroup Attribute Statements (optional for SSO login, required for group sync)define the following mappings fromÂName (Name format)on the left toFilteron the right:
+- memberOf (Unspecified)   - > Matches regex[\s\S]+-  for examples of how to filter groups with regex in Okta, refer toOkta documentation. This is required if you want to retain group membership in Atlan.
+- While this step is optional for basic SSO authentication, you must configure the memberOf attribute if you want to sync Okta groups to Atlan and use group-based access control
+- At the bottom of the form, click theNextbutton.
+At the bottom of the form, click theNextbutton.
+- UnderÂHelp Okta Support understand how you configured this applicationselectI'm an Okta customer adding an internal appand forÂApp typeenableÂThis is an internal app that we have created.
+UnderÂHelp Okta Support understand how you configured this applicationselectI'm an Okta customer adding an internal appand forÂApp typeenableÂThis is an internal app that we have created.
+- Click theÂFinishbutton.
+Click theÂFinishbutton.
+
+
+# Download Okta's metadata file (in Okta)â
+
+To download Okta's metadata file, within the Okta app's page:
+- Open theÂSign Ontab.
+- Under theÂSAML Signing Certificatesheading, in the table, click theÂActionslink under theÂActionscolumn.
+- From the drop-down, clickÂView IdP metadata.
+- Save the XML file, if it appears in plain text in your browser.
+
+
+# Assign users to the app (in Okta)â
+
+To assign users to the app, within the Okta app's page:
+- Open theÂAssignmentstab.
+- At the top of the table, click theÂAssignbutton and selectAssign to Peopleto add individual users orAssign to Groupsto add groups.
+- To the right of each user to whom you want to assign the application, clickAssign. To assign the application to a group, you may have to locate it first.
+- For individual users, confirm that the data is correct in theAssign Atlan to Peopledialog. For groups, complete the fields in theAssign Atlan to Groupsdialog if it appears.
+- ClickSave and Go Back. Repeat steps 3 to 5 for each user or group to which you want to assign the application.
+- When finished, in the respective dialog box, clickDone.
+
+
+# Upload Okta's metadata file (in Atlan)â
+
+To complete the configuration of Okta SSO, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- UnderÂChoose SAML provider, selectÂOktaand then clickÂConfigure.
+- To the right ofÂIdentity provider metadataclick theImport from XMLbutton.
+- Select the XML file saved from Okta above.
+- At the bottom of the screen, clickÂSave.
+Congratulations   -  you have successfully set up Okta SSO in Atlan! ð
+By default, users can now log into Atlan with either Okta SSO or a local Atlan account (via email). To only allow logins via SSO, enable theEnforce SSOoption in Atlan. Once SSO is enforced, we recommend asking your Okta administrator to provision access to users through Okta andnot directly from Atlan. When access has been provided, a user will be able to log into Atlan directly and their profile will be generated automatically.
+
+
+# (Optional) Configure group mappingsâ
+
+Before you can configure group mapping, you will first need tocreate groups in Atlanthat correspond to the groups you want to map from Okta to Atlan. In addition, you must configure thememberOfattribute and group mapping to retain group membership in Atlan   -  irrespective of whether or not youenable SCIM.
+To automatically assign Okta users to Atlan groups based on their Okta groups, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- Change to theGroups Mappingtab.
+- To the right of each Atlan group listed:Under theÂSSO Groupscolumn, type the name of the corresponding group in Okta to map to the Atlan group on that row   -  for example,Data Engineering,Business Analysts, and so on. You will need to provide each Okta group with access to Atlan.Click theÂSavebutton on that row.
+- Under theÂSSO Groupscolumn, type the name of the corresponding group in Okta to map to the Atlan group on that row   -  for example,Data Engineering,Business Analysts, and so on. You will need to provide each Okta group with access to Atlan.
+- Click theÂSavebutton on that row.
+As each user signs up to Atlan, they will be automatically assigned groups in Atlan based on these mappings! ð
+You can configureSCIM provisioning in Oktato manage your users and groups in Atlan. Plus, once you've configured group mapping, you can add the mapped groups to apersonaorpurposeto auto-assign relevant permissions to users as they sign up in Atlan.
+- integration
+- connectors
+- Choose SSO provider (in Atlan)
+- Set up SAML app (in Okta)
+- Download Okta's metadata file (in Okta)
+- Assign users to the app (in Okta)
+- Upload Okta's metadata file (in Atlan)
+- (Optional) Configure group mappings

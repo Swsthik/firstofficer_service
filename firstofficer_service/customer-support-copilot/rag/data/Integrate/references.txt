@@ -1,0 +1,31 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedGuidesReferencesSSO integration with PingFederate using SAMLTroubleshootingFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedGuidesReferencesSSO integration with PingFederate using SAMLTroubleshootingFAQ
+- SCIM
+- SSOGet StartedGuidesReferencesSSO integration with PingFederate using SAMLTroubleshootingFAQ
+- Get Started
+- Guides
+- ReferencesSSO integration with PingFederate using SAML
+- SSO integration with PingFederate using SAML
+- Troubleshooting
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- References
+- SSO integration with PingFederate using SAML
+
+
+# SSO integration with PingFederate using SAML
+
+If you have PingFederate as your IdP and are trying to integrate the SAML-based IdP using the metadata supplied from the page, you can use the following SAML assertion URL:
+- For identity provider initiated (IdP-initiated) SSO:https://{{instance}}/auth/realms/default/broker/{{alias}}/endpoint/clients/atlan-saml
+- For service provider initiated (SP-initiated) SSO:https://{{instance}}/auth/realms/default/broker/{{alias}}/endpoint
+To use both IdP- and SP-initiated SSO, add both the URLs mentioned above.
+If you encounter anInvalid signatureerror, you must ensure that the certificate in the XML metadata file is of the SHA-256 or SHA-512 type.
+- data
+- integration

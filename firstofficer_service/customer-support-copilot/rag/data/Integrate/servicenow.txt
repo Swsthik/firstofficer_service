@@ -1,0 +1,43 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementProject ManagementJiraServiceNowGet StartedTroubleshooting
+- Automation
+- Collaboration
+- Communication
+- Identity Management
+- Project ManagementJiraServiceNowGet StartedTroubleshooting
+- Jira
+- ServiceNowGet StartedTroubleshooting
+- Get Started
+- Troubleshooting
+- Configure Atlan
+- Integrations
+- Project Management
+- ServiceNow
+
+
+# ServiceNow
+
+Overview:Connect Atlan with ServiceNow to automate ticket creation, link your ServiceNow account, and manage data-related tasks directly from your data catalog.
+
+
+# Get startedâ
+
+Follow these steps to connect and integrate ServiceNow with Atlan:
+- Integrate ServiceNow
+- Link your ServiceNow account
+
+
+# Guidesâ
+
+- Integrate ServiceNow: Step-by-step instructions to connect Atlan with ServiceNow.
+- Link your ServiceNow account: How to link your ServiceNow account to Atlan for seamless ticket management.
+
+
+# Troubleshootingâ
+
+- Troubleshooting ServiceNow integration: Solutions for common issues encountered when integrating Atlan with ServiceNow.
+- servicenow
+- integration
+- project management
+- Get started
+- Guides
+- Troubleshooting

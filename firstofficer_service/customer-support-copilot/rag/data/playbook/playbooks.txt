@@ -1,0 +1,39 @@
+- PlaybooksGet StartedManagementTroubleshooting
+- Get Started
+- Management
+- Troubleshooting
+- Configure Atlan
+- Playbooks
+
+
+# Playbooks
+
+Overview:Atlan's playbooks provide reusable workflows and automation for common data tasks. Create, share, and execute standardized processes to maintain consistency, reduce manual effort, and enable self-service for data consumers while following governance standards.
+
+
+# Get startedâ
+
+- How to set up playbooks
+
+
+# Guidesâ
+
+
+
+# Playbook managementâ
+
+- How to manage playbooks: Monitor and maintain your playbook workflows.
+- How to automate data profiling: Set up automated data quality checks.
+
+
+# Troubleshootingâ
+
+- Troubleshooting playbooks: Solutions for common playbook issues.
+- playbooks
+- automation
+- workflows
+- metadata
+- capabilities
+- Get started
+- Guides
+- Troubleshooting

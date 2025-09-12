@@ -1,0 +1,55 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsSlackHow-tosTroubleshootingFAQSpreadsheetsSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsSlackHow-tosTroubleshootingFAQSpreadsheetsSend alerts for workflow events
+- Microsoft Teams
+- SlackHow-tosTroubleshootingFAQ
+- How-tos
+- Troubleshooting
+- FAQ
+- Spreadsheets
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Slack
+
+
+# Slack
+
+Overview:Connect Atlan with Slack to enable seamless collaboration, notifications, and sharing of data assets within your organization.
+
+
+# Get startedâ
+
+Follow these steps to connect and integrate Slack with Atlan:
+- Integrate Slack
+- Link your Slack account
+
+
+# Guidesâ
+
+- Integrate Slack: Step-by-step instructions to connect Atlan with Slack.
+- Link your Slack account: How to link your Slack account to Atlan for seamless collaboration.
+
+
+# Troubleshootingâ
+
+- Troubleshooting Slack integration: Solutions for common issues encountered when integrating Atlan with Slack.
+
+
+# FAQâ
+
+- How do I send messages or search assets from Slack?
+- What does Atlan do with each Slack permission?
+- What is included in the Slack integration?
+- What is the difference between Copy Link and Share on Slack or Teams?
+- slack
+- integration
+- collaboration
+- Get started
+- Guides
+- Troubleshooting
+- FAQ

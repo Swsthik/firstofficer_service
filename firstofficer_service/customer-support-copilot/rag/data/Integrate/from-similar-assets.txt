@@ -1,0 +1,61 @@
+- IntegrationsAutomationAWS LambdaAlways OnSuggestions from similar assetsTag propagationBrowser ExtensionConnectionsWebhooksCollaborationCommunicationIdentity ManagementProject Management
+- AutomationAWS LambdaAlways OnSuggestions from similar assetsTag propagationBrowser ExtensionConnectionsWebhooks
+- AWS Lambda
+- Always OnSuggestions from similar assetsTag propagation
+- Suggestions from similar assets
+- Tag propagation
+- Browser Extension
+- Connections
+- Webhooks
+- Collaboration
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Automation
+- Always On
+- Suggestions from similar assets
+
+
+# Suggestions from similar assets
+
+As a data team ourselves, we know that metadata curation can be time-consuming. To simplify that process, each time you fill in a metadata gap, Atlan looks for other places to reuse that information.
+For example:
+- You add the descriptionInformation about customersto a table calledCUSTOMER.
+- Atlan will look for any other tables calledCUSTOMERwithout a description.
+- Atlan suggestsInformation about customersas the description for these otherCUSTOMERtables.
+Metadata suggestions are currently available for:
+- Descriptions
+- Terms
+- Tags
+- Owners
+Atlan is always working behind the scenes to help
+fill in the gaps! ð
+Our goals:
+- Simplify metadata curation
+- Reduce human error
+- Improve consistency across the data stack
+Even if a field is blank, everyone can still see potential information for an asset from these suggestions. However, only users with the necessary edit permissions for that asset will be able to apply the metadata suggestions.
+
+
+# Frequently asked questionsâ
+
+On the asset sidebar, where the user generally visits the widgets for metadata updates.
+Suggestions are only available for assets of the same type with the same name, with one exception. Metadata suggestions can be propagated across tables and views with the same name.Â
+For example:
+- You are on aCUSTOMERtable asset with no description.
+- You will only see a suggestion if there is anotherCUSTOMERtable or view asset with a description already in place.
+- If there is acolumncalledCUSTOMERwith a description, you will not see its description as a suggestion on a table namedCUSTOMER.
+No, suggestions are currently only available for assets without that field populated.
+No, currently Atlan only provides suggestions for the same asset type.
+Not exactly. Currently, Atlan makes suggestions for assets that have exactly the same name.
+For example:
+- Two tables namedCUSTOMERandCUSTOMERSwill not share suggestions.
+- But two tables namedCUSTOMER, even if one is in Snowflake and the other is in BigQuery, will share suggestions.
+No, Atlan only suggests what has already been filled in for some other asset. Atlan does not create its own suggestions.
+When you update an owner for an asset type, for example, a table asset:
+- Atlan automatically checks other table assets with the same name and provides the owner you updated as a suggestion.
+- This works even if the owner has been updated via a workflow or API-based bulk updates.
+- atlan
+- documentation

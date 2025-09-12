@@ -1,0 +1,55 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQ
+- SCIM
+- SSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQ
+- Get Started
+- Guides
+- References
+- TroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO error
+- Troubleshooting SSO
+- Troubleshooting connector-specific SSO authentication
+- PingFederate SSO 404 error
+- Okta first-time login authentication error
+- Google Dashboard login error
+- Microsoft Defender SSO error
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- Troubleshooting
+- Troubleshooting connector-specific SSO authentication
+
+
+# Troubleshooting connector-specific SSO authentication
+
+Atlan currently supports the following connectors for SSO authentication toquery dataandpreview sample data:
+- Amazon Redshift
+- Google BigQuery
+- Snowflake
+
+
+# Generalâ
+
+Atlan supports data policies mandated at source if using SSO authentication. Explicit restrictions will take precedence, unless otherwise configured.
+Let's examine two scenarios using the example of a masking policy:
+- If you have adata policyin Atlan to mask sensitive data and are also using SSO authentication with no masking policy at source, the data will be masked in Atlan. However, if you have toggled onEnable data policies created at source to apply for querying in Atlanwhile configuring SSO authentication in Atlan, only source policies will take effect and the data will not be masked in Atlan as per the source policy.
+- If you do not have anydata policyin Atlan but are using SSO authentication with a masking policy at source for sensitive data, the data will be masked in Atlan.
+
+
+# Snowflakeâ
+
+If you receive the following error message:Cannot create PoolableConnectionFactory (Incorrect username or password was specified.)
+Thesecurity integration in Snowflakemaps Atlan email addresses to Snowflake login names. First, check if a user with an Atlan email address exists in Snowflake.
+If a user exists and the Snowflake login name is not an email address, your Snowflake administrator will have to manually update the user-mapping in the security integration to use email addresses instead. To do so, add the following command to thesecurity integration in Snowflake:
+Refer toSnowflake documentation.
+If you receive the following error message:Cannot create PoolableConnectionFactory (Role <'ACCOUNTADMIN'/'ORGADMIN'/'SECURITYADMIN'> specified in the connect string is not granted to this user. Contact your local system administrator, or attempt to login with another role, e.g. PUBLIC
+By default, Snowflake blocks theACCOUNTADMIN,ORGADMIN, andSECURITYADMINroles from being assumed in thesecurity integration. Therefore, a user with any of these Snowflake roles will not be able to run queries withSnowflake OAuth-based authentication.
+To allow users with theACCOUNTADMIN,ORGADMIN, orSECURITYADMINrole to query with Snowflake OAuth-based authentication, you will need to add the following command to set account-level permissions for thesecurity integration in Snowflake:
+Refer toSnowflake documentation.
+- integration
+- connectors

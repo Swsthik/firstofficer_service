@@ -1,0 +1,112 @@
+- DiscoveryGet StartedAsset ManagementConfigurationConceptsHow to interpret timestampsWhat are asset profiles?ReferencesFAQ
+- Get Started
+- Asset Management
+- Configuration
+- ConceptsHow to interpret timestampsWhat are asset profiles?
+- How to interpret timestamps
+- What are asset profiles?
+- References
+- FAQ
+- Use data
+- Discovery
+- Concepts
+- What are asset profiles?
+
+
+# What are asset profiles?
+
+Every asset in Atlan has its own asset profile, which consists of all the information available for that particular asset. After you've discovered an asset, click to open the asset profile. This view gives you all the context you need about the asset.
+
+
+# Components of an asset profileâ
+
+
+
+# Overviewâ
+
+This section displays important details about the asset:
+- Technical name andalias, if added
+- Number of rows and columns
+- Connections
+- Descriptionof the asset
+- Certification status(verified, draft, or deprecated)
+- Ownerof the asset
+- Lineageview
+- Related assets
+For table profiles, you can also view theColumnstab. This tab allows you to update the metadata for your columns directly from the asset profile.
+
+
+# Lineageâ
+
+Lineageoffers a visual representation of the sources and transformations of your asset. You can alsodownload lineagein a CSV file or as an image from here.
+
+
+# Related assetsâ
+
+Related assetsdisplays all the assets that have associations with each other beyond a parent-child relationship. For example, a Microsoft Power BI workspace will generally have reports, datasets, dashboards, and dataflows, all of which are related to each other.
+Related assets are additionally listed in theRelationstab of the asset sidebar.
+
+
+# Column previewâ
+
+Column previewoffers a snapshot of all the columns in a data table, including the column name, data type, and description.
+This will change toField previewin the asset profile andFieldstab in the asset sidebar for certain asset types   -  including but not limited to data source fields and calculated fields for Tableau data sources, columns for Microsoft Power BI tables, fields for Looker explores and views, and more.
+You can alsoexport child assetssuch as columns or fields from the parent asset profile.
+
+
+# Sample dataâ
+
+Sample datashows the sample data for an asset. This helps users understand what kind of data is included in the asset and allows them to copy or export this data.
+Connection admins can also enforce users tovalidate their credentialsbefore viewing sample data, helping you enforce better governance across your organization.
+
+
+# Linked queriesâ
+
+Linked queriesdisplays anysaved queriesÂ auto-linked to the asset when queried or referenced in the SQL query. This helps users quickly find the saved queries for additional context orlaunch the query in Insightsdirectly from the asset profile.
+From theLinked queriestab:
+- View all saved queries linked to the asset, along with a total count of such queries.
+- Hover over a linked query to:View the total number of query runs in the last 30 days in a popover.Click the play icon to run the query in Insights.Click the open asset sidebar icon to view details about the query in the sidebar.
+- View the total number of query runs in the last 30 days in a popover.
+- Click the play icon to run the query in Insights.
+- Click the open asset sidebar icon to view details about the query in the sidebar.
+- Click the 3-dot icon to view any additional linked queries.
+If you do not have access to query data in Atlan, the linked queries will be displayed with alock icon.
+
+
+# READMEâ
+
+Readmeprovides contextual information about the asset. It's a great place to crowdsource all the tribal knowledge and context that different users might have about the data asset.
+
+
+# Asset profile headerâ
+
+This section helps you perform quick actions. From the top right of the asset profile:
+- Click the user avatars to view a list of recently visited users, total views on your asset, total number of unique visitors, and total views by user.Use the days filter to filter asset views and user activity in the last 7, 30, and 90 days.This feature is turned on by default   -  admins canturn off user activity.
+- Use the days filter to filter asset views and user activity in the last 7, 30, and 90 days.
+- This feature is turned on by default   -  admins canturn off user activity.
+- Click the star button toÂstar your assetand bookmark it for easy access.
+- Expand theQuerydropdown to view sample data orquery the assetin Insights.
+- Click the clipboard icon to copy the link for your asset.
+- Click theSlackorTeamsicon to post on aSlackorMicrosoft Teamschannel.
+- Click the 3-dot icon toadd an announcementor aresourceto your asset.
+
+
+# Asset sidebarâ
+
+The sidebar to the right of the asset profile provides high-level information about the asset. Here's what you can view:
+- Overviewoffers a preview of the key characteristics of the asset, including linkeddomainsandpolicies.
+- Columnsdisplays a list of columns in an asset, along with a search bar for quick search.
+- Relationsshows a list of all the related assets.
+- UsagedisplaysÂusage metadatafor your Snowflake and Google BigQuery assets.
+- Lineageshows the upstream sources and downstream transformations for the asset.
+- Fact-Dim Relationsdisplays foreign-key relationships between fact and dimension tables.Fact-dimension relationshipsbetween assets can currently only be defined and published via API.
+- Activityserves as achangelog for the asset.
+- Resourcesare links to internal or external URLs that help your team understand the asset.
+- Queriesshows all the saved queries for the asset.
+- Requestsfor an asset can be filtered by their status, such asPending,Approved, andRejected.
+- Propertiesshows the unique identification number of the asset and other essential properties.
+- Integrationsshow Slack messages and Jira tickets pertaining to the asset.
+- Custom metadatatabs display custom metadata properties of the asset, if enabled.
+- atlan
+- documentation
+- Components of an asset profile

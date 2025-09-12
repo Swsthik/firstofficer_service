@@ -1,0 +1,115 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsHow-tosHow to integrate Microsoft TeamsLink your Microsoft Teams accountTroubleshootingFAQSlackSpreadsheetsSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsHow-tosHow to integrate Microsoft TeamsLink your Microsoft Teams accountTroubleshootingFAQSlackSpreadsheetsSend alerts for workflow events
+- Microsoft TeamsHow-tosHow to integrate Microsoft TeamsLink your Microsoft Teams accountTroubleshootingFAQ
+- How-tosHow to integrate Microsoft TeamsLink your Microsoft Teams account
+- How to integrate Microsoft Teams
+- Link your Microsoft Teams account
+- Troubleshooting
+- FAQ
+- Slack
+- Spreadsheets
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Microsoft Teams
+- How-tos
+- How to integrate Microsoft Teams
+
+
+# Integrate Microsoft Teams
+
+You will need to be anadminin Atlan to configure the Microsoft Teams integration. You will also need inputs and approval from theApplication AdministratorandTeams Administratorof your Microsoft Teams workspace.
+To integrate Microsoft Teams and Atlan, follow the
+se steps.
+
+
+# Retrieve the team linkâ
+
+To retrieve the team link, from within Microsoft Teams:
+- In the left menu inMicrosoft Teams, clickTeams.
+- UnderTeams, navigate to your team, and to the right of the team name, click thethree dots.
+- From the dropdown menu, clickGet link to team.
+- From theGet a link to the teamdialog, clickCopyto copy the team link and save it in a temporary location.
+
+
+# Connect Atlan to Microsoft Teamsâ
+
+Once you have retrieved the team link, you can proceed to connecting Atlan to Microsoft Teams.
+Atlan requires the following delegated permissions for the Microsoft Teams integration:
+- offline_access-  allows the Atlan app to access resources on behalf of the users, even when users are not currently using the app.
+- User.Read-  allows users to sign in to the app, and allows the app to read the profile of signed-in users.
+- AppCatalog.Submit-  allows the app to submit application packages to the catalog and cancel submissions that are pending review on behalf of the signed-in user.
+- ChannelMessage.Read.All-  allows the app to read a channel's messages in Microsoft Teams, on behalf of the signed-in user (only required if you have admin access to publish the app in Microsoft Teams).
+- AppCatalog.ReadWrite.All-  allows the app to create, read, update, and delete apps in the app catalogs (only required if you have admin access to publish the app in Microsoft Teams).
+- TeamsAppInstallation.ReadWriteSelfForUser-  allows a Teams app to read, install, upgrade, and uninstall itself for the signed-in user.
+From within Atlan:
+- From the left menu on any screen, clickAdmin.
+- UnderWorkspace, clickIntegrations.
+- In theMicrosoft Teamstile, clickConnect.
+- In theAdd to Microsoft Teamsdialog, forTeam link, paste theteam link you copiedfrom Microsoft Teams above.
+- ClickNextto continue.
+- ForPublish the Atlan app:If you haveApplication Administratoraccess to Microsoft Teams:ClickPublish nowto publish the Atlan app in your Microsoft Teams workspace.In thePermissions requestedpopover, check the box forConsent on behalf of your organizationto automatically grant access to the application for all users and then clickAcceptto publish the Atlan app.If you do not have admin access to Microsoft Teams:ClickRequest to publish.In thePermissions requestedpopover, clickAcceptto publish the Atlan app.Contact your Microsoft Teams administrator toapproveandpublishthe Atlan app in your Microsoft Teams workspace.
+- If you haveApplication Administratoraccess to Microsoft Teams:ClickPublish nowto publish the Atlan app in your Microsoft Teams workspace.In thePermissions requestedpopover, check the box forConsent on behalf of your organizationto automatically grant access to the application for all users and then clickAcceptto publish the Atlan app.
+- ClickPublish nowto publish the Atlan app in your Microsoft Teams workspace.
+- In thePermissions requestedpopover, check the box forConsent on behalf of your organizationto automatically grant access to the application for all users and then clickAcceptto publish the Atlan app.
+- If you do not have admin access to Microsoft Teams:ClickRequest to publish.In thePermissions requestedpopover, clickAcceptto publish the Atlan app.Contact your Microsoft Teams administrator toapproveandpublishthe Atlan app in your Microsoft Teams workspace.
+- ClickRequest to publish.
+- In thePermissions requestedpopover, clickAcceptto publish the Atlan app.
+- Contact your Microsoft Teams administrator toapproveandpublishthe Atlan app in your Microsoft Teams workspace.
+If your global administrator has enabled theadmin consent workflow, you will be prompted to request admin approval while attempting to install the Atlan app in your Microsoft Teams workspace. Reach out to your admin toapprove the admin consent requestfrom the Microsoft Entra admin center. Additionally, if there is anyexpiry dateset for such requests, ensure that the request is approved within that period of time, otherwise you will need to request approval again.
+
+
+# Add Atlan to the Microsoft Teams directoryâ
+
+Youmustallow 24 hours to elapse aftersetting up the Microsoft Teams integration in Atlanand before adding the Atlan app to your Microsoft Teams directory. This is required for the Atlan app to be activated in Microsoft Teams. To learn more, refer toMicrosoft Teams documentation.
+Once the Atlan app has been published in your Microsoft Teams workspace, you will need yourTeams Administratorto add Atlan to your Microsoft Teams directory.
+From within Microsoft Teams:
+- Log in to theMicrosoft Teams admin centerwithTeams Administratoraccess.
+- In the left menu ofMicrosoft Teams, clickTeams appsand then clickManage apps.
+- On theManage appspage, use the search bar to search for theAtlanapp.
+- To the left of the app name, click the circle to select theAtlanapp.
+- From the tabs along the top of theAll appssection, clickAdd to a team.
+- In theAdd to a teamform, configure the following:Click the search bar and enter the name of the team to which you want to add the Atlan app. Hover over the team name and then clickAdd.ClickApplyto confirm your selection(s).
+- Click the search bar and enter the name of the team to which you want to add the Atlan app. Hover over the team name and then clickAdd.
+- ClickApplyto confirm your selection(s).
+Atlan is now connected to Microsoft Teams! ð
+
+
+# Configure integration from Atlan to Microsoft Teamsâ
+
+Now that Atlan is connected to Microsoft Teams, you can configure the Microsoft Teams integration from Atlan.
+From theIntegrationssub-menu:
+- Expand theMicrosoft Teamstile.
+- Under theConfigurationstab, configure the following:For any existing Microsoft Teams integrations prior to February 22, 2024 only, you will need to update the Atlan app in your Microsoft Teams workspace to use new features likeenabling notifications for starred assets:If you haveApplication Administratoraccess to Microsoft Teams:ClickInstall nowto update the Atlan app in your Microsoft Teams workspace.In thePermissions requestedpopover, clickAcceptto update the Atlan app.If you do not have admin access to Microsoft Teams:ClickRequest update.Contact your Microsoft Teams administrator toupdatethe Atlan app in your Microsoft Teams workspace.Once updated, clickCheck statusin Atlan to view the status of your requested update.infoðªDid you know?For all new Microsoft Teams integrations from February 22, 2024 onward, no additional configuration required.ForChannels, enter channels to use in your Microsoft Teams workspace to allow users to post to from within Microsoft Teams orget notified about glossary updates. Enter the channel name without a#, and press tab after each channel if you want to enter multiple channels.(Optional) ForAnnouncements channel, enter the name of a single channel that can be used to viewannouncements on assetsin Atlan.(Optional) ForWorkflows alert channel, enter the name of a single channel that can be used to seealerts for workflow activitiesin Atlan. You can also choose to receive failure alerts only by toggling on theReceive failure alerts onlyslider.(Optional) ForPlaybooks alert channel, enter the name of a single channel that can be used to seealerts for playbook runsin Atlan. You can also choose to receive failure alerts only by toggling on theReceive failure alerts onlyslider.
+- For any existing Microsoft Teams integrations prior to February 22, 2024 only, you will need to update the Atlan app in your Microsoft Teams workspace to use new features likeenabling notifications for starred assets:If you haveApplication Administratoraccess to Microsoft Teams:ClickInstall nowto update the Atlan app in your Microsoft Teams workspace.In thePermissions requestedpopover, clickAcceptto update the Atlan app.If you do not have admin access to Microsoft Teams:ClickRequest update.Contact your Microsoft Teams administrator toupdatethe Atlan app in your Microsoft Teams workspace.Once updated, clickCheck statusin Atlan to view the status of your requested update.infoðªDid you know?For all new Microsoft Teams integrations from February 22, 2024 onward, no additional configuration required.
+For any existing Microsoft Teams integrations prior to February 22, 2024 only, you will need to update the Atlan app in your Microsoft Teams workspace to use new features likeenabling notifications for starred assets:
+- If you haveApplication Administratoraccess to Microsoft Teams:ClickInstall nowto update the Atlan app in your Microsoft Teams workspace.In thePermissions requestedpopover, clickAcceptto update the Atlan app.
+- ClickInstall nowto update the Atlan app in your Microsoft Teams workspace.
+- In thePermissions requestedpopover, clickAcceptto update the Atlan app.
+- If you do not have admin access to Microsoft Teams:ClickRequest update.Contact your Microsoft Teams administrator toupdatethe Atlan app in your Microsoft Teams workspace.Once updated, clickCheck statusin Atlan to view the status of your requested update.
+- ClickRequest update.
+- Contact your Microsoft Teams administrator toupdatethe Atlan app in your Microsoft Teams workspace.
+- Once updated, clickCheck statusin Atlan to view the status of your requested update.
+ðªDid you know?For all new Microsoft Teams integrations from February 22, 2024 onward, no additional configuration required.
+- ForChannels, enter channels to use in your Microsoft Teams workspace to allow users to post to from within Microsoft Teams orget notified about glossary updates. Enter the channel name without a#, and press tab after each channel if you want to enter multiple channels.
+ForChannels, enter channels to use in your Microsoft Teams workspace to allow users to post to from within Microsoft Teams orget notified about glossary updates. Enter the channel name without a#, and press tab after each channel if you want to enter multiple channels.
+- (Optional) ForAnnouncements channel, enter the name of a single channel that can be used to viewannouncements on assetsin Atlan.
+(Optional) ForAnnouncements channel, enter the name of a single channel that can be used to viewannouncements on assetsin Atlan.
+- (Optional) ForWorkflows alert channel, enter the name of a single channel that can be used to seealerts for workflow activitiesin Atlan. You can also choose to receive failure alerts only by toggling on theReceive failure alerts onlyslider.
+(Optional) ForWorkflows alert channel, enter the name of a single channel that can be used to seealerts for workflow activitiesin Atlan. You can also choose to receive failure alerts only by toggling on theReceive failure alerts onlyslider.
+- (Optional) ForPlaybooks alert channel, enter the name of a single channel that can be used to seealerts for playbook runsin Atlan. You can also choose to receive failure alerts only by toggling on theReceive failure alerts onlyslider.
+(Optional) ForPlaybooks alert channel, enter the name of a single channel that can be used to seealerts for playbook runsin Atlan. You can also choose to receive failure alerts only by toggling on theReceive failure alerts onlyslider.
+- At the bottom of the tile, click theUpdatebutton.
+Users can now post to Microsoft Teams without leaving Atlan! ð
+Channels need to bestandardfor Atlan to be able to post to them. If you try to integrate a private or shared channel, you will see an error for that channel when you try to update.
+- integration
+- connectors
+- Retrieve the team link
+- Connect Atlan to Microsoft Teams
+- Add Atlan to the Microsoft Teams directory
+- Configure integration from Atlan to Microsoft Teams

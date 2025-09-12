@@ -1,0 +1,37 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQ
+- SCIM
+- SSOGet StartedGuidesReferencesTroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO errorFAQ
+- Get Started
+- Guides
+- References
+- TroubleshootingTroubleshooting SSOTroubleshooting connector-specific SSO authenticationPingFederate SSO 404 errorOkta first-time login authentication errorGoogle Dashboard login errorMicrosoft Defender SSO error
+- Troubleshooting SSO
+- Troubleshooting connector-specific SSO authentication
+- PingFederate SSO 404 error
+- Okta first-time login authentication error
+- Google Dashboard login error
+- Microsoft Defender SSO error
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- Troubleshooting
+- Troubleshooting SSO
+
+
+# Troubleshooting SSO
+
+No, once you haveintegrated SSO in Atlan, the usernames of provisioned users will be dependent on your SSO provider. For example, if a username has changed due to an automation at source or in the case of a migration from one provider to another, you will not be able to update usernames in Atlan.
+Usernames in Atlan are of a permanent nature. Atlan uses usernames as a unique identifier across the platform and does not support making any changes to them. Ensure that your username in the SSO provider matches that in Atlan.
+If yourgroupsin Atlan are mapped to their corresponding groups in the SSO provider, then any changes in group membership at source will be synced to Atlan:
+- For any groups in the SSO provider not mapped to Atlan or vice versa, there will be no changes to your current SSO setup.
+- If a user is part of a mapped group in Atlan but not in the SSO provider, the user will be removed from the mapped group in Atlan.
+- If a user is part of a mapped group in the SSO provider but not in Atlan, the user will be added to the mapped group in Atlan.
+- integration
+- setup

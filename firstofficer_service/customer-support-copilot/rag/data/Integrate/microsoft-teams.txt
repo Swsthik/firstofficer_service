@@ -1,0 +1,52 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsHow-tosTroubleshootingFAQSlackSpreadsheetsSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsHow-tosTroubleshootingFAQSlackSpreadsheetsSend alerts for workflow events
+- Microsoft TeamsHow-tosTroubleshootingFAQ
+- How-tos
+- Troubleshooting
+- FAQ
+- Slack
+- Spreadsheets
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Microsoft Teams
+
+
+# Microsoft Teams
+
+Overview:Connect Atlan with Microsoft Teams to enable seamless collaboration, notifications, and sharing of data assets within your organization.
+
+
+# Get startedâ
+
+Follow these steps to connect and integrate Microsoft Teams with Atlan:
+- Integrate Microsoft Teams
+- Link your Microsoft Teams account
+
+
+# Guidesâ
+
+- Integrate Microsoft Teams: Step-by-step instructions to connect Atlan with Microsoft Teams.
+- Link your Microsoft Teams account: How to link your Microsoft Teams account to Atlan for seamless collaboration.
+
+
+# Troubleshootingâ
+
+- Troubleshooting Microsoft Teams integration: Solutions for common issues encountered when integrating Atlan with Microsoft Teams.
+
+
+# FAQâ
+
+- What is included in the Microsoft Teams integration?: Learn about the features and capabilities of the Microsoft Teams integration in Atlan.
+- microsoft teams
+- integration
+- collaboration
+- Get started
+- Guides
+- Troubleshooting
+- FAQ

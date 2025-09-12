@@ -1,0 +1,109 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsSlackSpreadsheetsHow-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft ExcelTroubleshootingSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsSlackSpreadsheetsHow-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft ExcelTroubleshootingSend alerts for workflow events
+- Microsoft Teams
+- Slack
+- SpreadsheetsHow-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft ExcelTroubleshooting
+- How-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft Excel
+- Bulk enrich metadata
+- Configure custom domains for Microsoft Excel
+- Download impacted assets in Google Sheets
+- Download impacted assets in Microsoft Excel
+- How to export assets
+- How to integrate Atlan with Google Sheets
+- How to integrate Atlan with Microsoft Excel
+- Link your account
+- How to update column metadata in Google Sheets
+- How to update column metadata in Microsoft Excel
+- Troubleshooting
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Spreadsheets
+- How-tos
+- Download impacted assets in Google Sheets
+
+
+# Download impacted assets in Google Sheets
+
+Once you'veconnected Atlan with Google Sheets, you can download impacted assets in Google Sheets. This can help you assess the downstream impact of any changes made to an upstream asset forimpact analysis.
+You need to be logged into your Atlan instance before you can download impacted assets from Atlan in Google Sheets.
+
+
+# Download impacted assets in Google Sheetsâ
+
+To import lineage in Google Sheets:
+- In the menu bar of your Google spreadsheet, clickExtensions.
+- From the dropdown menu, clickAtlan.
+- From the list of options in the Atlan add-on, clickÂImport Lineageto open a list of your assets in a sidebar.
+- (Optional) To filter your assets by a specific asset type, in the Atlan sidebar, select the asset type.
+- In the Atlan sidebar on your spreadsheet, select the asset(s) you want to import.
+- To select the type of impacted assets you'd like to download, in the Atlan sidebar, from theDirectiondropdown:To download downstream assets forimpact analysis, clickDownstream.To download upstream assets forroot cause analysis, clickUpstream.To download all impacted assets, clickBoth.
+- To download downstream assets forimpact analysis, clickDownstream.
+- To download upstream assets forroot cause analysis, clickUpstream.
+- To download all impacted assets, clickBoth.
+- To download the impacted assets in Google Sheets:ClickImport Lineageto download all the impacted assets in one sheet.ÂClick thevertical three dotsand then clickImport to new sheetto download the assets in separate sheet tabs.
+- ClickImport Lineageto download all the impacted assets in one sheet.Â
+- Click thevertical three dotsand then clickImport to new sheetto download the assets in separate sheet tabs.
+- (Optional) Once download is successful, click the asset links in your spreadsheet to view the assets in Atlan.
+The impacted assets are now available in Google Sheets! ð
+
+
+# Update column metadata for impacted assetsâ
+
+Once you've imported your impacted assets from Atlan, you can edit the column metadata for impacted assets in Google Sheets. You can make changes to the column metadata once all the columns have been imported successfully.
+You can only make changes to the metadata in the following columns:
+- Description
+- Owner Users
+- Owner Groups
+- Certification Status
+- Certification Message
+- Announcement Type
+- Announcement Title
+- Announcement Message
+- Tags
+Youcannotmake the following changes:
+- Edit headers for any of the columns
+- Edit the metadata in the following columns:Source AssetSource Asset ConnectorSource Asset TypeImpacted AssetImpacted Asset ConnectorImpacted Asset TypeDirectionTermsPropagated TagsSource URLQualified NameSource Asset GUIDImpacted Asset GUIDImmediate UpstreamandImmediate Downstream
+- Source Asset
+- Source Asset Connector
+- Source Asset Type
+- Impacted Asset
+- Impacted Asset Connector
+- Impacted Asset Type
+- Direction
+- Terms
+- Propagated Tags
+- Source URL
+- Qualified Name
+- Source Asset GUID
+- Impacted Asset GUID
+- Immediate UpstreamandImmediate Downstream
+- Delete any columns or rows
+Any of these changes will not be pushed to Atlan and you'll receive an error message.
+Whenadding tagsor owners for impacted assets in Google Sheets, the tag or user name for the owner user or group must already exist in Atlan; name match is case-sensitive, format the value exactly as it exists in Atlan; and you can add multiple tags or owners as comma-separated values.
+
+
+# Push changes to Atlanâ
+
+Once you've made changes to the column metadata, to push your changes:
+- In the menu bar of your Google spreadsheet, clickExtensions.
+- From the dropdown menu, clickAtlanand then clickPush to Atlan.
+- A dialog box will appear once the changes have synced.
+If you do not have thepermissionto update asset metadata, your changes will neither be pushed to Atlan nor will a request be created for approval   -  even if you receive a success message in Google Sheets. Ensure that you have the requisite permissions to update an asset before pushing your changes. Your user permissions are used to determine the bulk updates you can make to ensure that there is no adverse impact on assets beyond your scope of access.
+- lineage
+- data-lineage
+- impact-analysis
+- integration
+- connectors
+- downstream-impact
+- dependencies
+- upstream-dependencies
+- data-sources
+- Download impacted assets in Google Sheets
+- Update column metadata for impacted assets
+- Push changes to Atlan

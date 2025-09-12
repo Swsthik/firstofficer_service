@@ -1,0 +1,59 @@
+- IntegrationsAutomationCollaborationCommunicationSMTP and AnnouncementsConfigure SMTPCreate announcementsManage system announcementsIdentity ManagementProject Management
+- Automation
+- Collaboration
+- CommunicationSMTP and AnnouncementsConfigure SMTPCreate announcementsManage system announcements
+- SMTP and AnnouncementsConfigure SMTPCreate announcementsManage system announcements
+- Configure SMTP
+- Create announcements
+- Manage system announcements
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Communication
+- SMTP and Announcements
+- Create announcements
+
+
+# Create announcements
+
+Adding an announcement to your data asset helps you call attention to an important feature or notify others about a change coming down the pipeline. Since announcements in Atlan display the time stamp and author information, you can easily identify whether an announcement is still relevant and who to ask for questions.
+What type of announcements would you want to share with your team? Here are a few examples:
+
+
+# Add an announcementsâ
+
+To add an announcement to an asset:
+- From the left menu of any screen in Atlan, clickAssets.
+- On theAssetspage, select an asset to add an announcement. You can either:Open the asset profile. From the top right of theOverviewtab in the asset profile, click thevertical 3-dotÂ icon, and then from the dropdown, clickAdd announcement.In theOverviewtab of the asset sidebar, click thehorizontal 3-doticon, and then from the dropdown, clickAdd announcement.
+- Open the asset profile. From the top right of theOverviewtab in the asset profile, click thevertical 3-dotÂ icon, and then from the dropdown, clickAdd announcement.
+- In theOverviewtab of the asset sidebar, click thehorizontal 3-doticon, and then from the dropdown, clickAdd announcement.
+- In theNew Announcementdialog, enter the following details:From the top right, click thedownward arrowÂ and choose from three announcement types:Information,Issue, orWarning.ForAdd title, enter a title for your announcement.ForDescription, enter a description for your announcement.(Optional) You can include HTML hyperlinks to direct users to additional information   -  for example, wrap the text with<a href="https://my.url.com">description text</a>.(Optional) You can use Markdown syntax to write a description. Any headings will be rendered in heading 6 (<h6>).dangerAtlan currently does not support adding images to your announcements.(Optional) To share your announcement on Slack or Teams, you can either:Click theSharebuttonÂ to integrateSlackorMicrosoft Teams.If you have already integratedSlackorMicrosoft Teams, click the checkbox forShare on SlackorShare on Teams, respectively.(Optional) To configure the announcements channel for Slack or Teams:If you have already configured aSlackorMicrosoft Teamschannel to receive announcement alerts, that channel will be preselected. You can change to a different channel, if available.If you have not configured a channel for announcements, enter the channel name to receive notifications for announcements. This channel will be displayed as theAnnouncements channelÂ in yourÂSlackorMicrosoft Teamsintegration.ClickAddto create your announcement.
+- From the top right, click thedownward arrowÂ and choose from three announcement types:Information,Issue, orWarning.
+From the top right, click thedownward arrowÂ and choose from three announcement types:Information,Issue, orWarning.
+- ForAdd title, enter a title for your announcement.
+ForAdd title, enter a title for your announcement.
+- ForDescription, enter a description for your announcement.(Optional) You can include HTML hyperlinks to direct users to additional information   -  for example, wrap the text with<a href="https://my.url.com">description text</a>.(Optional) You can use Markdown syntax to write a description. Any headings will be rendered in heading 6 (<h6>).dangerAtlan currently does not support adding images to your announcements.
+ForDescription, enter a description for your announcement.
+- (Optional) You can include HTML hyperlinks to direct users to additional information   -  for example, wrap the text with<a href="https://my.url.com">description text</a>.
+- (Optional) You can use Markdown syntax to write a description. Any headings will be rendered in heading 6 (<h6>).
+Atlan currently does not support adding images to your announcements.
+- (Optional) To share your announcement on Slack or Teams, you can either:Click theSharebuttonÂ to integrateSlackorMicrosoft Teams.If you have already integratedSlackorMicrosoft Teams, click the checkbox forShare on SlackorShare on Teams, respectively.
+(Optional) To share your announcement on Slack or Teams, you can either:
+- Click theSharebuttonÂ to integrateSlackorMicrosoft Teams.
+- If you have already integratedSlackorMicrosoft Teams, click the checkbox forShare on SlackorShare on Teams, respectively.
+- (Optional) To configure the announcements channel for Slack or Teams:If you have already configured aSlackorMicrosoft Teamschannel to receive announcement alerts, that channel will be preselected. You can change to a different channel, if available.If you have not configured a channel for announcements, enter the channel name to receive notifications for announcements. This channel will be displayed as theAnnouncements channelÂ in yourÂSlackorMicrosoft Teamsintegration.
+(Optional) To configure the announcements channel for Slack or Teams:
+- If you have already configured aSlackorMicrosoft Teamschannel to receive announcement alerts, that channel will be preselected. You can change to a different channel, if available.
+- If you have not configured a channel for announcements, enter the channel name to receive notifications for announcements. This channel will be displayed as theAnnouncements channelÂ in yourÂSlackorMicrosoft Teamsintegration.
+- ClickAddto create your announcement.
+ClickAddto create your announcement.
+- (Optional) To edit an announcement, from the top right of the announcement box, click the 3-dot icon and then clickEdit.
+- (Optional) To delete an announcement, from the top right of the announcement box, click the 3-dot icon and then clickDelete.
+You just created an announcement! ð
+This announcement will be visible to anyone who views the asset. You can also create similar announcements for other types of data assets, includingglossaries, categories, and terms.
+To create, remove, and manage announcements using API, refer to ourdeveloper documentation.
+You can only create one announcement per asset. To add more information to your announcement, you can either edit the existing one to update it or delete the old one and create a new announcement.
+- data
+- integration
+- Add an announcements

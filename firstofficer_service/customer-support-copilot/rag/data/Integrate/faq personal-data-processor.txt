@@ -1,0 +1,33 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingFAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?Project Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingFAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?
+- SCIM
+- SSOGet StartedGuidesReferencesTroubleshootingFAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?
+- Get Started
+- Guides
+- References
+- Troubleshooting
+- FAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?
+- Can Atlan integrate with multiple Azure AD tenants within a single instance?
+- Can we use a Microsoft SSO login?
+- What type of user provisioning does Atlan support for SSO integrations?
+- When does Atlan become a personal data processor or subprocessor?
+- Why did my users not receive an invite email from Atlan?
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- FAQ
+- When does Atlan become a personal data processor or subprocessor?
+
+
+# When does Atlan become a personal data processor or subprocessor?
+
+Atlan personnel do not have access to any customer instance unless specifically provided by the customer. Accordingly, in the event that a customer instance contains personal data and Atlan personnel are provided access to that instance, Atlan may act as a personal data processor. In addition, depending on whether the customer is a data controller or processor, Atlan may act as a data processor or subprocessor, respectively.
+For this purpose, where Atlan customers intend to crawl any personal data into the platform, Atlan enters into a data protection agreement with its customers, and as applicable: aStandard Contractual Clauses (SCC)under EU GDPR, anInternational data transfer agreement (IDTA)under UK GDPR, or aHIPAA Business Associate Agreement (BAA)when dealing with personal health information governed by HIPAA regulations.
+- data
+- crawl
+- faq-integrations

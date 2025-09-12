@@ -1,0 +1,37 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedGuidesAuthenticate SSO credentials to query dataAuthenticate SSO credentials to view sample dataLimit SSO automatically creating users when they log inSet default user roles for SSOReferencesTroubleshootingFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedGuidesAuthenticate SSO credentials to query dataAuthenticate SSO credentials to view sample dataLimit SSO automatically creating users when they log inSet default user roles for SSOReferencesTroubleshootingFAQ
+- SCIM
+- SSOGet StartedGuidesAuthenticate SSO credentials to query dataAuthenticate SSO credentials to view sample dataLimit SSO automatically creating users when they log inSet default user roles for SSOReferencesTroubleshootingFAQ
+- Get Started
+- GuidesAuthenticate SSO credentials to query dataAuthenticate SSO credentials to view sample dataLimit SSO automatically creating users when they log inSet default user roles for SSO
+- Authenticate SSO credentials to query data
+- Authenticate SSO credentials to view sample data
+- Limit SSO automatically creating users when they log in
+- Set default user roles for SSO
+- References
+- Troubleshooting
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- Guides
+- Set default user roles for SSO
+
+
+# Set default user roles for SSO
+
+You will need to be an admin user andconfigure SSOwith a provider first.
+Admins can set default roles for new users joining
+the Atlan workspace via SSO. Setting the default role to admin, member, or guest will provide the appropriate permissions to users as soon as they log into Atlan.
+To set a default user role for SSO:
+- In the left menu from any screen in Atlan, clickAdmin.
+- UnderAdmin center, clickSSO.Â
+- On the SSO page for your provider, underDefault Role, click the dropdown menu.
+- From the dropdown menu, selectGuest,Member, orAdminas the default role for your users.
+- integration
+- connectors

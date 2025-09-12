@@ -1,0 +1,52 @@
+- IntegrationsAutomationAWS LambdaAlways OnBrowser ExtensionConnectionsDelete a connectionWebhooksCollaborationCommunicationIdentity ManagementProject Management
+- AutomationAWS LambdaAlways OnBrowser ExtensionConnectionsDelete a connectionWebhooks
+- AWS Lambda
+- Always On
+- Browser Extension
+- ConnectionsDelete a connection
+- Delete a connection
+- Webhooks
+- Collaboration
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Automation
+- Connections
+- Delete a connection
+
+
+# Delete a connection
+
+To delete a connection and its assets, complete th
+e following steps.
+
+
+# Select the utilityâ
+
+To select the connection delete utility:
+- In the top right of any screen, navigate toNewand then clickNew Workflow.
+- From the filters along the top, clickUtility.
+- From the list of packages, selectConnection Deleteand click onSetup Workflow.
+
+
+# Select the connectionâ
+
+To select the connection to delete:
+- UnderConnectionselect the existing connection you want to delete.
+- ForDelete Strategychoose how you want to delete that connection and its assets:Tosoft-deletethe connection and its assets, chooseArchive.Tofully purgethe connection and its assets, chooseDelete.
+- Tosoft-deletethe connection and its assets, chooseArchive.
+- Tofully purgethe connection and its assets, chooseDelete.
+
+
+# Run the utilityâ
+
+To delete the connection and its assets, after completing the steps above:
+- At the bottom of the page, clickRun.
+Once the utility has completed running, you will no longer see the assets in Atlan's asset page! ð
+- integration
+- connectors
+- Select the utility
+- Select the connection
+- Run the utility

@@ -1,0 +1,56 @@
+- ContractsGet StartedImpact AnalysisAdd contract impact analysis in GitHub
+- Get Started
+- Impact AnalysisAdd contract impact analysis in GitHub
+- Add contract impact analysis in GitHub
+- Build governance
+- Contracts
+- Impact Analysis
+- Add contract impact analysis in GitHub
+
+
+# Add contract impact analysis in GitHubPrivate Preview
+
+Impact analysis helps you identify how modifications to your data contracts might impact downstream processes, data quality, and overall business operations. This can help you analyze proposed changes and mitigate potential risks before implementation.
+If you have ever changed adata contractonly to find out later that it broke a downstream table or dashboard, Atlan provides aGitHub Actionto help you out.
+This action places Atlan's impact analysis right into your pull request. So, you can view the potential downstream impact of your changes before merging the pull request.
+
+
+# Prerequisitesâ
+
+- Before running the action, you will need to create anAtlan API token.
+- You will also need to assign apersonato the API token and add ametadata policythat provides the requisite permissions on assets for the Atlan action to work. For example, you can add the following permissions:Asset, such as a table   -ReadonlyAny downstream connections, such as Microsoft Power BI   -Readonly
+- Asset, such as a table   -Readonly
+- Any downstream connections, such as Microsoft Power BI   -Readonly
+- You will need to configure the defaultGITHUB_TOKENpermissions. GrantRead and write permissionsto theGITHUB_TOKENin your repository to allow theatlan-actionto seamlessly add or update comments on pull requests. Refer toGitHub documentationto learn more.
+
+
+# Configure the actionâ
+
+To set up the Atlan action in GitHub:
+- Create repository secretsin your repository:ATLAN_INSTANCE_URLwith the URL of your Atlan instance.ATLAN_API_TOKENwith the value of the API token.
+- ATLAN_INSTANCE_URLwith the URL of your Atlan instance.
+- ATLAN_API_TOKENwith the value of the API token.
+- Add the GitHub Action to your workflow:Create a workflow file in your repository   -.github/workflows/atlan-action.yml.Add the following code to your workflow file:name:Atlan actionon:pull_request:types:[opened,edited,synchronize,reopened,closed]jobs:get-downstream-impact:name:Get Downstream Assetsruns-on:ubuntu-lateststeps:-name:Checkoutuses:actions/checkout@v4-name:Run Actionuses:atlanhq/atlan-action@v1with:GITHUB_TOKEN:${{secrets.GITHUB_TOKEN}}ATLAN_INSTANCE_URL:${{secrets.ATLAN_INSTANCE_URL}}ATLAN_API_TOKEN:${{secrets.ATLAN_API_TOKEN}}ATLAN_CONFIG:.atlan/config.yaml
+- Create a workflow file in your repository   -.github/workflows/atlan-action.yml.
+Create a workflow file in your repository   -.github/workflows/atlan-action.yml.
+- Add the following code to your workflow file:name:Atlan actionon:pull_request:types:[opened,edited,synchronize,reopened,closed]jobs:get-downstream-impact:name:Get Downstream Assetsruns-on:ubuntu-lateststeps:-name:Checkoutuses:actions/checkout@v4-name:Run Actionuses:atlanhq/atlan-action@v1with:GITHUB_TOKEN:${{secrets.GITHUB_TOKEN}}ATLAN_INSTANCE_URL:${{secrets.ATLAN_INSTANCE_URL}}ATLAN_API_TOKEN:${{secrets.ATLAN_API_TOKEN}}ATLAN_CONFIG:.atlan/config.yaml
+Add the following code to your workflow file:
+
+
+# Test the actionâ
+
+After you've completed the configuration above, create a pull request with a changedAtlan data contractfile to test the action. You should see the Atlan GitHub action running and then adding comments in your pull request:
+- The GitHub workflow will add and update a single comment for every file change.
+- The impacted assets in the comment will be displayed in a collapsible section and grouped by source and asset type.
+- The comment will include some metadata for your impacted assets   -  such as descriptions, owners, and linked glossary terms.
+- View impacted assets directly in Atlan.
+
+
+# Inputsâ
+
+- data
+- api
+- Prerequisites
+- Configure the action
+- Test the action
+- Inputs

@@ -1,0 +1,100 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsSlackHow-tosHow to integrate SlackLink your Slack accountTroubleshootingFAQSpreadsheetsSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsSlackHow-tosHow to integrate SlackLink your Slack accountTroubleshootingFAQSpreadsheetsSend alerts for workflow events
+- Microsoft Teams
+- SlackHow-tosHow to integrate SlackLink your Slack accountTroubleshootingFAQ
+- How-tosHow to integrate SlackLink your Slack account
+- How to integrate Slack
+- Link your Slack account
+- Troubleshooting
+- FAQ
+- Spreadsheets
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Slack
+- How-tos
+- How to integrate Slack
+
+
+# Integrate Slack
+
+You will need to be an admin in Atlan to configure the Slack integration. You will also need inputs and approval from an administrator of your Slack workspace.
+To integrate Slack and Atlan, follow these steps.
+
+
+# Retrieve Slack tokensâ
+
+To retrieve Slack's integration tokens:
+- Access your Slack apps console at:https://api.slack.com/apps
+- At the bottom of the page, in theÂYour App Configuration Tokensbox click theÂGenerate Tokenbutton.
+- In theÂGenerate Your App Configuration Tokendialog, from theWorkspacedrop-down choose your Slack workspace and then click theÂGeneratebutton.
+- From theÂYour App Configuration Tokensbox:UnderÂAccess Tokenclick theÂCopybutton and save this temporarily.UnderÂRefresh Tokenclick theÂCopybutton and save this temporarily.
+- UnderÂAccess Tokenclick theÂCopybutton and save this temporarily.
+- UnderÂRefresh Tokenclick theÂCopybutton and save this temporarily.
+These tokens will usually expire after 12 hours, so will need to be used the same day they are generated.
+
+
+# Connect Atlan to Slackâ
+
+To connect Atlan to Slack, from within Atlan:
+- From the left menu, clickÂAdmin.
+- UnderÂWorkspace, clickÂIntegrations.
+- In theÂSlacktile, click theÂConnectbutton.
+- Enter the tokens copied above:ForÂAccess tokenenter the access token value.ForÂRefresh tokenenter the refresh token value.
+- ForÂAccess tokenenter the access token value.
+- ForÂRefresh tokenenter the refresh token value.
+- ClickÂNextto continue.
+- UnderÂInstall the Atlan app in your Slack workspaceclick theÂInstall nowbutton.
+- At the bottom of the resulting Slack popup, click theAllowbutton. (If you want more details on what each permission does, seeWhat does Atlan do with each Slack permission?)
+
+
+# (Optional) Request permission from your Slack adminâ
+
+If you are not a workspace administrator in Slack, you will be prompted to request permission to install. To request permission to install the integration:
+- UnderÂAdd a message for your App Managersenter an explanation for installing the app.
+- At the bottom of the form, click theÂSubmitbutton.
+- Contact your Slack workspace administrator and ask them to approve the Atlan app.
+- Once approved, you'll get an alert in Slack from Slackbot.
+- Once you receive the Slackbot alert, return to theÂIntegrationsmenu in Atlan (in the Admin Center) and click theÂAdd to Slackbutton.
+Atlan is now connected to Slack! ð
+
+
+# Configure integration from Atlan to Slackâ
+
+To configure the Slack integration from Atlan, from theIntegrationssub-menu:
+- Expand theSlacktile.
+- Under theÂConfigurationstab, enter channels to use in your Slack workspace. Enter the channel name or provide a link to the channel without a#, and press tab or enter after each channel to add multiple channels.(Optional) ForChannels, add any channels that users should be able to post to from within Slack orget notified on glossary updates.(Optional) ForAnnouncements channel, enter the name of a single channel that can be used to viewannouncements on assetsin Atlan.(Optional) ForWorkflows alert channel, enter the name of a single channel that can be used to viewalerts for workflow activitiesin Atlan. You can also choose to receive failure alerts only by toggling on theReceive failure alerts onlyslider.(Optional) ForPlaybooks alert channel, enter the name of a single channel that can be used to viewalerts for playbook runsin Atlan. You can also choose to receive failure alerts only by toggling on theReceive failure alerts onlyslider.(Optional) ForÂQuery output share channels, add any channels where users should be able to share query output.(Optional) ForRequest notifications, toggle on the slider to receive Slack notifications whenrequestsare raised in Atlan andapprove or reject themdirectly from Slack.
+- (Optional) ForChannels, add any channels that users should be able to post to from within Slack orget notified on glossary updates.
+- (Optional) ForAnnouncements channel, enter the name of a single channel that can be used to viewannouncements on assetsin Atlan.
+- (Optional) ForWorkflows alert channel, enter the name of a single channel that can be used to viewalerts for workflow activitiesin Atlan. You can also choose to receive failure alerts only by toggling on theReceive failure alerts onlyslider.
+- (Optional) ForPlaybooks alert channel, enter the name of a single channel that can be used to viewalerts for playbook runsin Atlan. You can also choose to receive failure alerts only by toggling on theReceive failure alerts onlyslider.
+- (Optional) ForÂQuery output share channels, add any channels where users should be able to share query output.
+- (Optional) ForRequest notifications, toggle on the slider to receive Slack notifications whenrequestsare raised in Atlan andapprove or reject themdirectly from Slack.
+- At the bottom of the tile, click theÂUpdatebutton.
+Users can now post to Slack without leaving Atlan! ð
+Channels need to be public for Atlan to be able to post to them. If you try to integrate a private channel you will see an error for that channel when you try to update.
+
+
+# Configure integration from Slack to Atlanâ
+
+To configure the Atlan integration from Slack, from within Slack:
+- Open each channel you want Slack users to be able to query Atlan from within.
+- At the top of the channel, click the name of the channel.
+- Change to theÂIntegrationstab.
+- In theÂAppstile, click theÂAdd an appbutton.
+- Find theAtlanapp under theIn your workspaceheading and click theAddbutton next to it.
+- (Optional) To add an icon to the Atlan app in Slack, from theAppspage, click theAtlanapp. On theDisplay Informationpage, underApp icon & Preview, click+ Add App Iconand upload theAtlan iconfor the app.Â
+Users can now search for assets in Atlan without leaving Slack! ð
+You can even add the Atlan app to private channels.
+- integration
+- api
+- configuration
+- Retrieve Slack tokens
+- Connect Atlan to Slack
+- Configure integration from Atlan to Slack
+- Configure integration from Slack to Atlan

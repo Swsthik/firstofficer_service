@@ -1,0 +1,38 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsSlackHow-tosTroubleshootingTroubleshooting SlackFAQSpreadsheetsSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsSlackHow-tosTroubleshootingTroubleshooting SlackFAQSpreadsheetsSend alerts for workflow events
+- Microsoft Teams
+- SlackHow-tosTroubleshootingTroubleshooting SlackFAQ
+- How-tos
+- TroubleshootingTroubleshooting Slack
+- Troubleshooting Slack
+- FAQ
+- Spreadsheets
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Slack
+- Troubleshooting
+- Troubleshooting Slack
+
+
+# Troubleshooting Slack
+
+These colors are based onasset certifications, which are as follows:
+- Green =Verified
+- Yellow =Draft
+- Red =Deprecated
+- Blue =No certificate
+Slack isintegrated with Atlan. However, sending messages and searching assets from Slack are disabled. You cannot push messages from Slack to Atlan directly. You can, however, add a Slack thread to an asset profile in Atlan using the Slack icon.
+In the channel that you've integrated with Atlan, you can use the/search-term <term_name>command to search for glossary terms or the/search-query <saved query name>command to search for queries.
+If you encounter aThere was error processing the requesterror message while attempting totake action on a request in Slack, this means that the request is no longer active in Atlan. That may be due to one of the following reasons:
+- The request raised was being approved by two or more approvers simultaneously.
+- The request was deleted by the requester.
+- integration
+- connectors
+- faq
+- troubleshooting

@@ -1,0 +1,70 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsSlackSpreadsheetsHow-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft ExcelTroubleshootingSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsSlackSpreadsheetsHow-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft ExcelTroubleshootingSend alerts for workflow events
+- Microsoft Teams
+- Slack
+- SpreadsheetsHow-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft ExcelTroubleshooting
+- How-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft Excel
+- Bulk enrich metadata
+- Configure custom domains for Microsoft Excel
+- Download impacted assets in Google Sheets
+- Download impacted assets in Microsoft Excel
+- How to export assets
+- How to integrate Atlan with Google Sheets
+- How to integrate Atlan with Microsoft Excel
+- Link your account
+- How to update column metadata in Google Sheets
+- How to update column metadata in Microsoft Excel
+- Troubleshooting
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Spreadsheets
+- How-tos
+- How to integrate Atlan with Google Sheets
+
+
+# Integrate Atlan with Google Sheets
+
+The Atlan add-on for Google Sheets makes it easy to edit column metadata in bulk for your data assets in Atlan.Â
+Integrating Atlan with Google Sheets allows you to:
+- Import column metadata for your data assets into Google Sheets
+- Update column metadata for your imported assets directly in Google Sheets
+- View data asset profiles on Google Sheets
+- Download downstream impacted assets in Google Sheets
+Any individual in your organization with access to Atlan can install the Atlan add-on for Google Sheets. You can even install the Atlan add-on if you have a Google account with a non-gmail address. However, the Atlan add-on can also be installed at the workspace level. To install the app for users in your organization, follow thisguide.
+You'll also need the following permissions for Google Sheets within your organization:
+- Display and run third-party web content in prompts and sidebars within Google apps
+- View and manage the spreadsheets with the Atlan add-on
+
+
+# Install Atlan in Google Sheetsâ
+
+To install the Atlan add-on from the Google Workspace Marketplace, usethis link.
+To install the Atlan add-on directly in Google Sheets, follow these steps:
+- In the menu bar of your Google spreadsheet, clickExtensions.
+- In the dropdown menu, clickAdd-ons.
+- ClickGet add-onsto view available add-ons in the Google Workspace Marketplace.
+- In the search bar of your Google Workspace Marketplace, typeAtlanand press enter.
+- ClickInstallto install the Atlan add-on.
+- If you see a dialog box pop up asking for permissions, clickAllowto continue.
+
+
+# Connect Atlan with Google Sheetsâ
+
+To connect Atlan with your Google spreadsheets:
+- In the menu bar of your Google spreadsheet, clickExtensions.
+- From the dropdown menu, clickAtlanand then clickSetup Atlan.
+- In the dialog box, enter your Atlan instance URL and clickContinue.
+Congrats on connecting Atlan with Google Sheets! ð
+For every new spreadsheet that you create using Google Sheets, you will need to follow the steps outlined above to connect Atlan with that spreadsheet. The Atlan add-on will remain connected for all tabs within an already connected spreadsheet.
+- integration
+- connectors
+- downstream-impact
+- dependencies
+- Install Atlan in Google Sheets
+- Connect Atlan with Google Sheets

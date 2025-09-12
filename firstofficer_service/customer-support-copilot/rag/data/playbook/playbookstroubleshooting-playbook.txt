@@ -1,0 +1,33 @@
+- PlaybooksGet StartedManagementTroubleshootingTroubleshooting playbooks
+- Get Started
+- Management
+- TroubleshootingTroubleshooting playbooks
+- Troubleshooting playbooks
+- Configure Atlan
+- Playbooks
+- Troubleshooting
+- Troubleshooting playbooks
+
+
+# Troubleshooting playbooks
+
+ð¤ Who can do this?You will need to be an admin user in Atlan to create playbooks.
+Here are a few things to know aboutsetting up playbooks:
+Following are the known issues or limitations when using thedomain action:
+- Atlan currently does not support adding glossaries, categories, and terms to domains.
+- If you do not have read permission on the assets you want to add to a domain, those assets will be removed from the playbook workflow during processing.Â
+- If you do not have update permission on the assets you want to add to a domain, the playbook workflow will fail. However, some assets may still be linked to the domain before the failure occurs.
+Atlan uses Elasticsearch to run playbooks, so expect infrastructure costs to be minimal and not a determining factor for utilizing playbooks.
+We recommend building no more than a maximum of 20 rules per playbook. However, the total number of playbooks that can be run is still to be determined. From a technical standpoint, playbooks leverage the workflow infrastructure, which means there are no hard limits. Depending on the number of playbooks that need to be run, the infrastructure will have to be scaled accordingly.Â
+Yes. You need to have the permission to update assets in Atlan in order to run playbooks for updating them.Â If you do not have the permission to update an asset, you will be unable to update it using playbooks.
+Additionally, Atlan uses the permissions of the playbook creator in determining the assets to be updated and not that of the user who runs the playbook. Your user permissions are used to determine the bulk updates you can make to ensure that there is no adverse impact on assets beyond your scope of access.
+No, Atlan currently does not support automating asset updaterequeststhrough playbooks.
+Currently, there is no button to undo asset updates. However, you canmodify your existing playbooks. You can either turn off the filters or add new rules to reverse the updates.
+Currently, no. You canmonitor your existing playbooksto view a high-level summary of asset updates from previous playbook runs. Observability of results is on the roadmap.
+Currently, no. However, you canset up Slack or Microsoft Teams alertsfor your playbook runs in Atlan.
+If you encounter anoffload node status is not supportederror message, the playbook workflow may have exceededÂ the EtcD size limit. Playbooks use Argo workflow templates, which are stored as Kubernetes resources. This creates a limit to their size.
+To handle this error, Atlan recommends the following:
+- Reduce the number of rules in your playbook
+- Optimize filters for asset selection
+- atlan
+- documentation

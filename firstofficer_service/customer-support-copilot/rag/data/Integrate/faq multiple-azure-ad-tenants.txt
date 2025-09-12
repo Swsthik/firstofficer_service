@@ -1,0 +1,33 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingFAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?Project Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingFAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?
+- SCIM
+- SSOGet StartedGuidesReferencesTroubleshootingFAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?
+- Get Started
+- Guides
+- References
+- Troubleshooting
+- FAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?
+- Can Atlan integrate with multiple Azure AD tenants within a single instance?
+- Can we use a Microsoft SSO login?
+- What type of user provisioning does Atlan support for SSO integrations?
+- When does Atlan become a personal data processor or subprocessor?
+- Why did my users not receive an invite email from Atlan?
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- FAQ
+- Can Atlan integrate with multiple Azure AD tenants within a single instance?
+
+
+# Can Atlan integrate with multiple Azure AD tenants within a single instance?
+
+Atlan can currently only connect to any one Azure AD tenant.
+However, you canreach out to Atlan supportto share more details about your organizational setup and requirements. For example, are your users currently assigned to separate tenants? This will help us better understand your use case.
+- atlan
+- documentation
+- faq-integrations

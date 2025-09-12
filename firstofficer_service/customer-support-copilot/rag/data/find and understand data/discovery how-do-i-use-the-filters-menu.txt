@@ -1,0 +1,22 @@
+- DiscoveryGet StartedAsset ManagementConfigurationConfigure language settingsHow to use the filters menuAdd custom metadataHow do I use the filters menu?ConceptsReferencesFAQ
+- Get Started
+- Asset Management
+- ConfigurationConfigure language settingsHow to use the filters menuAdd custom metadataHow do I use the filters menu?
+- Configure language settings
+- How to use the filters menu
+- Add custom metadata
+- How do I use the filters menu?
+- Concepts
+- References
+- FAQ
+- Use data
+- Discovery
+- Configuration
+- How do I use the filters menu?
+
+
+# How do I use the filters menu?
+
+To learn how to use the filters menu in Atlan, follow the instructions in thisguide.
+- atlan
+- documentation

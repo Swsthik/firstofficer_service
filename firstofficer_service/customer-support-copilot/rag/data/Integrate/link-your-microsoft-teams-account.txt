@@ -1,0 +1,51 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsHow-tosHow to integrate Microsoft TeamsLink your Microsoft Teams accountTroubleshootingFAQSlackSpreadsheetsSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsHow-tosHow to integrate Microsoft TeamsLink your Microsoft Teams accountTroubleshootingFAQSlackSpreadsheetsSend alerts for workflow events
+- Microsoft TeamsHow-tosHow to integrate Microsoft TeamsLink your Microsoft Teams accountTroubleshootingFAQ
+- How-tosHow to integrate Microsoft TeamsLink your Microsoft Teams account
+- How to integrate Microsoft Teams
+- Link your Microsoft Teams account
+- Troubleshooting
+- FAQ
+- Slack
+- Spreadsheets
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Microsoft Teams
+- How-tos
+- Link your Microsoft Teams account
+
+
+# Link your Microsoft Teams account
+
+To get alerts forstarred assetsdirectly delivered to your Microsoft Teams account, you may need to first link your Microsoft Teams account. This is done automatically for the user thatset up the Microsoft Teams integration, but not for other users.
+
+
+# Link your Microsoft Teams accountâ
+
+To link your Microsoft Teams account:
+- From any screen, in the upper right, navigate to your name, then clickProfile.
+- Click the four dots icon in the resulting dialog to get to integrations.
+- UnderTeams,Â click theÂConnectlink.
+- In the resulting popup, scroll to the bottom and clickÂAllow.
+
+
+# Unlink your Microsoft Teams accountâ
+
+To unlink your Microsoft Teams account:
+- From any screen, in the upper right, navigate to your name, then clickProfile.
+- Click the four dots icon in the resulting dialog to get to integrations.
+- UnderTeams, click theÂDisconnectlink.
+- In the confirmation dialog, clickÂConfirm.
+- integration
+- connectors
+- alerts
+- monitoring
+- notifications
+- Link your Microsoft Teams account
+- Unlink your Microsoft Teams account

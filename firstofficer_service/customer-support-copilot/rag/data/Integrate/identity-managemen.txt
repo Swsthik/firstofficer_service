@@ -1,0 +1,20 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSO
+- SCIM
+- SSO
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+
+
+# Identity Management Integrations
+
+Integrate Atlan with identity management tools such as SCIM and SSO to automate user provisioning, authentication, and access control.
+- integrations
+- identity management
+- scim
+- sso

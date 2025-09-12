@@ -1,0 +1,54 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementProject ManagementJiraGet StartedTroubleshootingFAQServiceNow
+- Automation
+- Collaboration
+- Communication
+- Identity Management
+- Project ManagementJiraGet StartedTroubleshootingFAQServiceNow
+- JiraGet StartedTroubleshootingFAQ
+- Get Started
+- Troubleshooting
+- FAQ
+- ServiceNow
+- Configure Atlan
+- Integrations
+- Project Management
+- Jira
+
+
+# Jira
+
+Overview:Connect Atlan with Jira to automate ticket creation, link your Jira account, and manage data-related tasks directly from your data catalog.
+
+
+# Get startedâ
+
+Follow these steps to connect and integrate Jira with Atlan:
+- Integrate Jira Cloud
+- Integrate Jira Data Center
+- Link your Jira account
+
+
+# Guidesâ
+
+- Integrate Jira Cloud: Step-by-step instructions to connect Atlan with Jira Cloud.
+- Integrate Jira Data Center: Step-by-step instructions to connect Atlan with Jira Data Center.
+- Link your Jira account: How to link your Jira account to Atlan for seamless ticket management.
+
+
+# Troubleshootingâ
+
+- Troubleshooting Jira integration: Solutions for common issues encountered when integrating Atlan with Jira.
+
+
+# FAQâ
+
+- What is included in the Jira integration?
+- Configure additional fields or auto-assign owners to Jira tickets created from Atlan
+- Can site renaming affect the Jira integration?
+- jira
+- integration
+- project management
+- Get started
+- Guides
+- Troubleshooting
+- FAQ

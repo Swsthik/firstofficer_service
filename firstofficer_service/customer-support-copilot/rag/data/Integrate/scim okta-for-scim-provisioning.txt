@@ -1,0 +1,122 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioningSSOProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioningSSO
+- SCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioning
+- Configure SCIM provisioning
+- How to enable Azure AD for SCIM provisioning
+- How to enable Okta for SCIM provisioning
+- Troubleshooting SCIM provisioning
+- SSO
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SCIM
+- How to enable Okta for SCIM provisioning
+
+
+# Enable Okta for SCIM provisioning
+
+You can automate the process of provisioning and deprovisioning your Okta users and groups in Atlan withSystem for Cross-domain Identity Management(SCIM).
+To enable Okta for SCIM provisioning, complete the following steps.
+For any questions about SCIM provisioning, head overhere.
+
+
+# Prerequisitesâ
+
+- Okta SSO must be enabled for Atlan.
+- Okta users must be assigned to Atlan.
+- Group mapping must be configured, only required if syncing mapped groups from Okta to Atlan. For any new groups created in Okta, you will first need tocreate corresponding groups in Atlanand thenmap the groupsto sync them through SCIM provisioning.
+
+
+# Retrieve SCIM token in Atlanâ
+
+You will need yourAtlan adminto complete these steps   -  you may not have access yourself. You will also need inputs and approval from your Okta administrator.
+Â You will need to generate a SCIM token in Atlan forauthentication in Okta.
+To retrieve the SCIM token, from within Atlan:
+- From the left menu on any screen, clickAdmin.
+- Under theWorkspaceheading, clickSSO.
+- On theSingle Sign onpage for Okta, underOverview, navigate toAutomate Provisioning with SCIMand toggle it on.
+- UnderSCIM token, click the+ Generate tokenbutton to create a SCIM token.
+- In theSCIM token generateddialog, click theCopybutton to copy the SCIM token and store it in a secure location.
+The SCIM token will only be displayed once after it has been generated, you cannot retrieve it later.
+
+
+# Enable SCIM provisioning in Oktaâ
+
+You will need your Okta administrator to complete these steps   -  you may not have access yourself. You will also need inputs and approval from yourAtlan admin.
+You canenable SCIM provisioning in Oktato automatically sync your users and groups to Atlan.
+
+
+# Configure SCIM provisioning in Oktaâ
+
+To configure SCIM provisioning, from within Okta:
+- Log in to your Okta admin console.
+- From the menu on the left, expand theApplicationsmenu and then clickApplications.
+- UnderApplications, select theSAML application you createdto configure SSO in Atlan.
+- From the tabs along the top of your application page, click theGeneraltab and then clickEdit.
+- UnderApp Settings, forProvisioning, clickSCIMand then clickSaveto confirm.
+- From the tabs along the top of your application page, click theProvisioningtab and then clickEdit.
+- ForSCIM connection, enter the following details:ForSCIM connector baseÂ URL, enter your Atlan tenant URL in the following format   -https://<your-tenant-dns>/api/service/scim/.ForUnique identifier field for users, enteruserNameas the field name of the unique identifier for your users on your SCIM server.ForSupported provisioning actions, click to enable the following provisioning actions:Import New Users and Profile Updates-  this allows Okta to import new users and user profile updates to Atlan.Push New Users-  this allows user information to flow from Okta to Atlan.Push Profile Updates-  this allows profile information to flow from Okta to Atlan.Push Groups-  this allows group information to flow from Okta to Atlan.Import Groups-  this allows Okta to import new groups and group profile updates to Atlan.ForAuthentication Mode, click the dropdown and then selectHTTP Header.To authenticate usingHTTP Header, you will need to provide a bearer token that will provide authorization against Atlan. ForAuthorization, in theTokenfield, enter theSCIM token you copiedin Atlan.Click theTest Connector ConfigurationÂ button to confirm connectivity to Atlan.Once successful, at the bottom of the form, clickSaveto save the configuration.
+- ForSCIM connector baseÂ URL, enter your Atlan tenant URL in the following format   -https://<your-tenant-dns>/api/service/scim/.
+- ForUnique identifier field for users, enteruserNameas the field name of the unique identifier for your users on your SCIM server.
+- ForSupported provisioning actions, click to enable the following provisioning actions:Import New Users and Profile Updates-  this allows Okta to import new users and user profile updates to Atlan.Push New Users-  this allows user information to flow from Okta to Atlan.Push Profile Updates-  this allows profile information to flow from Okta to Atlan.Push Groups-  this allows group information to flow from Okta to Atlan.Import Groups-  this allows Okta to import new groups and group profile updates to Atlan.
+- Import New Users and Profile Updates-  this allows Okta to import new users and user profile updates to Atlan.
+- Push New Users-  this allows user information to flow from Okta to Atlan.
+- Push Profile Updates-  this allows profile information to flow from Okta to Atlan.
+- Push Groups-  this allows group information to flow from Okta to Atlan.
+- Import Groups-  this allows Okta to import new groups and group profile updates to Atlan.
+- ForAuthentication Mode, click the dropdown and then selectHTTP Header.
+- To authenticate usingHTTP Header, you will need to provide a bearer token that will provide authorization against Atlan. ForAuthorization, in theTokenfield, enter theSCIM token you copiedin Atlan.
+- Click theTest Connector ConfigurationÂ button to confirm connectivity to Atlan.
+- Once successful, at the bottom of the form, clickSaveto save the configuration.
+- Under the leftSettingsmenu of theProvisioningtab, two new tabs will appear   -To AppandTo Okta. ClickTo Appto configure settings for SCIM provisioning to Atlan.
+- ForProvisioning to Apppage, clickEditand then click to enable the following:Create Users-  assigns a new Atlan account to each user managed by Okta. Okta does not create a new account if it detects that the username specified in Okta already exists in Atlan. The user's Okta username is assigned by default.Update User Attributes-  updates the user profiles of users assigned to Atlan. Profile changes made in Atlan will be overwritten with their respective Okta profile values.Deactivate Users-  automatically deactivates user accounts when they are unassigned in Okta or their Okta accounts are deactivated. Okta will also reactivate the Atlan account if the app integration is reassigned to a user in Okta.
+- Create Users-  assigns a new Atlan account to each user managed by Okta. Okta does not create a new account if it detects that the username specified in Okta already exists in Atlan. The user's Okta username is assigned by default.
+- Update User Attributes-  updates the user profiles of users assigned to Atlan. Profile changes made in Atlan will be overwritten with their respective Okta profile values.
+- Deactivate Users-  automatically deactivates user accounts when they are unassigned in Okta or their Okta accounts are deactivated. Okta will also reactivate the Atlan account if the app integration is reassigned to a user in Okta.
+- Â ClickSaveto save the configuration.
+
+
+# Map Okta user attributes to Atlanâ
+
+You will need toassign users to Atlanfrom Okta before you can provision them.
+After youhave enabled SCIM provisioningandassigned users to Atlanin Okta, you can provision them to Atlan. Note the following:
+- The username and email address of new and existing users cannot be changed once users have been provisioned to Atlan.
+- If provisioning any users that already exist in Atlan, ensure that their Okta credentials match the existing credentials in Atlan for provisioning to be successful.
+To provision users to Atlan, from within Okta:
+- Log in to your Okta admin console.
+- From the menu on the left, expand theDirectorymenu and then clickProfile Editor.
+- On theProfile Editorpage, in the left menu underUsers, clickAppsand select theSAML application you createdto configure SSO in Atlan.
+- On your application page, underAttributes, clickMappings.
+- In theUser Profile Mappingsdialog box, clickOkta User to App.
+- In theOkta User to Apppage,userNameis already set by Atlan. Define the following mappings from Okta on the left to Atlan on the right:user.firstName- >givenNameuser.lastName- >familyNameuser.email- >email
+- user.firstName- >givenName
+- user.lastName- >familyName
+- user.email- >email
+- ClickSaveto save your selections.
+- Once saved, at the bottom of the dialog, clickApply updates now.
+- (Optional) Navigate to theProvisioningtab of theSAML application you createdto configure SSO in Atlan to confirm the attribute mappings.
+
+
+# Enable group push in Okta to Atlanâ
+
+You will need toconfigure group mapping in Atlanbefore you can enable group push from Okta to Atlan.
+To enable group push to Atlan, from within Okta:
+- Log in to your Okta admin console.
+- From the menu on the left, expand theApplicationsmenu and then clickApplications.
+- UnderApplications, select theSAML application you createdto configure SSO in Atlan.
+- From the tabs along the top of your application page, click thePush Groupstab and then clickEdit.Â
+- UnderPush Groups to App, click the settings icon. FromÂ theGroup Push Settingsdialog, clickRename app groups to match group name in Oktaand then clickSaveto rename groups in Atlan when linking groups.
+- UnderPush Groups to App, click thePush Groupsbutton and then selectFind groups by nameto push your Okta groups to Atlan:ForPush groups by name, in theEnter a group to push...field, enter the name of an Okta group you want to push to Atlan.To the right of your selected Okta group, underMatch result & push action, click theCreate Groupdropdown and then selectLink Group.ClickSaveto save your selections.(Optional) Repeat steps 1 to 3 to push additional Okta groups to Atlan.
+- ForPush groups by name, in theEnter a group to push...field, enter the name of an Okta group you want to push to Atlan.
+- To the right of your selected Okta group, underMatch result & push action, click theCreate Groupdropdown and then selectLink Group.
+- ClickSaveto save your selections.
+- (Optional) Repeat steps 1 to 3 to push additional Okta groups to Atlan.
+- integration
+- connectors
+- Prerequisites
+- Retrieve SCIM token in Atlan
+- Enable SCIM provisioning in Okta

@@ -1,0 +1,104 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQ
+- SCIM
+- SSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQ
+- Get StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSO
+- How to enable Azure AD for SSO
+- How to enable Google for SSO
+- How to enable JumpCloud for SSO
+- How to enable Okta for SSO
+- How to enable OneLogin for SSO
+- How to enable SAML 2.0 for SSO
+- Guides
+- References
+- Troubleshooting
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- Get Started
+- How to enable Google for SSO
+
+
+# Enable  Google for SSO
+
+You will need to be an admin user within Atlan to configure SSO. You will also need to work with your Google domain administrator to carry out the tasks below in the Google Admin Center.
+SSO group mappings are triggered every time a user authenticates in Atlan. A user may need to log out and then log into Atlan again to view the changes. If a user is added to a new group or removed from an existing one in Google, the updates will also be reflected in Atlan. To ensure that the sync is successful, the groups that the user belongs to should be mapped in Atlan, and if a group name has changed in Google, you will need to update the group name in Atlan as well. For any questions about group mapping sync, head overhere.
+To integrate Google SSO for Atlan, complete the fo
+llowing steps.
+
+
+# Choose SSO provider (in Atlan)â
+
+To choose Google as your SSO provider, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- UnderÂChoose SAML provider, selectÂGoogleand then clickÂConfigure.
+- UnderÂService provider metadata, copy theÂACS URLandÂEntity ID.
+
+
+# Set up SAML app (in Google Admin Center)â
+
+To set up a SAML app, withinGoogle Admin Center:
+- From the menu on the left, expandÂAppsand then click onÂWeb and mobile apps.
+- At the top of the table, click theÂAdd applink and then clickÂAdd custom SAML app.
+- Enter a name for your app, such asÂAtlanand then click theContinueÂ button.
+- UnderÂOption 1: Download IdP metadataclick theÂDownload metadatabutton, save the file, and then click theContinuebutton.
+- UnderService provider details, enter your Atlan SAML settings:ForÂACS URL, enter the value you copied from Atlan above.ForÂEntity ID, enter the value you copied from Atlan above.
+- ForÂACS URL, enter the value you copied from Atlan above.
+- ForÂEntity ID, enter the value you copied from Atlan above.
+- Click theÂContinuebutton.
+- UnderÂAttributes, define the following mappings fromGoogle Directory attributeson the left toApp attributeson the right:Primary email   - > emailFirst name   - > firstNameLast name   - > lastName
+- Primary email   - > email
+- First name   - > firstName
+- Last name   - > lastName
+- (Optional) Toconfigure group mapping in Atlan, underGroup membership (optional), enter the following details:ForGoogle Groups, select all the Google groups you want to map to Atlan. You can select up to 75 groups in total.ForApp attribute, entermemberOf. This is required if you want to retain group membership in Atlan.
+- ForGoogle Groups, select all the Google groups you want to map to Atlan. You can select up to 75 groups in total.
+- ForApp attribute, entermemberOf. This is required if you want to retain group membership in Atlan.
+- At the end of the form, click theFinishbutton.
+
+
+# Assign users to the app (in Google Admin Center)â
+
+To assign users to the app, withinGoogle Admin Center:
+- From the app page, expandUser access.
+- UnderÂService statuschange toÂON for everyoneÂ and then clickÂSave.
+
+
+# Upload Google's metadata file (in Atlan)â
+
+To complete the configuration of Google SSO, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- UnderÂChoose SAML provider, selectÂGoogleand then clickÂConfigure.
+- To the right ofÂIdentity provider metadataclick theImport from XMLbutton.
+- Select theGoogleIDPMetadata.xmlfile downloaded from Google above.
+- At the bottom of the screen, clickÂSave.
+Congratulations   -  you have successfully set up Google SSO in Atlan! ð
+By default, users can now log into Atlan with either Google SSO or a local Atlan account (via email). To only allow logins via SSO, enable theEnforce SSOoption in Atlan. Once SSO is enforced, we recommend asking your Google domain administrator to provision access to users through the Google Admin Center andnot directly from Atlan. When access has been provided, a user will be able to log into Atlan directly and their profile will be generated automatically.
+
+
+# (Optional) Configure group mappingsâ
+
+Before you can configure group mapping, you will first need tocreate groups in Atlanthat correspond to the groups you want to map from Google to Atlan. In addition, you must configure thememberOfattribute and group mapping to retain group membership in Atlan.
+To automatically assign Google users to Atlan groups based on their Google groups, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- Change to theGroups Mappingtab.
+- To the right of each Atlan group listed:Under theÂSSO Groupscolumn, type the name of the corresponding group in Google to map to the Atlan group on that row   -  for example,Data Engineering,Business Analysts, and so on. You will need to provide each Google group with access to Atlan.Click theÂSavebutton on that row.
+- Under theÂSSO Groupscolumn, type the name of the corresponding group in Google to map to the Atlan group on that row   -  for example,Data Engineering,Business Analysts, and so on. You will need to provide each Google group with access to Atlan.
+- Click theÂSavebutton on that row.
+As each user signs up to Atlan, they will be automatically assigned groups in Atlan based on these mappings! ð
+Once you've configured group mapping, you can add the mapped groups to apersonaorpurposeto auto-assign relevant permissions to users as they sign up in Atlan.
+- integration
+- connectors
+- Choose SSO provider (in Atlan)
+- Set up SAML app (in Google Admin Center)
+- Assign users to the app (in Google Admin Center)
+- Upload Google's metadata file (in Atlan)
+- (Optional) Configure group mappings

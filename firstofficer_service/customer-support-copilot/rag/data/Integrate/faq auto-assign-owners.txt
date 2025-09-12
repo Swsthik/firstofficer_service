@@ -1,0 +1,28 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementProject ManagementJiraGet StartedTroubleshootingFAQWhat is included in the Jira integration?Can I configure additional fields or auto-assign owners to Jira tickets created from Atlan?Can site renaming affect the Jira integration?ServiceNow
+- Automation
+- Collaboration
+- Communication
+- Identity Management
+- Project ManagementJiraGet StartedTroubleshootingFAQWhat is included in the Jira integration?Can I configure additional fields or auto-assign owners to Jira tickets created from Atlan?Can site renaming affect the Jira integration?ServiceNow
+- JiraGet StartedTroubleshootingFAQWhat is included in the Jira integration?Can I configure additional fields or auto-assign owners to Jira tickets created from Atlan?Can site renaming affect the Jira integration?
+- Get Started
+- Troubleshooting
+- FAQWhat is included in the Jira integration?Can I configure additional fields or auto-assign owners to Jira tickets created from Atlan?Can site renaming affect the Jira integration?
+- What is included in the Jira integration?
+- Can I configure additional fields or auto-assign owners to Jira tickets created from Atlan?
+- Can site renaming affect the Jira integration?
+- ServiceNow
+- Configure Atlan
+- Integrations
+- Project Management
+- Jira
+- FAQ
+- Can I configure additional fields or auto-assign owners to Jira tickets created from Atlan?
+
+
+# Can I configure additional fields or auto-assign owners to Jira tickets created from Atlan?
+
+Refer to ourtroubleshooting Jira documentationto learn more.
+- integration
+- faq
+- faq-integrations

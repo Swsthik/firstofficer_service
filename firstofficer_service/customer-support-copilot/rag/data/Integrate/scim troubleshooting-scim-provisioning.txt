@@ -1,0 +1,40 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioningSSOProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioningSSO
+- SCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioning
+- Configure SCIM provisioning
+- How to enable Azure AD for SCIM provisioning
+- How to enable Okta for SCIM provisioning
+- Troubleshooting SCIM provisioning
+- SSO
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SCIM
+- Troubleshooting SCIM provisioning
+
+
+# Troubleshooting SCIM provisioning
+
+Atlan currently supports SCIM provisioning for the following SSO providers:
+- Azure AD
+- Okta
+Atlan syncs the user's first name, last name, username, email ID, group information, and user status through group mapping. The username and email ID are only synced once when the user is provisioned in Atlan for the first time.
+No, once you haveintegrated SCIM in Atlan, the usernames of provisioned users will be dependent on your SCIM provider. For example, if a username has changed due to an automation at source or in the case of a migration from one provider to another, you will not be able to update usernames in Atlan.
+Usernames in Atlan are of a permanent nature. Atlan uses usernames as a unique identifier across the platform and does not support making any changes to them. Ensure that your username in the SCIM provider matches that in Atlan.
+If SCIM provisioning is enabled and an SSO group that is mapped to Atlan is renamed, changes will sync automatically. Renaming an Atlan group does not affect SCIM functionality.
+If an SSO group is deleted in the SSO provider, then the group mapping will also be deleted in Atlan. The corresponding group in Atlan will remain active, but all the users will be removed from that group.
+However, if you would like to retain the group membership for your users in Atlan, you can first delete the group mapping in Atlan and then delete your SSO group in the SSO provider.
+If users are removed from your SSO provider, then the same users will also bedeactivated in Atlan. Their status will be displayed asDisabled. To permanently delete them from Atlan, you canremove the users and transfer ownership of assets.
+If a user with the usernameuser.nameand email address[email protected]already exists in Atlan and another user with the same usernameuser.namebut different email address[email protected]is to be added via SSO, it will create a conflict in Atlan. The existing user will remain in Atlan while the new SSO user will not be synced.
+The SCIM token does not expire by default and can only be revoked if deleted.
+Yes,user removalwill also result in the deletion of any SCIM tokens created by that user. For more guidance, see theUser management FAQ.
+No, SCIM provisioning works as soon as the user has been provisioned from the SSO provider. For example, even if the user is yet to log into Atlan, the user profile can be updated or the user disabled in Atlan directly from the SSO provider.
+If SCIM is enabled and a user has never logged into Atlan, the status of the user will beEnabledby default. Once the user has logged in, their last login activity will be displayed in theLast Activecolumn.
+Yes, you can assignasset ownershipto SCIM provisioned users even if they are yet to log into Atlan for the first time.
+Following are the detailed permissions for managing your users in Atlan:
+- integration
+- connectors

@@ -1,0 +1,216 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsSlackSpreadsheetsHow-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft ExcelTroubleshootingSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsSlackSpreadsheetsHow-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft ExcelTroubleshootingSend alerts for workflow events
+- Microsoft Teams
+- Slack
+- SpreadsheetsHow-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft ExcelTroubleshooting
+- How-tosBulk enrich metadataConfigure custom domains for Microsoft ExcelDownload impacted assets in Google SheetsDownload impacted assets in Microsoft ExcelHow to export assetsHow to integrate Atlan with Google SheetsHow to integrate Atlan with Microsoft ExcelLink your accountHow to update column metadata in Google SheetsHow to update column metadata in Microsoft Excel
+- Bulk enrich metadata
+- Configure custom domains for Microsoft Excel
+- Download impacted assets in Google Sheets
+- Download impacted assets in Microsoft Excel
+- How to export assets
+- How to integrate Atlan with Google Sheets
+- How to integrate Atlan with Microsoft Excel
+- Link your account
+- How to update column metadata in Google Sheets
+- How to update column metadata in Microsoft Excel
+- Troubleshooting
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Spreadsheets
+- How-tos
+- How to export assets
+
+
+# Export Assets
+
+Before you can export assets to spreadsheets, you will first need your Atlan admin toenable asset export.
+Atlan enables you to export all your assets or afiltered subset of assetsto spreadsheets. Atlan currently supports exporting assets to:
+- Google Sheets
+- Microsoft Excel online
+Once yourAtlan adminhas integrated a supported tool, you will be able to export your assets and asset metadata to spreadsheets. Your existingpermissionsandaccess policiesin Atlan will determine whether you can export assets, but at a minimum you'll require read permission on the assets you want to export.
+For example, you can:
+- Export a list of assets that need enrichment and share the spreadsheet widely to crowdsource documentation.
+- Export your business glossary and bring everyone up to speed on commonly used terminology across the organization.
+To export impacted assets, seeHow to download and export lineage.
+Atlan currently limits the total number of assets you can export to 150,000 rows. Reach out to your customer success manager if you'd like to increase the limit for your organization.
+
+
+# Supported assets for exportâ
+
+You can export assets from the following tabs:
+
+
+# Assets tabâ
+
+- All assets
+- Filtered subset of assets
+- Child assets such as columns or fields from theparent asset profile
+
+
+# Glossary tabâ
+
+- Glossary profile-  all categories and terms within a glossary
+- Category profile-  all direct subcategories and terms within a category
+- Term profile-linked assets for termsfrom theLinked Assetstab
+
+
+# Reporting tabâ
+
+- Assetsdashboard-total assets, archived assets, assets by certificates, SQL assets,assets without enrichment,assets with lineage, and assets with announcements
+- Glossarydashboard-linked assets for terms
+- Insightsdashboard-query assets with certificate
+- Usage & Costdashboard-suggested assets for deprecation
+
+
+# Enable asset exportâ
+
+You will need to be anadmin userin Atlan to integrate a supported tool   -  Google Sheets and Microsoft Excel   -  and enable your users to export assets. For Atlan admins, you do not have to set the following permissions manually. You can simply sign in to your Google or Microsoft account while integrating the supported tool, which in turn will automatically set the permissions and grant appropriate access to your users.
+The export icon or button will only be visible if your Atlan admin has integrated a supported tool. If you cannot see the export icon or button, reach out to your Atlan admin to integrate Google Sheets or Microsoft Excel.
+Atlan uses the following permissions to integrate supported tools:
+- Google Sheets:https://www.googleapis.com/auth/drive.file-  allows the app to see, edit, create, and delete only specific Google Drive files used with the Google Sheets app. This enables Atlan to create and update spreadsheets with exported assets. Refer toGoogle documentation.
+- https://www.googleapis.com/auth/drive.file-  allows the app to see, edit, create, and delete only specific Google Drive files used with the Google Sheets app. This enables Atlan to create and update spreadsheets with exported assets. Refer toGoogle documentation.
+- Microsoft Excel:Files.ReadWrite-  allows the app to read, create, update, and delete the signed-in user's OneDrive files. This enables Atlan to create and update spreadsheets with exported assets. Note that access is restricted to the signed-in user's files   -  Atlan does not access any shared files. Refer toMicrosoft documentation.offline_access-  allows the app to access resources on behalf of the users, even when users are not currently using the app. Refer toMicrosoft documentation.User.Read-  allows users to sign in to the app, and allows the app to read the profile of signed-in users. This enables Atlan to authenticate the user. Atlan only supports authenticating with an organizational account. Refer toMicrosoft documentation.
+- Files.ReadWrite-  allows the app to read, create, update, and delete the signed-in user's OneDrive files. This enables Atlan to create and update spreadsheets with exported assets. Note that access is restricted to the signed-in user's files   -  Atlan does not access any shared files. Refer toMicrosoft documentation.
+- offline_access-  allows the app to access resources on behalf of the users, even when users are not currently using the app. Refer toMicrosoft documentation.
+- User.Read-  allows users to sign in to the app, and allows the app to read the profile of signed-in users. This enables Atlan to authenticate the user. Atlan only supports authenticating with an organizational account. Refer toMicrosoft documentation.
+For Microsoft users, if your global administrator has enabled theadmin consent workflow, you will be prompted to request admin approval while attempting to integrate Microsoft Excel. Reach out to your admin toapprove the admin consent requestfrom the Microsoft Entra admin center. Additionally, if there is anyexpiry dateset for such requests, ensure that the request is approved within that period of time, otherwise you will need to request approval again.
+To integrate a supported tool for exporting assets:
+- From the left menu of any screen, clickAdmin.
+- Under theWorkspaceheading, clickIntegrations.
+- To connect Atlan to a supported tool for exporting assets:In theGoogle Sheetstile, click theConnectbutton. A sign-in dialog will appear and you will be redirected to sign in with your Google account. From the corresponding screen, clickAllowto integrate Atlan with Google Sheets.In theMicrosoft Exceltitle, click theConnectbutton. A sign-in dialog will appear and you will be redirected to sign in with your Microsoft account to integrate Atlan with Microsoft Excel.
+- In theGoogle Sheetstile, click theConnectbutton. A sign-in dialog will appear and you will be redirected to sign in with your Google account. From the corresponding screen, clickAllowto integrate Atlan with Google Sheets.
+- In theMicrosoft Exceltitle, click theConnectbutton. A sign-in dialog will appear and you will be redirected to sign in with your Microsoft account to integrate Atlan with Microsoft Excel.
+Your users can now export assets from Atlan! ð
+
+
+# Export assetsâ
+
+Once an Atlan admin has integrated a supported tool, anyadmin, member, or guest userin Atlan with read permission on assets can export assets to spreadsheets.
+Atlan recommends that you avoid exporting assets during workflow runs. Exporting assets while you have workflows running in the background may lead to duplicate assets on the spreadsheet.
+Atlan allows you to export your assets to spreadsheets and view asset metadata in bulk.
+At a tenant level, Atlan supports running five exports concurrently for each supported tool. If both Google Sheets and Microsoft Excel have been integrated, a total of 10 concurrent exports is supported. At an individual user level, only one export is allowed for each supported tool at a time, the rest will be auto-queued for execution.
+To export your assets:
+- From the left menu of any screen in Atlan, clickAssets.
+- To export assets, in theAssetspage, you can either:Next to the search bar, click the 3-dot icon and then clickExportto export all assets.Apply any filters, click the 3-dot icon, and then clickExportto export a list of filtered assets.
+- Next to the search bar, click the 3-dot icon and then clickExportto export all assets.
+- Apply any filters, click the 3-dot icon, and then clickExportto export a list of filtered assets.
+- TheExportdialog displays a total count of assets available for export:ClickGoogle Sheetsto export your assets to a Google Sheets spreadsheet.ClickMicrosoft Excelto export your assets to a Microsoft Excel spreadsheet.
+- ClickGoogle Sheetsto export your assets to a Google Sheets spreadsheet.
+- ClickMicrosoft Excelto export your assets to a Microsoft Excel spreadsheet.
+- A sign-in dialog will appear and you will be redirected to sign in with your Google or Microsoft account. From the corresponding screen, clickAllowto connect to Google Sheets or Microsoft Excel.
+- To track the progress of the export, you can either:In theExport in progresspopup, clickOpen SheetsorOpen Excelto navigate to the spreadsheet. TheQueuedstatus will change toSuccessonce assets have been exported.Click the 3-dot icon and then clickExportto view asset export in progress, along with an estimated time of completion. (Optional) To cancel the export, hover overIn queueand click theStopbutton.
+- In theExport in progresspopup, clickOpen SheetsorOpen Excelto navigate to the spreadsheet. TheQueuedstatus will change toSuccessonce assets have been exported.
+- Click the 3-dot icon and then clickExportto view asset export in progress, along with an estimated time of completion. (Optional) To cancel the export, hover overIn queueand click theStopbutton.
+- On the spreadsheet, you will be able to view the following details and asset metadata:Status-  export status and total count of assets exportedTitle-  asset name and linkType-  asset typeConnector-  name ofsupported sourceBusiness Name (Alias)-  business-orientedaliasof assets, if anyCreated ByandCreated At-  username for user who created the asset and when it was created, only applicable to glossary exportsDescription-asset description, if anyOwner UsersandOwner Groups-asset owners, if anyCertification StatusandCertification Message-certification status of asset, if anyAnnouncement Type,Announcement Title, andAnnouncement Message-announcements on assets, if anyTagsandPropagated Tags-tagsdirectly attached orpropagatedto an asset, if anyTerms-linked assetsQualified Name-  fully qualified name of the assetGUID-  globally unique identifier of the assetCustom Metadata-customized metadatawith organizational context, if any
+- Status-  export status and total count of assets exported
+- Title-  asset name and link
+- Type-  asset type
+- Connector-  name ofsupported source
+- Business Name (Alias)-  business-orientedaliasof assets, if any
+- Created ByandCreated At-  username for user who created the asset and when it was created, only applicable to glossary exports
+- Description-asset description, if any
+- Owner UsersandOwner Groups-asset owners, if any
+- Certification StatusandCertification Message-certification status of asset, if any
+- Announcement Type,Announcement Title, andAnnouncement Message-announcements on assets, if any
+- TagsandPropagated Tags-tagsdirectly attached orpropagatedto an asset, if any
+- Terms-linked assets
+- Qualified Name-  fully qualified name of the asset
+- GUID-  globally unique identifier of the asset
+- Custom Metadata-customized metadatawith organizational context, if any
+- (Optional) To view your asset export history, click the 3-dot icon and then clickExport. From theExportdialog, expand theHistorydropdown to view your last 10 exports. Note that onlyyoucan currently view your own export history.
+That's it, you've successfully exported your assets from Atlan! ð
+
+
+# Update metadata in spreadsheets and sync to Atlanâ
+
+Once you've exported your assets, you can use the Atlan extension for spreadsheets to update metadata for exported assets and sync your updates to Atlan. Atlan currently supports updating metadata and syncing updates for Google Sheets and Microsoft Excel.
+
+
+# Update metadataâ
+
+Anynon-guest user with edit access to an asset's metadatacan update metadata for exported assets and sync changes to Atlan. This only includes admin and member users.
+Atlan also recommends noting the following while updating metadata:
+- If asset import from Atlan to a spreadsheet is in progress, avoid making any updates until the import is completed.
+- You cannot make any changes to columns marked read-only or grayed out. Any changes to those columns will not be synced to Atlan and you will receive an error message.
+- You can remove or change the order of assets in the spreadsheet, but you cannot add or replace it with an entirely new set of assets.
+- You cannot add extra columns to the spreadsheet   -  sync to Atlan will fail.
+- Avoid having any empty rows between assets.
+- Although you can make changes in the spreadsheet while a sync is in progress, avoid starting a new sync until the current one has ended.
+- You can easily collaborate with other users on the spreadsheet. However, sync to Atlan will only be recorded for the username that initiated the sync.
+- Atlan uses hidden sheets to create a snapshot of the changes you've made. Refrain from making any changes in the hidden sheets.
+To update metadata for exported assets in a spreadsheet:
+- Install the Atlan extension for:Google SheetsMicrosoft Excel
+- Google Sheets
+- Microsoft Excel
+- Connect your Atlan instance to:Google SheetsMicrosoft Excel
+- Google Sheets
+- Microsoft Excel
+- To update metadata for your exported assets:You can only make changes to the metadata in the following columns:Business Name (Alias)DescriptionOwner UsersandOwner Groups-  when adding an owner user or group, they must already exist in Atlan; name match is case-sensitive, format the value exactly as it exists in Atlan; and you can add multiple owners or groups as comma-separated values.Certification Status-  select valid values from the dropdown.Certification MessageAnnouncement Type-  select valid values from the dropdown.Announcement TitleAnnouncement MessageTags-  when adding a tag, it must already exist in Atlan; name match is case-sensitive, format the value exactly as it exists in Atlan; and you can add multiple tags as comma-separated values.Terms-  when adding a term, it must already exist in Atlan; name match is case-sensitive, format the value exactly as it exists in Atlan; and you can add multiple terms as comma-separated values.Custom Metadata-  enter custom metadata values for any properties you want to enrich based on the description and expected data type and format. Atlan uses two placeholder values,N/Aindicates that the custom metadata property is not applicable on a specific asset andNot Permittedindicates that the user lacks permission to make metadata updates. Atlan recommends that you do not make any changes to these values. Neither of these values will be synced to Atlan. Additionally, Atlan currently only allows you to select a single value forOptionsdata type when updating from spreadsheets.Youcannotmake the following changes:Edit headers for any of the columns.Edit the metadata in the following columns:TitleTypeConnector,GlossaryandCategoriesPropagated TagsQualified Name_GUID_Created ByandCreated AtDelete any columns or rows.dangerAny of these changes will not be pushed to Atlan and you'll receive an error message.
+- You can only make changes to the metadata in the following columns:Business Name (Alias)DescriptionOwner UsersandOwner Groups-  when adding an owner user or group, they must already exist in Atlan; name match is case-sensitive, format the value exactly as it exists in Atlan; and you can add multiple owners or groups as comma-separated values.Certification Status-  select valid values from the dropdown.Certification MessageAnnouncement Type-  select valid values from the dropdown.Announcement TitleAnnouncement MessageTags-  when adding a tag, it must already exist in Atlan; name match is case-sensitive, format the value exactly as it exists in Atlan; and you can add multiple tags as comma-separated values.Terms-  when adding a term, it must already exist in Atlan; name match is case-sensitive, format the value exactly as it exists in Atlan; and you can add multiple terms as comma-separated values.Custom Metadata-  enter custom metadata values for any properties you want to enrich based on the description and expected data type and format. Atlan uses two placeholder values,N/Aindicates that the custom metadata property is not applicable on a specific asset andNot Permittedindicates that the user lacks permission to make metadata updates. Atlan recommends that you do not make any changes to these values. Neither of these values will be synced to Atlan. Additionally, Atlan currently only allows you to select a single value forOptionsdata type when updating from spreadsheets.
+You can only make changes to the metadata in the following columns:
+- Business Name (Alias)
+- Description
+- Owner UsersandOwner Groups-  when adding an owner user or group, they must already exist in Atlan; name match is case-sensitive, format the value exactly as it exists in Atlan; and you can add multiple owners or groups as comma-separated values.
+- Certification Status-  select valid values from the dropdown.
+- Certification Message
+- Announcement Type-  select valid values from the dropdown.
+- Announcement Title
+- Announcement Message
+- Tags-  when adding a tag, it must already exist in Atlan; name match is case-sensitive, format the value exactly as it exists in Atlan; and you can add multiple tags as comma-separated values.
+- Terms-  when adding a term, it must already exist in Atlan; name match is case-sensitive, format the value exactly as it exists in Atlan; and you can add multiple terms as comma-separated values.
+- Custom Metadata-  enter custom metadata values for any properties you want to enrich based on the description and expected data type and format. Atlan uses two placeholder values,N/Aindicates that the custom metadata property is not applicable on a specific asset andNot Permittedindicates that the user lacks permission to make metadata updates. Atlan recommends that you do not make any changes to these values. Neither of these values will be synced to Atlan. Additionally, Atlan currently only allows you to select a single value forOptionsdata type when updating from spreadsheets.
+- Youcannotmake the following changes:Edit headers for any of the columns.Edit the metadata in the following columns:TitleTypeConnector,GlossaryandCategoriesPropagated TagsQualified Name_GUID_Created ByandCreated AtDelete any columns or rows.dangerAny of these changes will not be pushed to Atlan and you'll receive an error message.
+Youcannotmake the following changes:
+- Edit headers for any of the columns.
+- Edit the metadata in the following columns:TitleTypeConnector,GlossaryandCategoriesPropagated TagsQualified Name_GUID_Created ByandCreated At
+- Title
+- Type
+- Connector,GlossaryandCategories
+- Propagated Tags
+- Qualified Name
+- _GUID_
+- Created ByandCreated At
+- Delete any columns or rows.
+Any of these changes will not be pushed to Atlan and you'll receive an error message.
+
+
+# Sync to Atlanâ
+
+If you do not have thepermissionsto update asset metadata in Atlan, your changes will neither be pushed to Atlan nor will a request be created for approval   -  even if you receive a success message in the spreadsheet. Ensure that you have the requisite permissions to update an asset before syncing your changes. Your user permissions are used to determine the bulk updates you can make to ensure that there is no adverse impact on assets beyond your scope of access.
+To sync your metadata updates to Atlan:
+- To sync your metadata updates:For Google Sheets, in the menu bar of your Google Sheets spreadsheet, clickExtensions. From the dropdown menu, clickAtlanand then clickSync to Atlan.For Microsoft Excel, in the menu bar of your Microsoft Excel workbook, clickAtlan. From theAtlantab, clickSync to Atlan.dangerAtlan recommends that you do not change the name of your Microsoft Excel workbook if you want to sync metadata updates to Atlan, the sync will fail otherwise. Additionally, Microsoft Excel may take longer to autosave changes on the workbook. If you notice that zero changes were detected, retry syncing after a few seconds.
+To sync your metadata updates:
+- For Google Sheets, in the menu bar of your Google Sheets spreadsheet, clickExtensions. From the dropdown menu, clickAtlanand then clickSync to Atlan.
+For Google Sheets, in the menu bar of your Google Sheets spreadsheet, clickExtensions. From the dropdown menu, clickAtlanand then clickSync to Atlan.
+- For Microsoft Excel, in the menu bar of your Microsoft Excel workbook, clickAtlan. From theAtlantab, clickSync to Atlan.dangerAtlan recommends that you do not change the name of your Microsoft Excel workbook if you want to sync metadata updates to Atlan, the sync will fail otherwise. Additionally, Microsoft Excel may take longer to autosave changes on the workbook. If you notice that zero changes were detected, retry syncing after a few seconds.
+For Microsoft Excel, in the menu bar of your Microsoft Excel workbook, clickAtlan. From theAtlantab, clickSync to Atlan.
+Atlan recommends that you do not change the name of your Microsoft Excel workbook if you want to sync metadata updates to Atlan, the sync will fail otherwise. Additionally, Microsoft Excel may take longer to autosave changes on the workbook. If you notice that zero changes were detected, retry syncing after a few seconds.
+- Once the changes have synced, the Atlan sidebar will indicate completion of the sync.
+Once the changes have synced, the Atlan sidebar will indicate completion of the sync.
+- (Optional) At the bottom of the spreadsheet, switch to theSync-Logstab to view a record of your changes:View all changes synced to Atlan   -  the latest sync details will be displayed at the top of the spreadsheet.Changes are displayed on an asset level. For example, even if you have updated three attributes for an asset, it will be recorded as one change per asset.View the status of each update   -SyncedorFailed. ForFailed, Atlan will display a failure message:Invalid value-  for unsupported values.Unauthorized-  you do not have the permissions to update asset metadata.Not synced due to conflict-  if any attributes were updated in Atlan since the assets were last exported, Atlan will signal a conflict. In that case, you will need to export your assets once again with the latest changes to proceed.If the error message does not match any of the above options,reach out to Atlan support.Click any asset to verify the changes directly in Atlan.In Atlan, when viewing the activity log:AnUpdated via Google Sheetsstamp will appear in theactivity logfor updated assets. Click theGoogle Sheetslink to view the source spreadsheet from Atlan.AnUpdated via Microsoft Excelstamp will appear in theactivity logfor updated assets. Click theExcellink to view the source spreadsheet from Atlan.
+(Optional) At the bottom of the spreadsheet, switch to theSync-Logstab to view a record of your changes:
+- View all changes synced to Atlan   -  the latest sync details will be displayed at the top of the spreadsheet.
+- Changes are displayed on an asset level. For example, even if you have updated three attributes for an asset, it will be recorded as one change per asset.
+- View the status of each update   -SyncedorFailed. ForFailed, Atlan will display a failure message:Invalid value-  for unsupported values.Unauthorized-  you do not have the permissions to update asset metadata.Not synced due to conflict-  if any attributes were updated in Atlan since the assets were last exported, Atlan will signal a conflict. In that case, you will need to export your assets once again with the latest changes to proceed.If the error message does not match any of the above options,reach out to Atlan support.
+- Invalid value-  for unsupported values.
+- Unauthorized-  you do not have the permissions to update asset metadata.
+- Not synced due to conflict-  if any attributes were updated in Atlan since the assets were last exported, Atlan will signal a conflict. In that case, you will need to export your assets once again with the latest changes to proceed.
+- If the error message does not match any of the above options,reach out to Atlan support.
+- Click any asset to verify the changes directly in Atlan.
+- In Atlan, when viewing the activity log:AnUpdated via Google Sheetsstamp will appear in theactivity logfor updated assets. Click theGoogle Sheetslink to view the source spreadsheet from Atlan.AnUpdated via Microsoft Excelstamp will appear in theactivity logfor updated assets. Click theExcellink to view the source spreadsheet from Atlan.
+- AnUpdated via Google Sheetsstamp will appear in theactivity logfor updated assets. Click theGoogle Sheetslink to view the source spreadsheet from Atlan.
+- AnUpdated via Microsoft Excelstamp will appear in theactivity logfor updated assets. Click theExcellink to view the source spreadsheet from Atlan.
+- integrations
+- spreadsheets
+- assests
+- Supported assets for export
+- Enable asset export
+- Export assets
+- Update metadata in spreadsheets and sync to Atlan

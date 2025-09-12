@@ -1,0 +1,104 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioningSSOProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioningSSO
+- SCIMConfigure SCIM provisioningHow to enable Azure AD for SCIM provisioningHow to enable Okta for SCIM provisioningTroubleshooting SCIM provisioning
+- Configure SCIM provisioning
+- How to enable Azure AD for SCIM provisioning
+- How to enable Okta for SCIM provisioning
+- Troubleshooting SCIM provisioning
+- SSO
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SCIM
+- How to enable Azure AD for SCIM provisioning
+
+
+# Enable  Azure AD for SCIM provisioning
+
+You can automate the process of provisioning and deprovisioning your Azure Active Directory (AD) users and groups in Atlan withSystem for Cross-domain Identity Management(SCIM).
+To enable Azure AD for SCIM provisioning, complete the following steps.
+For any questions about SCIM provisioning, head overhere.
+
+
+# Prerequisitesâ
+
+- Azure AD SSO must be enabled for Atlan.
+- Azure AD users or groups must be assigned to Atlan.
+- Group mapping must be configured, only required if syncing mapped groups from Azure AD to Atlan. For any new groups created in Azure AD, you will first need tocreate corresponding groups in Atlanand thenmap the groupsto sync them through SCIM provisioning.
+
+
+# Retrieve SCIM token in Atlanâ
+
+You will need yourAtlan adminto complete these steps   -  you may not have access yourself. You will also need inputs and approval from your Azure AD administrator.
+Â You will need to generate a SCIM token in Atlan forauthentication in Azure AD.
+To retrieve the SCIM token, within Atlan:
+- From the left menu on any screen, clickAdmin.
+- Under theWorkspaceheading, clickSSO.
+- On theSingle Sign onpage for Azure AD, underOverview, navigate toAutomate Provisioning with SCIMand toggle it on.
+- UnderSCIM token, click the+ Generate tokenbutton to create a SCIM token.
+- In theSCIM token generateddialog, click theCopybutton to copy the SCIM token and store it in a secure location.
+The SCIM token will only be displayed once after it has been generated, you cannot retrieve it later.
+
+
+# Enable SCIM provisioning in Azure ADâ
+
+You will need your Azure AD administrator to complete these steps   -  you may not have access yourself. You will also need inputs and approval from yourAtlan admin.
+You can enable SCIM provisioning in Azure AD to automatically sync your users and groups to Atlan.
+
+
+# Configure SCIM provisioning in Azure ADâ
+
+To configure SCIM provisioning, within Azure AD:
+- Log in to yourAzure portaland search for and selectAzure Active Directory.
+- From the left menu underManage, selectEnterprise applications.
+- From theAll applicationspage, select theSAML applicationyou created to configure SSO in Atlan.
+- In the left menu of your application page,Â underManage, clickProvisioning.
+- From theProvisioning modedropdown, clickAutomatic.
+- UnderAdmin credentials, enter the following details:ForTenant URL, enter your Atlan tenant URL in the following format   -https://<your-tenant-dns>/api/service/scim.ForSecret Token, enter theSCIM token you copiedin Atlan.Click theTest connectionbutton to confirm connectivity to Atlan.
+- ForTenant URL, enter your Atlan tenant URL in the following format   -https://<your-tenant-dns>/api/service/scim.
+- ForSecret Token, enter theSCIM token you copiedin Atlan.
+- Click theTest connectionbutton to confirm connectivity to Atlan.
+- When successful, in the top right, clickSaveto save the configuration.
+- In theMappingssection, verify thatProvision Azure Active Directory GroupsandProvision Azure Active Directory Usersare enabled. UnderMappings:ClickProvision Azure Active Directory Groups, and underAttribute Mappings, define the following mappings from Azure AD on the left to Atlan on the right:displayName- >displayName-  Note that this field is currently unsupported in Atlan.objectId- >externalIdmembers- >membersClickProvision Azure Active Directory Users, and underAttribute Mappings, define the following mappings from Azure AD on the left to Atlan on the right:mailNickname- >userName-  If the username is not mapped, the default username will be theUserPrincipalName(UPN).Switch([IsSoftDeleted], , "False", "True", "True", "False")- >activedisplayName- >displayNamemail- >emails[type eq "work"].valuegivenName- >name.givenNamesurname- >name.familyNameobjectId- >externalIdTo save any changes, clickSave.
+- ClickProvision Azure Active Directory Groups, and underAttribute Mappings, define the following mappings from Azure AD on the left to Atlan on the right:displayName- >displayName-  Note that this field is currently unsupported in Atlan.objectId- >externalIdmembers- >members
+- displayName- >displayName-  Note that this field is currently unsupported in Atlan.
+- objectId- >externalId
+- members- >members
+- ClickProvision Azure Active Directory Users, and underAttribute Mappings, define the following mappings from Azure AD on the left to Atlan on the right:mailNickname- >userName-  If the username is not mapped, the default username will be theUserPrincipalName(UPN).Switch([IsSoftDeleted], , "False", "True", "True", "False")- >activedisplayName- >displayNamemail- >emails[type eq "work"].valuegivenName- >name.givenNamesurname- >name.familyNameobjectId- >externalId
+- mailNickname- >userName-  If the username is not mapped, the default username will be theUserPrincipalName(UPN).
+- Switch([IsSoftDeleted], , "False", "True", "True", "False")- >active
+- displayName- >displayName
+- mail- >emails[type eq "work"].value
+- givenName- >name.givenName
+- surname- >name.familyName
+- objectId- >externalId
+- To save any changes, clickSave.
+
+
+# Provision users and groupsâ
+
+You will need toassign users or groups to Atlanfrom Azure AD before you can provision them. You will also need toconfigure group mappingÂ to sync mapped groups from Azure AD to Atlan. For any new groups created in Azure AD, you will first need tomap the groupsin Atlan to sync them through SCIM provisioning.
+After you haveenabled SCIM provisioningandassigned users and groups to Atlanin Azure AD, you can provision them to Atlan. In Azure AD, users and groups can be provisioned in two ways   -provisioning cycleandon-demand provisioning.
+Note the following:
+- The username and email address of new and existing users cannot be changed once users have been provisioned to Atlan.
+- If provisioning any users that already exist in Atlan, ensure that their Azure AD credentials match the existing credentials in Atlan for provisioning to be successful.
+To provision users and groups, within Azure AD:
+- Log in to yourAzure portaland search for and selectAzure Active Directory.
+- From the left menu underManage, selectEnterprise applications.
+- From theAll applicationspage, select theSAML applicationyou created to configure SSO in Atlan.
+- In the left menu of your application page,Â underManage, clickProvisioningand select a provisioning method:To enableprovisioning cycle, in the upper left of theOverviewpage, clickStart provisioningand toggle theProvisioning StatustoOn.To enableon-demand provisioning, from the left menu, clickProvision on demand. To provision users or groups on demand:ForSelect a user or group, search for and select a user or group.At the bottom of the screen, clickProvision. Repeat the steps for every user or group you want to provision.
+- To enableprovisioning cycle, in the upper left of theOverviewpage, clickStart provisioningand toggle theProvisioning StatustoOn.
+- To enableon-demand provisioning, from the left menu, clickProvision on demand. To provision users or groups on demand:ForSelect a user or group, search for and select a user or group.At the bottom of the screen, clickProvision. Repeat the steps for every user or group you want to provision.
+- ForSelect a user or group, search for and select a user or group.
+- At the bottom of the screen, clickProvision. Repeat the steps for every user or group you want to provision.
+Once you have enabled SCIM provisioning, Azure AD will automatically provision and update user accounts in Atlan. However, thesync typically happens every 40 minutes. So, it may take up to 40 minutes for user provisioning to be completed in Atlan.
+There areknown limitationsto on-demand provisioning in Azure AD.
+- atlan
+- documentation
+- Prerequisites
+- Retrieve SCIM token in Atlan
+- Enable SCIM provisioning in Azure AD

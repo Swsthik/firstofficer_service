@@ -1,0 +1,73 @@
+- IntegrationsAutomationAWS LambdaSet up AWS LambdaCreate an AWS Lambda triggerAlways OnBrowser ExtensionConnectionsWebhooksCollaborationCommunicationIdentity ManagementProject Management
+- AutomationAWS LambdaSet up AWS LambdaCreate an AWS Lambda triggerAlways OnBrowser ExtensionConnectionsWebhooks
+- AWS LambdaSet up AWS LambdaCreate an AWS Lambda trigger
+- Set up AWS Lambda
+- Create an AWS Lambda trigger
+- Always On
+- Browser Extension
+- Connections
+- Webhooks
+- Collaboration
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Automation
+- AWS Lambda
+- Set up AWS Lambda
+
+
+# Set up AWS Lambda
+
+ð¤ Who can do this?You will probably need your AWS Lambda administrator to run these commands   -  you may not have access yourself.
+
+
+# Create IAM policyâ
+
+To create an IAM policy with the necessary permissions, followthe steps in the AWS Identity and Access Management User Guide.
+Create the policy using the following JSON:
+
+
+# Choose authentication mechanismâ
+
+Using the policy created above, configure one of the following options for authentication.
+
+
+# User-based authenticationâ
+
+To configure user-based authentication:
+- Create an AWS IAM user by followingthe steps in the AWS Identity and Access Management User Guide.
+Create an AWS IAM user by followingthe steps in the AWS Identity and Access Management User Guide.
+- On theÂSet permissionspage, attach the policy created in the previous step to this user.
+On theÂSet permissionspage, attach the policy created in the previous step to this user.
+- Once the user is created, view or download the user'sÂaccess key IDandÂsecret access key.dangerThis will be your only opportunity to view or download the access keys. You will not have access to them again after leaving the user creation screen.
+Once the user is created, view or download the user'sÂaccess key IDandÂsecret access key.
+This will be your only opportunity to view or download the access keys. You will not have access to them again after leaving the user creation screen.
+
+
+# Role-based authenticationâ
+
+To configure role-based authentication, attach the policy created in the previous step to the EC2 role that Atlan uses for its EC2 instances in the EKS cluster. Pleaseraise a support ticketto use this option.
+
+
+# Role delegation-based authenticationâ
+
+To configure role delegation-based authentication:
+- Raise a support ticketto get the ARN of theNode Instance Rolefor your Atlan EKS cluster.
+Raise a support ticketto get the ARN of theNode Instance Rolefor your Atlan EKS cluster.
+- Create a new role in your AWS account by followingthe steps in the AWS Identity and Access Management User Guide.When prompted for policies, attach the policy created in the previous step to this role.When prompted, create a trust relationship for the role using the following trust policy. (Replace<atlan_nodeinstance_role_arn>with the ARN received from Atlan support.){"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"AWS":"<atlan_nodeinstance_role_arn>"},"Action":"sts:AssumeRole","Condition":{}}]}
+Create a new role in your AWS account by followingthe steps in the AWS Identity and Access Management User Guide.
+- When prompted for policies, attach the policy created in the previous step to this role.
+When prompted for policies, attach the policy created in the previous step to this role.
+- When prompted, create a trust relationship for the role using the following trust policy. (Replace<atlan_nodeinstance_role_arn>with the ARN received from Atlan support.){"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"AWS":"<atlan_nodeinstance_role_arn>"},"Action":"sts:AssumeRole","Condition":{}}]}
+When prompted, create a trust relationship for the role using the following trust policy. (Replace<atlan_nodeinstance_role_arn>with the ARN received from Atlan support.)
+- Now,reach out to Atlan supportwith:The name of the role you created above.The ID of the AWS account where the role was created.
+Now,reach out to Atlan supportwith:
+- The name of the role you created above.
+- The ID of the AWS account where the role was created.
+Wait until the support team confirms the account is allowlisted to assume the role before running the Lambda function.
+- atlan
+- documentation
+- Create IAM policy
+- Choose authentication mechanism

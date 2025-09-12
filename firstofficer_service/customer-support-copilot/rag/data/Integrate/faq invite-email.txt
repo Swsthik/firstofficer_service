@@ -1,0 +1,34 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingFAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?Project Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingFAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?
+- SCIM
+- SSOGet StartedGuidesReferencesTroubleshootingFAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?
+- Get Started
+- Guides
+- References
+- Troubleshooting
+- FAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?
+- Can Atlan integrate with multiple Azure AD tenants within a single instance?
+- Can we use a Microsoft SSO login?
+- What type of user provisioning does Atlan support for SSO integrations?
+- When does Atlan become a personal data processor or subprocessor?
+- Why did my users not receive an invite email from Atlan?
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- FAQ
+- Why did my users not receive an invite email from Atlan?
+
+
+# Why did my users not receive an invite email from Atlan?
+
+If you have sent an invite from Atlan but your user(s) did not receive it, Atlan recommends the following:
+- Check if the email has been routed to the user's spam mailbox.
+- Add users to the Atlan app in your SSO provider. WhenSSO is integrated, you do not need toinvite usersvia the Atlan UI (using their email). Instead, the first time a user logs into Atlan via SSO, their user profile will be automatically created.
+- integration
+- connectors
+- faq-integrations

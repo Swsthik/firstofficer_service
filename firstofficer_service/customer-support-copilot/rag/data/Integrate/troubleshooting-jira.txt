@@ -1,0 +1,32 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementProject ManagementJiraGet StartedTroubleshootingTroubleshooting JiraFAQServiceNow
+- Automation
+- Collaboration
+- Communication
+- Identity Management
+- Project ManagementJiraGet StartedTroubleshootingTroubleshooting JiraFAQServiceNow
+- JiraGet StartedTroubleshootingTroubleshooting JiraFAQ
+- Get Started
+- TroubleshootingTroubleshooting Jira
+- Troubleshooting Jira
+- FAQ
+- ServiceNow
+- Configure Atlan
+- Integrations
+- Project Management
+- Jira
+- Troubleshooting
+- Troubleshooting Jira
+
+
+# Troubleshooting Jira
+
+Atlan currently only supports standard fields such as project, issue type, title, and description.
+Atlan'sJira CloudandJira Data Centerintegrations currently do not support assigning owners by default or configuring additional fields whilecreating an issue. However, you can assign an owner or add any basic or required fields within Jira once the ticket has been created from Atlan.
+Atlan currently stores and uses the organization URL to help you access your Jira workspace from Atlan, if required. Since Jiraautomatically redirectsthe old URL to the new one, site renaming will not impact theJira integration.
+While Atlan's Jira integration supports multiple Jira projects, it currently does not support multiple Jira accounts.
+Jira issues will remain in Atlan unless they are unlinked. To unlink a Jira issue, you can either:
+- Manually unlink the Jira issue from the asset in Atlan.
+- Delete the issue in Jira.
+No, Atlan currently does not support Jira Service Management. You can use Atlan'sJira CloudandJira Data Centerintegrations.
+- data
+- integration

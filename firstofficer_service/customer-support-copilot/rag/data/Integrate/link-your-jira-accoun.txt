@@ -1,0 +1,48 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementProject ManagementJiraGet StartedHow to integrate Jira CloudHow to integrate Jira Data CenterLink your Jira accountTroubleshootingFAQServiceNow
+- Automation
+- Collaboration
+- Communication
+- Identity Management
+- Project ManagementJiraGet StartedHow to integrate Jira CloudHow to integrate Jira Data CenterLink your Jira accountTroubleshootingFAQServiceNow
+- JiraGet StartedHow to integrate Jira CloudHow to integrate Jira Data CenterLink your Jira accountTroubleshootingFAQ
+- Get StartedHow to integrate Jira CloudHow to integrate Jira Data CenterLink your Jira account
+- How to integrate Jira Cloud
+- How to integrate Jira Data Center
+- Link your Jira account
+- Troubleshooting
+- FAQ
+- ServiceNow
+- Configure Atlan
+- Integrations
+- Project Management
+- Jira
+- Get Started
+- Link your Jira account
+
+
+# Link your Jira account
+
+To create and link Jira issues inside Atlan, you may first need to link your Jira account. This is done automatically for the admin user thatset up the Jira integration, but not for other users.
+An Atlan admin must set up the tenant-level Jira integration in Atlan before any other user can perform a user-level integration. This is because the Atlan app installation requires inputs and approval from an administrator of your Jira workspace. Once the Jira integration has been completed, you can link your Jira account to Atlan without requiring any additional permissions from your Atlan or Jira admin.
+
+
+# Link your Jira accountâ
+
+To link your Jira account:
+- From any screen, in the upper right navigate to your name, then clickÂProfile.
+- Click the icon at the bottom of the resulting dialog to get to integrations.
+- UnderÂJiraclick theÂConnectlink.
+- In the resulting popup, log in if necessary, then scroll to the bottom and clickAllow.
+
+
+# Unlink your Jira accountâ
+
+To unlink your Jira account:
+- From any screen, in the upper right navigate to your name, then clickÂProfile.
+- Click the icon at the bottom of the resulting dialog to get to integrations.
+- UnderÂJiraclick theÂDisconnectlink.
+- In the confirmation dialog, clickÂConfirm.
+- integration
+- connectors
+- Link your Jira account
+- Unlink your Jira account

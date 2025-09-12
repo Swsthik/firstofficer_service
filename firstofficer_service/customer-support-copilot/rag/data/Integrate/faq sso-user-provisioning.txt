@@ -1,0 +1,35 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingFAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?Project Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingFAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?
+- SCIM
+- SSOGet StartedGuidesReferencesTroubleshootingFAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?
+- Get Started
+- Guides
+- References
+- Troubleshooting
+- FAQCan Atlan integrate with multiple Azure AD tenants within a single instance?Can we use a Microsoft SSO login?What type of user provisioning does Atlan support for SSO integrations?When does Atlan become a personal data processor or subprocessor?Why did my users not receive an invite email from Atlan?
+- Can Atlan integrate with multiple Azure AD tenants within a single instance?
+- Can we use a Microsoft SSO login?
+- What type of user provisioning does Atlan support for SSO integrations?
+- When does Atlan become a personal data processor or subprocessor?
+- Why did my users not receive an invite email from Atlan?
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- FAQ
+- What type of user provisioning does Atlan support for SSO integrations?
+
+
+# What type of user provisioning does Atlan support for SSO integrations?
+
+Atlan currently supportsSystem for Cross-domain Identity Management(SCIM) capabilities for user provisioning for:
+- Azure AD
+- Okta
+Atlan also supportsjust-in-time(JIT) user provisioning and automated assignment of user groups during every login for severalSSO providers. Once a user is deprovisioned in your SSO provider, the user will not be able to log into Atlan. Since the user profile in Atlan is not deleted automatically, you will also need todisable the user.
+- integration
+- connectors
+- faq-integrations

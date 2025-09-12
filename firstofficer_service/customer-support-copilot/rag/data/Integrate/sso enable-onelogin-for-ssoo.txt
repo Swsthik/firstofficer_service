@@ -1,0 +1,146 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQ
+- SCIM
+- SSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQ
+- Get StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSO
+- How to enable Azure AD for SSO
+- How to enable Google for SSO
+- How to enable JumpCloud for SSO
+- How to enable Okta for SSO
+- How to enable OneLogin for SSO
+- How to enable SAML 2.0 for SSO
+- Guides
+- References
+- Troubleshooting
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- Get Started
+- How to enable OneLogin for SSO
+
+
+# Enable  OneLogin for SSO
+
+You will need to be an admin user within Atlan to configure SSO. You will also need to work with your OneLogin administrator to carry out the tasks below in OneLogin.
+SSO group mappings are triggered every time a user authenticates in Atlan. A user may need to log out and then log into Atlan again to view the changes. If a user is added to a new group or removed from an existing one in OneLogin, the updates will also be reflected in Atlan. To ensure that the sync is successful, the groups that the user belongs to should be mapped in Atlan, and if a group name has changed in OneLogin, you will need to update the group name in Atlan as well. For any questions about group mapping sync, head overhere.
+To integrate OneLogin SSO for Atlan, complete the
+following steps.
+
+
+# Choose SSO provider (in Atlan)â
+
+To choose OneLogin as your SSO provider, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- UnderÂChoose SAML provider, selectÂOneLoginand then clickÂConfigure.
+- UnderÂService provider metadata, copy theÂAudience (EntityID),Recipient,ACS (Consumer) URL Validator, andACS (Consumer) URL.
+
+
+# Set up SAML application (in OneLogin)â
+
+To set up a SAML application, within OneLogin admin console:
+- From the menu along the top, navigate toApplicationsand then click onÂApplications.
+- In the upper right, click theAdd Appbutton.
+- In the search box, enterÂsaml customand then clickSAML Custom Connector (Advanced).
+- UnderÂDisplay Nameenter a name for your app, such asÂAtlanand then click theÂSavebutton.
+- Change to theÂConfigurationtab and underÂApplication detailsenter your Atlan SAML settings:ForÂAudience (EntityID)enter the value you copied from Atlan above.ForÂRecipiententer the value you copied from Atlan above.ForÂACS (Consumer) URL Validatorenter the value you copied from Atlan above.ForÂACS (Consumer) URLenter the value you copied from Atlan above.ForÂLogin URLenter the same value used for the fields above.
+- ForÂAudience (EntityID)enter the value you copied from Atlan above.
+- ForÂRecipiententer the value you copied from Atlan above.
+- ForÂACS (Consumer) URL Validatorenter the value you copied from Atlan above.
+- ForÂACS (Consumer) URLenter the value you copied from Atlan above.
+- ForÂLogin URLenter the same value used for the fields above.
+- Change to theÂSSOtab and change the following:ForÂSAML Signature AlgorithmsetÂSHA-512.UnderÂLogin HintensureÂEnable login hintis checked.
+- ForÂSAML Signature AlgorithmsetÂSHA-512.
+- UnderÂLogin HintensureÂEnable login hintis checked.
+- Change to theParameterstab and use the circular+icon to add mappings for the following:email   - > EmailfirstName   - > First NamelastName   - > Last Name
+- email   - > Email
+- firstName   - > First Name
+- lastName   - > Last Name
+- In the upper right, click theSavebutton.
+
+
+# Download OneLogin's metadata file (in OneLogin)â
+
+To download the metadata file for the application, within OneLogin:
+- From the application page, in the upper right navigate toMore Actionsand clickSAML Metadata.
+
+
+# (Optional) Map groups to the app (in OneLogin)â
+
+To map OneLogin groups to the app, within the OneLogin application:
+- In the top left, click theUserstab, and from the dropdown, selectMappings.
+- UnderMappings, clickNew Mappingto create a new group mapping for Atlan.
+- In theNew Mappingdialog, enter the following details:ForName, enter a meaningful name for your group mapping   -  for example,SSOGroupA.UnderConditions, click the+button and enter the following details:From the attributes dropdown, selectGroupto map all your OneLogin groups to Atlan.ÂFrom the operators dropdown, selectis.From the values dropdown, select the group name.UnderActions, enter the following details:From theSet roledropdown, selectSet memberOf. This is required if you want to retain group membership in Atlan.From theSet memberOf todropdown, enter the group name.ClickSaveto confirm your selections.
+- ForName, enter a meaningful name for your group mapping   -  for example,SSOGroupA.
+- UnderConditions, click the+button and enter the following details:From the attributes dropdown, selectGroupto map all your OneLogin groups to Atlan.ÂFrom the operators dropdown, selectis.From the values dropdown, select the group name.
+- From the attributes dropdown, selectGroupto map all your OneLogin groups to Atlan.Â
+- From the operators dropdown, selectis.
+- From the values dropdown, select the group name.
+- UnderActions, enter the following details:From theSet roledropdown, selectSet memberOf. This is required if you want to retain group membership in Atlan.From theSet memberOf todropdown, enter the group name.
+- From theSet roledropdown, selectSet memberOf. This is required if you want to retain group membership in Atlan.
+- From theSet memberOf todropdown, enter the group name.
+- ClickSaveto confirm your selections.
+- UnderMappings, clickNew Mappingto remove any group mappings if none are selected.
+- In theNew Mappingdialog, enter the following details:ForName, enter a meaningful name for your group mapping   -  for example,clearMemberOf.UnderConditions, click the+button and enter the following details:From the attributes dropdown, selectGroup.ÂFrom the operators dropdown, selectis.From the values dropdown, keep the default selectionNone.UnderActions, enter the following details:From theSet roledropdown, selectSet memberOf.From theSet memberOf todropdown, leave as blank.ClickSaveto confirm your selections.
+- ForName, enter a meaningful name for your group mapping   -  for example,clearMemberOf.
+- UnderConditions, click the+button and enter the following details:From the attributes dropdown, selectGroup.ÂFrom the operators dropdown, selectis.From the values dropdown, keep the default selectionNone.
+- From the attributes dropdown, selectGroup.Â
+- From the operators dropdown, selectis.
+- From the values dropdown, keep the default selectionNone.
+- UnderActions, enter the following details:From theSet roledropdown, selectSet memberOf.From theSet memberOf todropdown, leave as blank.
+- From theSet roledropdown, selectSet memberOf.
+- From theSet memberOf todropdown, leave as blank.
+- ClickSaveto confirm your selections.
+- UnderMappings, click theReapply All Mappingstab, and in the corresponding screen, clickContinueto confirm.
+- In the top left, click theApplicationstab, and from the dropdown, clickApplications.
+- UnderApplications, select your SAML application.
+- From the left menu ofSAML Custom Connector (Advanced), clickParameters.
+- In the upper right of the parameters page, click the+button to add a new parameter.
+- In theNew Fielddialog, enter the following details:
+- ForField name, entermemberOf.
+- ForFlags, check theInclude in SAML assertionbox.
+- ClickSaveto proceed to the next step.
+- In the correspondingEdit Field memberOfdialog, from theValuedropdown, selectMemberOf.
+- ClickSaveto confirm your selections.
+If any of your OneLogin users do not belong to any groups, you can either add them to an existing group or create a new one. Once you haveconfigured group mapping in Atlan, they will be able to log in to Atlan and assigned the same permissions as their OneLogin group.
+
+
+# Upload OneLogin's metadata file (in Atlan)â
+
+To complete the configuration of OneLogin SSO, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- UnderÂChoose SAML provider, selectÂOneLoginand then clickÂConfigure.
+- To the right ofÂIdentity provider metadataclick theImport from XMLbutton.
+- Select theonelogin_metadata_1234567.xmlfile downloaded from OneLogin above.
+- At the bottom of the screen, clickÂSave.
+Congratulations   -  you have successfully set up OneLogin SSO in Atlan! ð
+By default, users can now log into Atlan with either OneLogin SSO or a local Atlan account (via email). To only allow logins via SSO, enable theEnforce SSOoption in Atlan. Once SSO is enforced, we recommend asking your OneLogin administrator to provision access to users through OneLogin andnot directly from Atlan. When access has been provided, a user will be able to log into Atlan directly and their profile will be generated automatically.
+
+
+# (Optional) Configure group mappingsâ
+
+Before you can configure group mapping, you will first need tocreate groups in Atlanthat correspond to the groups you want to map from OneLogin to Atlan. In addition, you must configure thememberOfattribute and group mapping to retain group membership in Atlan.
+To automatically assign OneLogin users to Atlan groups based on their OneLogin groups, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- Change to theGroups Mappingtab.
+- To the right of each Atlan group listed:Under theSSO Groupscolumn, type the name of the corresponding group in OneLogin to map to the Atlan group on that row   -  for example,Data Engineering,Business Analysts, and so on. You will need to provide each OneLogin group with access to Atlan.Click theÂSavebutton on that row.
+- Under theSSO Groupscolumn, type the name of the corresponding group in OneLogin to map to the Atlan group on that row   -  for example,Data Engineering,Business Analysts, and so on. You will need to provide each OneLogin group with access to Atlan.
+- Click theÂSavebutton on that row.
+As each user signs up to Atlan, they will be automatically assigned groups in Atlan based on these mappings! ð
+Once you've configured group mapping, you can add the mapped groups to apersonaorpurposeto auto-assign relevant permissions to users as they sign up in Atlan.
+- integration
+- connectors
+- Choose SSO provider (in Atlan)
+- Set up SAML application (in OneLogin)
+- Download OneLogin's metadata file (in OneLogin)
+- (Optional) Map groups to the app (in OneLogin)
+- Upload OneLogin's metadata file (in Atlan)
+- (Optional) Configure group mappings

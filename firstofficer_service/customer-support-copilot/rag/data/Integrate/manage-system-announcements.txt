@@ -1,0 +1,58 @@
+- IntegrationsAutomationCollaborationCommunicationSMTP and AnnouncementsConfigure SMTPCreate announcementsManage system announcementsIdentity ManagementProject Management
+- Automation
+- Collaboration
+- CommunicationSMTP and AnnouncementsConfigure SMTPCreate announcementsManage system announcements
+- SMTP and AnnouncementsConfigure SMTPCreate announcementsManage system announcements
+- Configure SMTP
+- Create announcements
+- Manage system announcements
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Communication
+- SMTP and Announcements
+- Manage system announcements
+
+
+# Manage system announcements
+
+You will need to be an admin user in Atlan to manage system announcements.
+Have you ever wanted to notify everyone on the system of something? System announcements allow you to do just that. For example, you could welcome your users when you're first launching Atlan. Or you could use it to warn them about planned outages to large parts of your IT landscape.
+System announcements appear on the homepage of all users, in an announcement box underRecent updates.
+You can only create one system announcement per instance. To add more information to your system announcement, you can either edit the existing one to update it or delete the old one and create a new system announcement.
+
+
+# Add a system announcementâ
+
+To add a system announcement:
+- From the left menu of any screen, clickÂAdmin.
+From the left menu of any screen, clickÂAdmin.
+- In the upper right of the page, click theNew announcementbutton.
+In the upper right of the page, click theNew announcementbutton.
+- (Optional) At the top of the dialog, click onInformationto change the style of announcement:To give general information, in blue, chooseInformation.To display a problem, in red, chooseÂIssue.To give a warning, in yellow, chooseÂWarning.
+(Optional) At the top of the dialog, click onInformationto change the style of announcement:
+- To give general information, in blue, chooseInformation.
+- To display a problem, in red, chooseÂIssue.
+- To give a warning, in yellow, chooseÂWarning.
+- ForÂAdd announcement header...enter a brief title for your announcement.
+ForÂAdd announcement header...enter a brief title for your announcement.
+- ForÂAdd description...enter the detailed explanation for the announcement. (Optional) You can use Markdown syntax to write a description. Any headings will be rendered in heading 6 (<h6>).dangerAtlan currently does not support adding images to your announcements.
+ForÂAdd description...enter the detailed explanation for the announcement. (Optional) You can use Markdown syntax to write a description. Any headings will be rendered in heading 6 (<h6>).
+Atlan currently does not support adding images to your announcements.
+- At the bottom of the dialog, clickÂSave.
+At the bottom of the dialog, clickÂSave.
+Your announcement will now appear on the home page of every user that visits Atlan! ð
+
+
+# Remove a system announcementâ
+
+To remove a system announcement:
+- From the left menu of any screen, clickÂAdmin(or from the homepage where the announcement is displayed).
+- In the upper-right corner of the announcement box, click the 3-dot button.
+- From the options, clickÂDelete.
+Your announcement has now been removed from the home page of every user that visits Atlan! ð
+- atlan
+- documentation
+- Add a system announcement
+- Remove a system announcement

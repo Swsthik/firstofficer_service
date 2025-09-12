@@ -1,0 +1,45 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementProject ManagementJiraServiceNowGet StartedHow to integrate ServiceNowLink your ServiceNow accountTroubleshooting
+- Automation
+- Collaboration
+- Communication
+- Identity Management
+- Project ManagementJiraServiceNowGet StartedHow to integrate ServiceNowLink your ServiceNow accountTroubleshooting
+- Jira
+- ServiceNowGet StartedHow to integrate ServiceNowLink your ServiceNow accountTroubleshooting
+- Get StartedHow to integrate ServiceNowLink your ServiceNow account
+- How to integrate ServiceNow
+- Link your ServiceNow account
+- Troubleshooting
+- Configure Atlan
+- Integrations
+- Project Management
+- ServiceNow
+- Get Started
+- Link your ServiceNow account
+
+
+# Link your ServiceNow account
+
+To request or revoke data access through ServiceNow inside Atlan, you may first need to link your ServiceNow account. This is done automatically for the user thatset up the ServiceNow integration, but not for other users.
+
+
+# Link your ServiceNow accountâ
+
+To link your ServiceNow account:
+- From any screen, in the upper right navigate to your name, then clickProfile.
+- Click the four dots icon in the resulting dialog to get to integrations.
+- UnderServiceNow, click theConnectlink.
+- In the resulting popup, scroll to the bottom and clickAllow.
+
+
+# Unlink your ServiceNow accountâ
+
+To unlink your ServiceNow account:
+- From any screen, in the upper right navigate to your name, then clickProfile.
+- Click the four dots icon in the resulting dialog to get to integrations.
+- UnderServiceNow, click theDisconnectlink.
+- In the confirmation dialog, clickConfirm.
+- data
+- integration
+- Link your ServiceNow account
+- Unlink your ServiceNow account

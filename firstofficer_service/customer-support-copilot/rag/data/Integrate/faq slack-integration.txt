@@ -1,0 +1,189 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsSlackHow-tosTroubleshootingFAQHow do I send messages or search assets from Slack?Slack permissions explainedWhat is included in the Slack integration?SpreadsheetsSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsSlackHow-tosTroubleshootingFAQHow do I send messages or search assets from Slack?Slack permissions explainedWhat is included in the Slack integration?SpreadsheetsSend alerts for workflow events
+- Microsoft Teams
+- SlackHow-tosTroubleshootingFAQHow do I send messages or search assets from Slack?Slack permissions explainedWhat is included in the Slack integration?
+- How-tos
+- Troubleshooting
+- FAQHow do I send messages or search assets from Slack?Slack permissions explainedWhat is included in the Slack integration?
+- How do I send messages or search assets from Slack?
+- Slack permissions explained
+- What is included in the Slack integration?
+- Spreadsheets
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Slack
+- FAQ
+- What is included in the Slack integration?
+
+
+# What is included in the Slack integration?
+
+With two of your most important workspaces connected, you can save time and improve the way you share data assets with your team.
+Once youintegrate Slack with Atlanyou can do all of the following â all without leaving Atlan!
+- Share data assets on Slack
+- Link important Slack threads to Atlan assets
+- Start Slack conversations
+- Set up Slack notifications forannouncements,governance workflows,glossary updates,starred assets, andplaybook runs
+When users share assets on Slack (like assets, glossaries and saved queries) Atlan provides an embedded preview and context for the asset directly in Slack.
+ðªDid you know?To use all of the features outlined, each user needs toconnect their individual Slack accountto their Atlan profile.
+
+
+# Ask questions about assets, without leaving Atlanâ
+
+To ask questions about assets on Slack, without leaving Atlan:
+- For any asset, in the asset sidebar, click theSlackicon.
+- In theShare on Slackdialog:ForChannel, choose the Slack channel where you want to post your question.ForMessage, enter the question you want to ask on the Slack channel. (Optional) Type@to select another user from your Atlan workspace and tag them in your message.(Optional) ForAdd as a resource, toggle the slider on to add the message as aresourceto your asset. When you add the message as a resource, anyone viewing the asset in Atlan will be able to see previous discussions in Slack about that asset.
+- ForChannel, choose the Slack channel where you want to post your question.
+- ForMessage, enter the question you want to ask on the Slack channel. (Optional) Type@to select another user from your Atlan workspace and tag them in your message.
+- (Optional) ForAdd as a resource, toggle the slider on to add the message as aresourceto your asset. When you add the message as a resource, anyone viewing the asset in Atlan will be able to see previous discussions in Slack about that asset.
+- ClickShareto post on Slack.
+Your message is now on Slack and linked to the asset for future reference! ð
+
+
+# Add existing Slack discussions to assetsâ
+
+ð¤Who can do this?Anynon-guest user with edit access to an asset's metadatacan add existing Slack discussions to assets.
+Ever discussed a data asset in Slack? It's important to bring that context back to your asset.
+
+
+# From within Slackâ
+
+To add existing discussions in Slack into Atlan, from Slack:
+- On any discussion in Slack, open the context menu for actions and clickSend to Atlan.
+- Find the asset you want to link the discussion to:ForTitleenter a brief summary of the discussion.ForAsset Typesselect the type of asset you want to link the discussion to.ForAssetstart typing in the asset you want to link the discussion to. Slack will run a search against Atlan and give you a list of options â select your asset from the list.
+- ForTitleenter a brief summary of the discussion.
+- ForAsset Typesselect the type of asset you want to link the discussion to.
+- ForAssetstart typing in the asset you want to link the discussion to. Slack will run a search against Atlan and give you a list of options â select your asset from the list.
+- At the bottom right of the dialog, click theSubmitbutton.
+Your existing discussion on Slack is now linked to the asset for future reference. And Atlan has even updated the discussion thread with a link to the asset for everyone's convenience within Slack! ð
+
+
+# From within Atlanâ
+
+To add existing discussions in Slack into Atlan, from Atlan:
+- From the asset, on the right of the screen, click theSlacksidebar icon:If there are existing discussions on the asset, to the right ofSlack Conversations, click theAddlink.If there are no existing discussions on the asset, click theAdd Slack Threadbutton.
+- If there are existing discussions on the asset, to the right ofSlack Conversations, click theAddlink.
+- If there are no existing discussions on the asset, click theAdd Slack Threadbutton.
+- In theAdd Slack Threaddialog, under theLinkheading, paste the link to the Slack discussion.
+- Under theTitleheading, write a brief description of the discussion. This will only be displayed to users who have notlinked their Slack account.
+- At the bottom of the dialog, click theAddbutton.
+Your existing discussion on Slack is now linked to the asset for future reference! ð
+
+
+# Start direct chats from Atlan user profilesâ
+
+You can only start a direct chat with Atlan users who havelinked their Slack accountto their Atlan profile. Once linked, theSay HiSlack icon will appear next to the user's name.
+To start a direct chat with another Atlan user:
+- Hover over any username.
+- In the resulting dialog, click theSay HiSlack icon next to the user's name.
+You are now in a direct chat with that user in Slack! ð
+
+
+# Enable alerts for glossary updates in Atlanâ
+
+ð¤ Who can do this?You will need to be anadmin userin Atlan to enable Slack notifications for glossary updates. Once enabled, anyone in the selected Slack channel will be able to view these alerts directly in Slack.
+You can set up Slack notifications for updates made to yourglossariesin Atlan. You can also customize the type of change alerts you want to receive. With real-time alerts sent to aSlack channel of your choice, you'll be able to stay informed about the latest changes to your glossaries.
+Slack notifications can only be set up at the glossary level. Even if configured from a specific term or category profile, the notification settings will be applicable to the entire glossary.
+To enable Slack notifications for glossary updates, from Atlan:
+- From the left menu on any screen, clickGlossary.
+- UnderGlossaryin the left menu, click the name of the glossary for which you want to set up change notifications.
+- From the top right of the glossary profile, click the bell icon to set up notifications for glossary updates.
+- In the notifications setup dialog, clickSlackand then enter the following details:ForNotification channel, click the dropdown to select a Slack channel where you want to receive notifications from the channel(s) configured in yourSlack integration in Atlan.ForNotify me about, you can either:ClickAll updatesto receive notifications for all the changes listed inCustom updatesmade to your glossary.ClickCustom updatesto limit notifications to specific types of updates:Click+ New term or categoryto receive an alert when a new term or category is added to the glossary.ClickNameto receive an alert when the name of the glossary or that of a nested category or term is updated.ClickDescriptionto receive an alert when adescriptionis added to, updated, or removed from the glossary or a nested category or term.ClickAnnouncementto receive an alert when anannouncementis added to, updated, or removed from the glossary or a nested category or term.ClickCertificateto receive an alert when acertificateis added to, updated, or removed from the glossary or a nested category or term.ClickOwnersto receive an alert when anowneris assigned to or removed from the glossary or a nested category or term.ClickReadmeto receive an alert when aREADMEis added to, updated, or removed from the glossary or a nested category or term.ClickTags (for terms)to receive an alert when a tag isattached toorremoved froma term within the glossary.ClickCategories updated (for terms)to receive an alert when aterm is assigned to a different categorywithin the same glossary. (Notifications for moving terms across glossaries are currently not supported.)ClickRemove termto receive an alert when a term is removed from the glossary. (Notifications for removal of categories are currently not supported.)ClickSaveto save your notification preferences.
+- ForNotification channel, click the dropdown to select a Slack channel where you want to receive notifications from the channel(s) configured in yourSlack integration in Atlan.
+- ForNotify me about, you can either:ClickAll updatesto receive notifications for all the changes listed inCustom updatesmade to your glossary.ClickCustom updatesto limit notifications to specific types of updates:Click+ New term or categoryto receive an alert when a new term or category is added to the glossary.ClickNameto receive an alert when the name of the glossary or that of a nested category or term is updated.ClickDescriptionto receive an alert when adescriptionis added to, updated, or removed from the glossary or a nested category or term.ClickAnnouncementto receive an alert when anannouncementis added to, updated, or removed from the glossary or a nested category or term.ClickCertificateto receive an alert when acertificateis added to, updated, or removed from the glossary or a nested category or term.ClickOwnersto receive an alert when anowneris assigned to or removed from the glossary or a nested category or term.ClickReadmeto receive an alert when aREADMEis added to, updated, or removed from the glossary or a nested category or term.ClickTags (for terms)to receive an alert when a tag isattached toorremoved froma term within the glossary.ClickCategories updated (for terms)to receive an alert when aterm is assigned to a different categorywithin the same glossary. (Notifications for moving terms across glossaries are currently not supported.)ClickRemove termto receive an alert when a term is removed from the glossary. (Notifications for removal of categories are currently not supported.)
+- ClickAll updatesto receive notifications for all the changes listed inCustom updatesmade to your glossary.
+- ClickCustom updatesto limit notifications to specific types of updates:Click+ New term or categoryto receive an alert when a new term or category is added to the glossary.ClickNameto receive an alert when the name of the glossary or that of a nested category or term is updated.ClickDescriptionto receive an alert when adescriptionis added to, updated, or removed from the glossary or a nested category or term.ClickAnnouncementto receive an alert when anannouncementis added to, updated, or removed from the glossary or a nested category or term.ClickCertificateto receive an alert when acertificateis added to, updated, or removed from the glossary or a nested category or term.ClickOwnersto receive an alert when anowneris assigned to or removed from the glossary or a nested category or term.ClickReadmeto receive an alert when aREADMEis added to, updated, or removed from the glossary or a nested category or term.ClickTags (for terms)to receive an alert when a tag isattached toorremoved froma term within the glossary.ClickCategories updated (for terms)to receive an alert when aterm is assigned to a different categorywithin the same glossary. (Notifications for moving terms across glossaries are currently not supported.)ClickRemove termto receive an alert when a term is removed from the glossary. (Notifications for removal of categories are currently not supported.)
+- Click+ New term or categoryto receive an alert when a new term or category is added to the glossary.
+- ClickNameto receive an alert when the name of the glossary or that of a nested category or term is updated.
+- ClickDescriptionto receive an alert when adescriptionis added to, updated, or removed from the glossary or a nested category or term.
+- ClickAnnouncementto receive an alert when anannouncementis added to, updated, or removed from the glossary or a nested category or term.
+- ClickCertificateto receive an alert when acertificateis added to, updated, or removed from the glossary or a nested category or term.
+- ClickOwnersto receive an alert when anowneris assigned to or removed from the glossary or a nested category or term.
+- ClickReadmeto receive an alert when aREADMEis added to, updated, or removed from the glossary or a nested category or term.
+- ClickTags (for terms)to receive an alert when a tag isattached toorremoved froma term within the glossary.
+- ClickCategories updated (for terms)to receive an alert when aterm is assigned to a different categorywithin the same glossary. (Notifications for moving terms across glossaries are currently not supported.)
+- ClickRemove termto receive an alert when a term is removed from the glossary. (Notifications for removal of categories are currently not supported.)
+- ClickSaveto save your notification preferences.
+- (Optional) To edit notification settings, click the bell icon. In the notifications setup dialog, you can change the channel or further customize your notifications.
+- (Optional) To remove notifications, click the bell icon. In the notifications setup dialog, click theEnabled (by username)dropdown. ClickRemove notificationto reset your notification settings.
+You will now receive Slack notifications for changes made to your glossary! ð
+If theSlack channelyou selected for sending notifications is removed from your Slack integration in Atlan, glossary alerts will continue to be sent to that channel. In that case, you can either remove the notifications or select a different channel.
+ðªDid you know?You can also set up Slack notifications for metadata updates on all yourstarred assetsin Atlan.
+
+
+# Query Atlan from within Slackâ
+
+
+
+# Find termsâ
+
+To search for terms in Atlan from within Slack:
+- Enter/search-term <search words>.
+- Review the results (only visible to you).
+- Send any result(s) you want to the channel.
+You've now shared terms with others without ever leaving Slack! ð
+
+
+# Find queriesâ
+
+To search for queries in Atlan from within Slack:
+- Enter/search-query <search words>.
+- Review the results (only visible to you).
+- Send any result(s) you want to the channel.
+You've now shared queries with others without ever leaving Slack! ð
+
+
+# Provide context for any asset linkâ
+
+Other times you may have a link for an asset already. You can do more than just share the link â Atlan's bot will expand the context of that link directly in Slack.
+To provide detail for an asset in Slack:
+- Paste an asset link into Slack, along with any other context in your message.
+- The Atlan bot will expand the link with a card of contextual metadata.
+The channel can now understand the basics about the asset without ever leaving Slack! ð
+ðªDid you know?Once your organization's Slack account is integrated with Atlan, your users will be able to receiveSlack notifications on their requests.
+
+
+# View workflow alerts in Slackâ
+
+You canconfigure the Slack integrationto receive alerts for workflow activities from Atlan. This can help youmonitor your workflowsdirectly in Slack. You can also choose to receive failure alerts only.
+To view workflow alerts in Slack:
+- Open the Slack channel youconfiguredto view workflow notifications.
+- The Atlan bot will share workflow alerts â including details like run status, start time, run time, trigger type, and last three runs.
+- (Optional) ClickView on Atlanto open the workflow link in Atlan.
+You can now inspect crawled assets or troubleshoot in case of any failed workflows.
+ðªDid you know?Atlan also supports workflow alerts for allcustom packages. If you have set up any custom packages on your Atlan instance, you will be able to monitor your workflows directly in Slack.
+
+
+# Take action on requests in Slackâ
+
+You canconfigure the Slack integrationto receive notifications for metadata updaterequestsraised in Atlan, and approve or reject them directly from Slack.
+To take action on requests in Slack:
+- From the leftAppsmenu in Slack, click the Atlan app.
+- Ifrequest notifications are enabled, the app will display requests raised in Atlan â including asset name and basic information, and the type of metadata update requested. To take action on a request:ClickRejectto reject the update.ClickAcceptto accept the update.
+- ClickRejectto reject the update.
+- ClickAcceptto accept the update.
+The status of the request will be updated in Slack to inform your team that no further action is required.
+- slack
+- integration
+- collaboration
+- data
+- faq
+- faq-integrations
+- Ask questions about assets, without leaving Atlan
+- Add existing Slack discussions to assetsFrom within SlackFrom within Atlan
+- From within Slack
+- From within Atlan
+- Start direct chats from Atlan user profiles
+- Enable alerts for glossary updates in Atlan
+- Query Atlan from within SlackFind termsFind queriesProvide context for any asset link
+- Find terms
+- Find queries
+- Provide context for any asset link
+- View workflow alerts in Slack
+- Take action on requests in Slack

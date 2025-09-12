@@ -1,0 +1,106 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQ
+- SCIM
+- SSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQ
+- Get StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSO
+- How to enable Azure AD for SSO
+- How to enable Google for SSO
+- How to enable JumpCloud for SSO
+- How to enable Okta for SSO
+- How to enable OneLogin for SSO
+- How to enable SAML 2.0 for SSO
+- Guides
+- References
+- Troubleshooting
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- Get Started
+- How to enable JumpCloud for SSO
+
+
+# Enable  JumpCloud for SSO
+
+You will need to be an admin user within Atlan to configure SSO. You will also need to work with your JumpCloud administrator to carry out the tasks below in JumpCloud.
+SSO group mappings are triggered every time a user authenticates in Atlan. A user may need to log out and then log into Atlan again to view the changes. If a user is added to a new group or removed from an existing one in JumpCloud, the updates will also be reflected in Atlan. To ensure that the sync is successful, the groups that the user belongs to should be mapped in Atlan, and if a group name has changed in JumpCloud, you will need to update the group name in Atlan as well. For any questions about group mapping sync, head overhere.
+To integrate JumpCloud SSO for Atlan, complete the
+following steps.
+
+
+# Choose SSO provider (in Atlan)â
+
+To choose JumpCloud as your SSO provider, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- UnderÂChoose SAML provider, selectÂJumpcloudand then clickÂConfigure.
+- UnderÂService provider metadata, copy theIdP Entity ID,SP Entity ID, andACS URL.
+
+
+# Set up SAML app (in JumpCloud)â
+
+To set up a SAML app, withinJumpCloud Console:
+- From the menu on the left, underUser AuthenticationclickSSO.
+- To the left of the search box, click the large circular+icon.
+- At the bottom of the page, click theÂCustom SAML Appbutton.
+- Under theÂGeneral Infotab, forÂDisplay Labelenter a name such asÂAtlan.
+- Change to theSSOtab and enter your Atlan SAML settings:ForÂIdP Entity IDenter the value you copied from Atlan above.ForÂSP Entity IDenter the value you copied from Atlan above.ForÂACS URLenter the value you copied from Atlan above.BelowÂSignature AlgorithmensureÂSign Assertionis enabled.
+- ForÂIdP Entity IDenter the value you copied from Atlan above.
+- ForÂSP Entity IDenter the value you copied from Atlan above.
+- ForÂACS URLenter the value you copied from Atlan above.
+- BelowÂSignature AlgorithmensureÂSign Assertionis enabled.
+- Scroll to the bottom of theÂSSOtab and underÂUser Attribute Mappingclick theÂadd attributebutton. Define the following mappings fromÂService Provider Attribute Nameon the left toÂJumpCloud Attribute Nameon the right:email   - > emailfirstName   - > firstnamelastName   - > lastnamegroup   - > group (you may need to selectÂCustom User or Group Attributefrom theJumpCloud Attribute Namedrop-down, and then type ingroup)username   - > username
+- email   - > email
+- firstName   - > firstname
+- lastName   - > lastname
+- group   - > group (you may need to selectÂCustom User or Group Attributefrom theJumpCloud Attribute Namedrop-down, and then type ingroup)
+- username   - > username
+- Under theÂGroup Attributesheading, enable theÂinclude group attributebox and enter the valuememberOf. This is required if you want to retain group membership in Atlan.
+- Change to theÂUser Groupstab and check the box for each user group you want to be enabled for SSO.
+- Below the form, click theÂactivatebutton and when prompted click thecontinuebutton.
+
+
+# Download JumpCloud metadata file (in JumpCloud)â
+
+To download the JumpCloud metadata file, withinJumpCloud Console:
+- From the SSO app page, click your Atlan SSO application to open it.
+- Change to theSSOtab and underJumpCloud Metadataclick theExport Metadatabutton.
+
+
+# Upload JumpCloud's metadata file (in Atlan)â
+
+To complete the configuration of JumpCloud SSO, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- UnderÂChoose SAML provider, selectÂJumpcloudand then clickÂConfigure.
+- To the right ofÂIdentity provider metadataclick theImport from XMLbutton.
+- Select theJumpCloud-saml2-metadata.xmlfile downloaded from JumpCloud above.
+- At the bottom of the screen, clickÂSave.
+Congratulations   -  you have successfully set up JumpCloud SSO in Atlan! ð
+By default, users can now log into Atlan with either JumpCloud SSO or a local Atlan account (via email). To only allow logins via SSO, enable theEnforce SSOoption in Atlan. Once SSO is enforced, we recommend asking your JumpCloud administrator to provision access to users through JumpCloud andnot directly from Atlan. When access has been provided, a user will be able to log into Atlan directly and their profile will be generated automatically.
+
+
+# (Optional) Configure group mappingsâ
+
+Before you can configure group mapping, you will first need tocreate groups in Atlanthat correspond to the groups you want to map from JumpCloud to Atlan. In addition, you must configure thememberOfattribute and group mapping to retain group membership in Atlan.
+To automatically assign JumpCloud users to Atlan groups based on their JumpCloud groups, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- Change to theGroups Mappingtab.
+- To the right of each Atlan group listed:Under theSSO Groupscolumn, type the name of the corresponding group in JumpCloud to map to the Atlan group on that row   -  for example,Data Engineering,Business Analysts, and so on. You will need to provide each JumpCloud group with access to Atlan.Click theÂSavebutton on that row.
+- Under theSSO Groupscolumn, type the name of the corresponding group in JumpCloud to map to the Atlan group on that row   -  for example,Data Engineering,Business Analysts, and so on. You will need to provide each JumpCloud group with access to Atlan.
+- Click theÂSavebutton on that row.
+As each user signs up to Atlan, they will be automatically assigned groups in Atlan based on these mappings! ð
+Once you've configured group mapping, you can add the mapped groups to apersonaorpurposeto auto-assign relevant permissions to users as they sign up in Atlan.
+- integration
+- connectors
+- Choose SSO provider (in Atlan)
+- Set up SAML app (in JumpCloud)
+- Download JumpCloud metadata file (in JumpCloud)
+- Upload JumpCloud's metadata file (in Atlan)
+- (Optional) Configure group mappings

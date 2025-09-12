@@ -1,0 +1,95 @@
+- IntegrationsAutomationCollaborationMicrosoft TeamsSlackHow-tosTroubleshootingFAQHow do I send messages or search assets from Slack?Slack permissions explainedWhat is included in the Slack integration?SpreadsheetsSend alerts for workflow eventsCommunicationIdentity ManagementProject Management
+- Automation
+- CollaborationMicrosoft TeamsSlackHow-tosTroubleshootingFAQHow do I send messages or search assets from Slack?Slack permissions explainedWhat is included in the Slack integration?SpreadsheetsSend alerts for workflow events
+- Microsoft Teams
+- SlackHow-tosTroubleshootingFAQHow do I send messages or search assets from Slack?Slack permissions explainedWhat is included in the Slack integration?
+- How-tos
+- Troubleshooting
+- FAQHow do I send messages or search assets from Slack?Slack permissions explainedWhat is included in the Slack integration?
+- How do I send messages or search assets from Slack?
+- Slack permissions explained
+- What is included in the Slack integration?
+- Spreadsheets
+- Send alerts for workflow events
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Collaboration
+- Slack
+- FAQ
+- Slack permissions explained
+
+
+# What does Atlan do with each Slack permission?
+
+As you set up theSlack integration, you will need to provide an Atlan Slack app permissions in Slack. Note the following:
+- Atlan does not store any data for Slack messages. Slack messages are fetched on demand.
+- Atlan connects to Slack via Slack APIs, and stores the following metadata to send messages on behalf of users   -  username, channel name, tenant name, refresh token, and access token.
+- Atlan does not store any personally identifiable information of users.
+Here is what Atlan does with each of those permissions:
+
+
+# What will Atlan be able to view?â
+
+
+
+# Content and info about youâ
+
+- View profile details about people in your workspace (users.profile:read)
+- View information about your identity
+Atlan requires these permissions to:
+- Show rich Slack message previews within Atlan (for example, a user's profile picture)
+
+
+# Content and info about channels & conversationsâ
+
+- View messages and other content in your public channels (channels:history)
+- View basic information about public channels in your workspace (channels:read)
+- View Atlan URLs in messages (links:read)
+- View messages and other content in public channels that Atlan has been added to (channels:history)
+Atlan requires these permissions to:
+- Show rich Slack message previews within Atlan (the message itself, the channel where it was posted)
+
+
+# Content and info about your workspaceâ
+
+- View people in your workspace (users:read)
+- View profile details about people in your workspace (users.profile:read)
+- View email addresses of people in your workspace (users:read.email)
+Atlan requires these permissions to:
+- Show rich Slack message previews within Atlan (for example, a user's profile picture)
+- Send notifications about requests made in Atlan (users:read.email)
+
+
+# What will Atlan be able to do?â
+
+
+
+# Perform actions in channels and conversationsâ
+
+- Show previews of Atlan URLs in messages (links:write)
+- Send messages as@atlan(chat:write)
+- Send messages to channels@atlanisn't a member of (chat:write.public)
+- Add and edit emoji reactions
+- View messages that directly mention@atlanin conversations that the app is in
+- Upload, edit, and delete files as Atlan (files.write)
+Atlan requires these permissions to:
+- Unfurl Atlan links (show previews for them) within Slack
+- Allow the Slack share button on Atlan assets to work (sending messages to Slack as@atlan)
+- Search Atlan from any Slack channel and share search results to the channel, all from within Slack
+- Share query output from within Atlan to Slack (files.write)
+
+
+# Perform actions in your workspaceâ
+
+- Add shortcuts and/or slash commands that people can use (commands)
+Atlan requires these permissions to:
+- Search Atlan from within Slack (the/search-termand/search-querycommands)
+- Document a Slack conversation into Atlan (using the Slack context menu on any Slack conversation)
+- slack
+- faq
+- faq-integrations
+- What will Atlan be able to view?
+- What will Atlan be able to do?

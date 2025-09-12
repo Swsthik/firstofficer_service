@@ -1,0 +1,32 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedGuidesAuthenticate SSO credentials to query dataAuthenticate SSO credentials to view sample dataLimit SSO automatically creating users when they log inSet default user roles for SSOReferencesTroubleshootingFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedGuidesAuthenticate SSO credentials to query dataAuthenticate SSO credentials to view sample dataLimit SSO automatically creating users when they log inSet default user roles for SSOReferencesTroubleshootingFAQ
+- SCIM
+- SSOGet StartedGuidesAuthenticate SSO credentials to query dataAuthenticate SSO credentials to view sample dataLimit SSO automatically creating users when they log inSet default user roles for SSOReferencesTroubleshootingFAQ
+- Get Started
+- GuidesAuthenticate SSO credentials to query dataAuthenticate SSO credentials to view sample dataLimit SSO automatically creating users when they log inSet default user roles for SSO
+- Authenticate SSO credentials to query data
+- Authenticate SSO credentials to view sample data
+- Limit SSO automatically creating users when they log in
+- Set default user roles for SSO
+- References
+- Troubleshooting
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- Guides
+- Limit SSO automatically creating users when they log in
+
+
+# Limit SSO automatically creating users when they log in
+
+Only users in the SSO provider's application configuration for Atlan can log in via SSO and have their user profiles created automatically in Atlan.
+To restrict access to certain users, edit the list of users configured for Atlan in your SSO provider to a limited set of users.
+Each time a new user needs to be onboarded, they will need to be added to this list in your SSO provider before they can access Atlan. Without being added to this list, no user in Atlan will be automatically created even if they attempt to log in.
+- atlan
+- documentation

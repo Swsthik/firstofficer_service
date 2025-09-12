@@ -1,0 +1,102 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQ
+- SCIM
+- SSOGet StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSOGuidesReferencesTroubleshootingFAQ
+- Get StartedHow to enable Azure AD for SSOHow to enable Google for SSOHow to enable JumpCloud for SSOHow to enable Okta for SSOHow to enable OneLogin for SSOHow to enable SAML 2.0 for SSO
+- How to enable Azure AD for SSO
+- How to enable Google for SSO
+- How to enable JumpCloud for SSO
+- How to enable Okta for SSO
+- How to enable OneLogin for SSO
+- How to enable SAML 2.0 for SSO
+- Guides
+- References
+- Troubleshooting
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+- Get Started
+- How to enable SAML 2.0 for SSO
+
+
+# Enable  SAML 2.0 for SSO
+
+You will need to be an admin user within Atlan to configure SSO. You will also need to work with your SAML 2.0 administrator to carry out the tasks below in your custom IdP.
+SSO group mappings are triggered every time a user authenticates in Atlan. A user may need to log out and then log into Atlan again to view the changes. If a user is added to a new group or removed from an existing one in SAML 2.0, the updates will also be reflected in Atlan. To ensure that the sync is successful, the groups that the user belongs to should be mapped in Atlan, and if a group name has changed in SAML 2.0, you will need to update the group name in Atlan as well. For any questions about group mapping sync, head overhere.
+To integrate SAML 2.0 SSO for Atlan, complete the
+following steps.
+
+
+# Choose SSO provider (in Atlan)â
+
+To choose SAML 2.0 as your SSO provider, within Atlan:
+- From the left menu on any screen, navigate toAdmin.
+- Under theWorkspaceheading, clickSSO.
+- UnderChoose SAML provider, selectSAML 2.0and then clickConfigure.
+- ForAlias, type in an alias for the SAML 2.0 connection and then clickNext.
+- UnderService provider metadata, copy theAtlan SAML Assertion URLandAtlan Audience URI (SP Entity ID).
+
+
+# Set up SAML app (in custom IdP)â
+
+If you have PingFederate as your IdP, refer toSSO integration with PingFederate using SAMLfor the SAML assertion URL to use.
+To set up a SAML app within your custom IdP:
+- Create a new SAML application in your IdP with the nameAtlan.
+Create a new SAML application in your IdP with the nameAtlan.
+- ForEntity/Issuer ID, enter theAtlan Audience URI (SP Entity ID)value you copied from above.
+ForEntity/Issuer ID, enter theAtlan Audience URI (SP Entity ID)value you copied from above.
+- ForAssertion Consumer Service (ACS) URL, enter theAtlan SAML Assertion URLvalue you copied from above.
+ForAssertion Consumer Service (ACS) URL, enter theAtlan SAML Assertion URLvalue you copied from above.
+- Add the required users and groups to the application.
+Add the required users and groups to the application.
+- Configure the IdP to return the following attributes in the SAML response:firstNamelastNameemailmemberOf(listing the user's group memberships, which will be required for group mapping in Atlan)
+Configure the IdP to return the following attributes in the SAML response:
+- firstName
+- lastName
+- email
+- memberOf(listing the user's group memberships, which will be required for group mapping in Atlan)
+- Save the SAML metadata XML file for the SSO URL and X.509 public certificate file of the IdP.dangerThe SSO URL must be accessible from Atlan via an internet connection.
+Save the SAML metadata XML file for the SSO URL and X.509 public certificate file of the IdP.
+The SSO URL must be accessible from Atlan via an internet connection.
+
+
+# Configure IdP details (in Atlan)â
+
+To complete the configuration of SAML 2.0 SSO, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- UnderÂChoose SAML provider, selectÂSAML 2.0and then clickÂConfigure.
+- ForAlias, type in an alias for the SAML 2.0 connection and then clickNext.
+- To the right ofÂIdentity provider metadata,click theImport from XMLbutton.
+- Select the XML file saved from the IdP above.
+- ForAttribute Mapper, modify the IdP attribute names for email, first name, and last name if these will be different in the IdP SAML response.
+- (Optional) ForCustomize, underSign in button text, type any custom message you'd like your users to see on the Atlan login screen.Â
+- At the bottom of the screen, clickSave.
+Congratulations   -  you have successfully set up SSO for your custom IdP in Atlan! ð
+By default, users can now log into Atlan with either SAML 2.0 SSO or a local Atlan account (via email). To only allow logins via SSO, enable theEnforce SSOoption in Atlan. Once SSO is enforced, we recommend asking your SAML 2.0 administrator to provision access to users through your custom IdP andnot directly from Atlan. When access has been provided, a user will be able to log into Atlan directly and their profile will be generated automatically.
+
+
+# (Optional) Configure group mappingsâ
+
+Before you can configure group mapping, you will first need tocreate groups in Atlanthat correspond to the groups you want to map from your custom IdP to Atlan. In addition, you must configure thememberOfattribute and group mapping to retain group membership in Atlan.
+To automatically assign SSO users to Atlan groups based on their custom IdP groups, within Atlan:
+- From the left menu on any screen, navigate toÂAdmin.
+- Under theÂWorkspaceheading, clickÂSSO.
+- Change to theGroups Mappingtab.
+- To the right of each Atlan group listed:Under theSSO Groupscolumn, type the name of the corresponding group in your custom IdP to map to the Atlan group on that row   -  for example,Data Engineering,Business Analysts, and so on. You will need to provide each custom IdP group with access to Atlan.Click theÂSavebutton on that row.
+- Under theSSO Groupscolumn, type the name of the corresponding group in your custom IdP to map to the Atlan group on that row   -  for example,Data Engineering,Business Analysts, and so on. You will need to provide each custom IdP group with access to Atlan.
+- Click theÂSavebutton on that row.
+As each user signs up to Atlan, they will be automatically assigned groups in Atlan based on these mappings! ð
+Once you've configured group mapping, you can add the mapped groups to apersonaorpurposeto auto-assign relevant permissions to users as they sign up in Atlan.
+- integration
+- connectors
+- Choose SSO provider (in Atlan)
+- Set up SAML app (in custom IdP)
+- Configure IdP details (in Atlan)
+- (Optional) Configure group mappings

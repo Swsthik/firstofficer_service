@@ -1,0 +1,73 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingFAQProject Management
+- Automation
+- Collaboration
+- Communication
+- Identity ManagementSCIMSSOGet StartedGuidesReferencesTroubleshootingFAQ
+- SCIM
+- SSOGet StartedGuidesReferencesTroubleshootingFAQ
+- Get Started
+- Guides
+- References
+- Troubleshooting
+- FAQ
+- Project Management
+- Configure Atlan
+- Integrations
+- Identity Management
+- SSO
+
+
+# SSO Integration
+
+Overview:Connect Atlan with SSO to enable secure authentication, streamline user access, and enhance identity management.
+
+
+# Get startedâ
+
+- How to enable Azure AD for SSO
+- How to enable Google for SSO
+- How to enable JumpCloud for SSO
+- How to enable Okta for SSO
+- How to enable OneLogin for SSO
+- How to enable SAML 2.0 for SSO
+
+
+# Guidesâ
+
+- Authenticate SSO credentials to query data
+- Authenticate SSO credentials to view sample data
+- How to enable associated terms
+- How to limit SSO automatically creating users when they log in
+- How to set default user roles for SSO
+
+
+# Referencesâ
+
+- SSO integration with PingFederate using SAML
+
+
+# Troubleshootingâ
+
+- Troubleshooting SSO
+- Troubleshooting connector-specific SSO authentication
+- Why do I get a 404 error when using PingFederate SSO?
+- Why do I get an authentication error when logging in via Okta for the first time?
+- Why do I get an error while logging in via Google dashboard?
+- Unable to log into Atlan via SSO due to an internal error from Microsoft Defender
+
+
+# FAQâ
+
+- Can Atlan integrate with multiple Azure AD tenants within a single instance?
+- Can we use a Microsoft SSO login?
+- What type of user provisioning does Atlan support for SSO integrations?
+- When does Atlan become a personal data processor or subprocessor?
+- Why did my users not receive an invite email from Atlan?
+- integrations
+- identity management
+- sso
+- Get started
+- Guides
+- References
+- Troubleshooting
+- FAQ

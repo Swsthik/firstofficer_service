@@ -1,0 +1,97 @@
+- IntegrationsAutomationCollaborationCommunicationIdentity ManagementProject ManagementJiraGet StartedHow to integrate Jira CloudHow to integrate Jira Data CenterLink your Jira accountTroubleshootingFAQServiceNow
+- Automation
+- Collaboration
+- Communication
+- Identity Management
+- Project ManagementJiraGet StartedHow to integrate Jira CloudHow to integrate Jira Data CenterLink your Jira accountTroubleshootingFAQServiceNow
+- JiraGet StartedHow to integrate Jira CloudHow to integrate Jira Data CenterLink your Jira accountTroubleshootingFAQ
+- Get StartedHow to integrate Jira CloudHow to integrate Jira Data CenterLink your Jira account
+- How to integrate Jira Cloud
+- How to integrate Jira Data Center
+- Link your Jira account
+- Troubleshooting
+- FAQ
+- ServiceNow
+- Configure Atlan
+- Integrations
+- Project Management
+- Jira
+- Get Started
+- How to integrate Jira Data Center
+
+
+# Integrate Jira Data Center
+
+You will need to be anadminin Atlan to configure the Jira Data Center integration. You will also need inputs and approval from an administrator of your Jira workspace.
+If your Jira Data Center instance is behind a VPN or firewall, you must add the Atlan IP to your allowlist. Please raise a support ticket from within Atlan, orsubmit a request. (If you are not using the IP allowlist, you can skip this step.)
+To integrate Jira Data Center and Atlan, follow th
+ese steps.
+
+
+# Configure an incoming app link in Jira Data Centerâ
+
+You will need toconfigure an incoming linkwith an external application   -  in this case, Atlan. This will allow Atlan to access Jira data, which means that Jira will act as the OAuth provider.
+Atlan requires theminimum scopeofWRITEto create issues in Jira Data Center. However, actual permissions are capped at what the authorizing user can do. For example, if the authorizing user lacks the permission to delete issues or projects, then Atlan will not have the permission to do so even with theWRITEscope.
+To configure an incoming link for Atlan, from within Jira Data Center:
+- Log in to your Jira instance.
+- Copy the Jira site URLfrom your browser's address bar and store it in a secure location. If you're viewing the dashboard, the site URL is everything that comes before/secure/Dashboard.jspa.
+- From the top right of your Jira instance, click the settings icon, and from the dropdown, clickApplications.
+- In the left menu of theApplicationspage, underIntegrations, clickApplication links.
+- From the top right of theApplication linkspage, clickCreate linkto create a new application link for Atlan.
+- In theCreate linkdialog, enter the following details:ForApplication type, clickExternal applicationto link to an external application using OAuth 2.0.ForDirection, clickIncomingto allow Atlan to access data from Jira.
+- ForApplication type, clickExternal applicationto link to an external application using OAuth 2.0.
+- ForDirection, clickIncomingto allow Atlan to access data from Jira.
+- In the correspondingConfigure an incoming linkpage, enter the following details:ForName, enter a meaningful name for your application   -  for example,Atlan_integration.UnderApplication details, forRedirect URL, enter the redirect URL in the following format   -https://${client-domain}.atlan.com/oauth-callback.UnderApplication permissions, forPermissions, click the dropdown and then clickWrite. TheWRITEscopewill allow Atlan to:View projects and issuesCreate, update, and delete projects and issuesClickSaveÂ to save your selections.
+- ForName, enter a meaningful name for your application   -  for example,Atlan_integration.
+- UnderApplication details, forRedirect URL, enter the redirect URL in the following format   -https://${client-domain}.atlan.com/oauth-callback.
+- UnderApplication permissions, forPermissions, click the dropdown and then clickWrite. TheWRITEscopewill allow Atlan to:View projects and issuesCreate, update, and delete projects and issues
+- View projects and issues
+- Create, update, and delete projects and issues
+- ClickSaveÂ to save your selections.
+- From the correspondingCredentialspage, clickCopyto copy theClient IDandClient secretand store them in a secure location.
+
+
+# Connect Atlan to Jira Data Centerâ
+
+Once you have retrieved theJira instance URL and client ID and client secretfrom Jira, you can proceed to connecting Atlan to Jira Data Center.
+You must have at least one issue already created in Jira before integrating it with Atlan.
+To connect Atlan to Jira Data Center, from within Atlan:
+- From the left menu, clickÂAdmin.
+- UnderÂWorkspace, clickÂIntegrations.
+- In theÂJiratile, to the right of theConnectbutton, click the downward arrow and then clickConnect with Jira Data Center.
+- A newJira Data Centerwindow will open and you'll be asked to install the Atlan app and create an application link in Jira. ClickNextto proceed.
+- In the correspondingJira Data Centerdialog, forAdd credentials, enter the following details:ForInstance URL, enter theURL of your Jira instance.ForClient ID, enter theclient ID you copiedin Jira.ForClient secret, enter theclient secret you copiedin Jira.
+- ForInstance URL, enter theURL of your Jira instance.
+- ForClient ID, enter theclient ID you copiedin Jira.
+- ForClient secret, enter theclient secret you copiedin Jira.
+- In theOAuth 2.0 Authorization Consentpopup, clickAllowto complete the connection.
+- Click theAdd to Jirabutton to install the Atlan app in Jira Data Center.
+
+
+# Install Atlan app in Jira Data Centerâ
+
+Before you can install the Atlan app in Jira Data Center, navigate to theAtlan for Jira Data Center appURL and clickGet it nowto download the app.
+To install the Atlan app, from within Jira Data Center:
+- Log in to your Jira instance.
+- UnderAdministration, from the tabs along the top, clickManage apps.
+- From the left menu underAtlassian Marketplace, clickManage apps.
+- From the upper right of theManage appspage, clickUpload app.
+- In theUpload appdialog, forUpload the .jar or .obr file for a custom or third-party app here., select theapp file you downloaded.
+- ClickUploadto complete the installation.
+- Changes to the apps in your instance will affect Jira search index. After you make changes to the app, you'll get the following message in theAdministrationview:We recommend that you perform a re-index, as configuration changes were made toSECTIONbyUSERatTIME. If you have other changes to make, complete them first so that you don't perform multiple re-indexes. You will need to perform a full re-index for the integration to succeed, follow the steps in theofficial Jira documentationto do so.
+
+
+# Configure integration from Atlan to Jira Data Centerâ
+
+To configure the Jira Data Center integration from Atlan, from theIntegrationssub-menu:
+- Expand theÂJiratile. (You may need to refresh the page before the following options appear.)
+- Under theÂConfigurationstab, forProjects, select the Jira project to use as your default project from the dropdown and clickUpdate.
+- (Optional) At any future time, you can review theÂOverviewtab to see the number of linked issues between Jira Data Center and Atlan.
+Atlan is now connected to Jira Data Center! ð
+The default project is preselected when creating or linking issues to an asset in Atlan. You can change the project while creating or linking issues as needed.
+- data
+- integration
+- Configure an incoming app link in Jira Data Center
+- Connect Atlan to Jira Data Center
+- Install Atlan app in Jira Data Center
+- Configure integration from Atlan to Jira Data Center

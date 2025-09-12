@@ -1,0 +1,34 @@
+- IntegrationsAutomationCollaborationCommunicationSMTP and AnnouncementsConfigure SMTPCreate announcementsManage system announcementsIdentity ManagementProject Management
+- Automation
+- Collaboration
+- CommunicationSMTP and AnnouncementsConfigure SMTPCreate announcementsManage system announcements
+- SMTP and AnnouncementsConfigure SMTPCreate announcementsManage system announcements
+- Configure SMTP
+- Create announcements
+- Manage system announcements
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Communication
+- SMTP and Announcements
+- Configure SMTP
+
+
+# Configure SMTP
+
+You will need to be an admin user in Atlan to configure SMTP. The default SMTP setup is preconfigured by Atlan. You should only update this configuration if you want to set up custom SMTP.
+Atlan uses SMTP to send emails, primarily for things like inviting users, login failure alerts, andscheduled queries. We provide an embedded SMTP server to do this, out-of-the-box.
+If desired, you can override this embedded SMTP se
+rver with your own.
+To override the embedded SMTP server:
+- From the left menu of any screen, clickÂAdmin.
+- UnderÂWorkspace, clickÂSMTP.
+- Fill in the configuration of your SMTP server, at least:ForÂHostthe fully-qualified hostname of the SMTP server.ForÂFrom Emailthe email address that should be used to send emails from the server.ForÂUsernamethe username required by your SMTP server.
+- ForÂHostthe fully-qualified hostname of the SMTP server.
+- ForÂFrom Emailthe email address that should be used to send emails from the server.
+- ForÂUsernamethe username required by your SMTP server.
+- At the bottom of the page, click theÂTest SMTP Configbutton to test your configuration. This will attempt to send an email to your profile's email address.
+- Once you successfully receive the test email, at the bottom of the page clickÂSave.
+- setup
+- configuration

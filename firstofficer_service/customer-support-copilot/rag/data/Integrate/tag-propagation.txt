@@ -1,0 +1,67 @@
+- IntegrationsAutomationAWS LambdaAlways OnSuggestions from similar assetsTag propagationBrowser ExtensionConnectionsWebhooksCollaborationCommunicationIdentity ManagementProject Management
+- AutomationAWS LambdaAlways OnSuggestions from similar assetsTag propagationBrowser ExtensionConnectionsWebhooks
+- AWS Lambda
+- Always OnSuggestions from similar assetsTag propagation
+- Suggestions from similar assets
+- Tag propagation
+- Browser Extension
+- Connections
+- Webhooks
+- Collaboration
+- Communication
+- Identity Management
+- Project Management
+- Configure Atlan
+- Integrations
+- Automation
+- Always On
+- Tag propagation
+
+
+# Tag propagation
+
+Tag propagation is disabled by default in Atlan.
+Whentagging an asset, you can enable tag propagation tochildassets.
+
+
+# To downstream assetsâ
+
+Downstream assets are derived through thedata transformationsof an asset.
+Atlan can propagate tags through lineage. For example:
+- Youtag a columnasPII.
+- That column has downstream columns (in lineage).
+- Atlan tags the downstream columns asPII, too, if propagation is enabled.
+This is particularly useful when you want to tag data for protection reasons. When combined withpurposes, Atlan protects all downstream copies of the data automatically.
+
+
+# To child assetsâ
+
+Child assets are linked to parent assets through a parent-child hierarchical relationship.
+Atlan can propagate tags from parent to child assets. For example:
+- Youtag a database tableasMarketing Analysis.
+- Atlan tags all the columns in that table asMarketing Analysis, too, if propagation is enabled.
+- You can also configure the propagation of your tags:Hierarchy & lineageenables tag propagation to child and downstream assets.Hierarchy only (no lineage)enables tag propagation to child assets only.Lineage only (no hierarchy)enables tag propagation to downstream assets only.No propagationdisables any tag propagation.
+- Hierarchy & lineageenables tag propagation to child and downstream assets.
+- Hierarchy only (no lineage)enables tag propagation to child assets only.
+- Lineage only (no hierarchy)enables tag propagation to downstream assets only.
+- No propagationdisables any tag propagation.
+This is particularly useful when you want to tag data for a business domain or project use. Atlan includes all assets under the level you tag in that business domain or project.
+
+
+# To linked assetsâ
+
+Atlan can propagate tags to alllinked assetsforterms. For example:
+- Youtag a glossary termasPublic.
+- Atlan tags all the linked assets for that term asPublic, too, if propagation is enabled.
+- You can also configure the propagation of your tags:Hierarchy & lineageenables tag propagation to child and downstream assets.Hierarchy only (no lineage)enables tag propogation to child assets only.Lineage only (no hierarchy)enables tag propogation to downstream assets only.No propagationdisables any tag propagation.
+- Hierarchy & lineageenables tag propagation to child and downstream assets.
+- Hierarchy only (no lineage)enables tag propogation to child assets only.
+- Lineage only (no hierarchy)enables tag propogation to downstream assets only.
+- No propagationdisables any tag propagation.
+This is particularly useful when you want to tag data en masse for use across all teams. If propagation is enabled, Atlan includes all linked assets for the tagged term.
+- lineage
+- data-lineage
+- impact-analysis
+- To downstream assets
+- To child assets
+- To linked assets
