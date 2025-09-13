@@ -1,10 +1,6 @@
 import streamlit as st
 from agent import classifier_agent
 from agent import mquery_agent   # new conversational agent
-from rag import retrieval        # retrieval for RAG pipeline
-
-# Allowed topics for RAG response
-RAG_TOPICS = ["How-to", "Product", "API/SDK", "SSO", "Best practices"]
 
 st.set_page_config(page_title="Customer Support Copilot", layout="wide")
 st.title("🛠 Customer Support Copilot Demo")
@@ -25,11 +21,14 @@ if uploaded_file:
 # --- Main: Interactive Conversational Agent ---
 st.subheader("🤖 Interactive AI Agent")
 
-# Keep conversation history
+# Initialize conversation history and logs
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# Display past conversation
+if "logs" not in st.session_state:
+    st.session_state.logs = []
+
+# Display past conversation in main panel
 for msg in st.session_state.messages:
     if msg["role"] == "user":
         st.markdown(f"🧑 **You:** {msg['content']}")
@@ -40,12 +39,22 @@ for msg in st.session_state.messages:
 user_query = st.text_input("Enter your message:")
 
 if st.button("Send") and user_query.strip():
+    # Append user query to session state
     st.session_state.messages.append({"role": "user", "content": user_query})
     
     with st.spinner("Agent is thinking..."):
-        # Use the conversational agent logic
-        response = mquery_agent.handle_message(user_query, retrieval, classifier_agent, RAG_TOPICS)
+        # Get response and structured log
+        response, log_entry = mquery_agent.handle_message(user_query, return_log=True)
     
+    # Append assistant response and structured log
     st.session_state.messages.append({"role": "assistant", "content": response})
+    st.session_state.logs.append(log_entry)
+    
+    # Rerun to refresh conversation
     st.rerun()
 
+# --- Sidebar: Display conversation logs ---
+st.sidebar.header("Conversation Logs")
+for i, log in enumerate(st.session_state.logs, 1):
+    st.sidebar.markdown(f"**Turn {i}:**")
+    st.sidebar.json(log)
