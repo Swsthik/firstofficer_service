@@ -2,14 +2,20 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 # Load local sentiment model (cardiffnlp/twitter-roberta-base-sentiment-latest)
 SENTIMENT_MODEL_NAME = "cardiffnlp/twitter-roberta-base-sentiment-latest"
-try:
-    sentiment_tokenizer = AutoTokenizer.from_pretrained(SENTIMENT_MODEL_NAME)
-    sentiment_model = AutoModelForSequenceClassification.from_pretrained(SENTIMENT_MODEL_NAME)
-    sentiment_model.eval()
-except Exception as e:
-    print(f"[Warning] Could not load local sentiment model: {e}")
-    sentiment_tokenizer = None
-    sentiment_model = None
+sentiment_tokenizer = None
+sentiment_model = None
+
+def load_sentiment_model():
+    global sentiment_tokenizer, sentiment_model
+    if sentiment_model is None:
+        try:
+            sentiment_tokenizer = AutoTokenizer.from_pretrained(SENTIMENT_MODEL_NAME)
+            sentiment_model = AutoModelForSequenceClassification.from_pretrained(SENTIMENT_MODEL_NAME)
+            sentiment_model.eval()
+        except Exception as e:
+            print(f"[Warning] Could not load local sentiment model: {e}")
+            sentiment_tokenizer = None
+            sentiment_model = None
 
 # Expanded sentiment tags and mapping
 SENTIMENT_LABELS = {
@@ -26,6 +32,7 @@ SENTIMENT_RICH_MAP = {
 }
 
 def local_sentiment_analysis(text):
+    load_sentiment_model()
     if not sentiment_model or not sentiment_tokenizer:
         return "Neutral"
     inputs = sentiment_tokenizer(text, return_tensors="pt", truncation=True)
@@ -107,7 +114,7 @@ def classify_ticket(ticket_text: str) -> dict:
     return parsed
 
 if __name__ == "__main__":
-    sample_ticket = "I tried connecting to your API but keep getting a 401 error."
+    sample_ticket = " your system is charging me twice."
     result = classify_ticket(sample_ticket)
     print("Ticket:", sample_ticket)
     print("Classification:", result)
