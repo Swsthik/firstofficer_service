@@ -139,6 +139,8 @@ class MultiQueryAgent:
             "cannot find",
             "no information available",
             "unknown",
+            "not contain information",
+            "I couldn't find any information",
         ]
         if any(marker in answer.lower() for marker in low_quality_markers):
             response_quality = 0.5
