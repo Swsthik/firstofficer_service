@@ -1,0 +1,47 @@
+- Get StartedWhat is Atlan?Quick Start GuidesAdministratorsData consumersContributorsDevelopersCore ConceptsAdministrationSecurity & ComplianceReferencesFAQs
+- What is Atlan?
+- Quick Start GuidesAdministratorsData consumersContributorsDevelopers
+- Administrators
+- Data consumers
+- Contributors
+- Developers
+- Core Concepts
+- Administration
+- Security & Compliance
+- References
+- FAQs
+- Get Started
+- Quick Start Guides
+- Data consumers
+
+
+# Data consumers
+
+
+
+# Discoveryâ
+
+We rely on search bars to find things in almost every corner of the internet. Atlan uses a similar search tool to help you explore your data assets. Thediscovery toolis Atlan's powerful in-platform search, powered by the terms, tags, and definitions you've added to your data.
+Here are a few of the things that make Atlan's discovery awesome:
+- Every attribute of your data is searchable in Atlan   -  saved SQL queries, schemas, links, and more. This lets you search far and wide to find exactly what you need.
+Discovery allows you to toggle the type of data asset you are looking for.
+- Intelligent keyword recognition sees through your typos to show exactly what you wanted, no matter what you actually typed.
+- Search assets from just about any page in Atlan usingCmd/Ctrl+Kor by clickingSearch assets across Atlanat the top of any page.
+- Control your search by using facets about your data (such as the verification status or owner) to find what's most important to you.
+- Sort by popularity to quickly discover what assets your teammates are using every day.
+
+
+# Insightsâ
+
+Atlan was built by data teams for data teams, so we know that querying your data is crucial to answering important business questions.
+SQL is the most common way that data teams query their data, so we wanted to make it easy for Atlan users to seamlessly query and share SQL work with their team.
+Atlan'sInsightsworkspace allows teams to find the data they need, query it, and save and manage all SQL queries in one place. You can write SQL queries from scratch or use the Visual Query Builder to write SQL scripts quicker.
+The Visual Query Builder is a great way to start building complex queries without fluency in SQL. Think of it as "fill in the blank" but for queries!
+Some of our favorite features about Insights:
+- Customize the SQL editor's look and feel through preferences
+- Examine a data asset's lineage alongside your SQL editor, so you can effortlessly understand your data asset in relation to other assets
+- Save, organize, and share your SQL queries
+- get-started
+- quick-start
+- Discovery
+- Insights

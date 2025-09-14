@@ -1,0 +1,51 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAdministrationSecurity & ComplianceReferencesFAQsGetting Started and OnboardingBasic Platform UsageSupport and Technical Help
+- What is Atlan?
+- Quick Start Guides
+- Core Concepts
+- Administration
+- Security & Compliance
+- References
+- FAQsGetting Started and OnboardingBasic Platform UsageSupport and Technical Help
+- Getting Started and Onboarding
+- Basic Platform Usage
+- Support and Technical Help
+- Get Started
+- FAQs
+- Support and Technical Help
+
+
+# Support and Technical Help
+
+Complete guide to getting support, understanding API limits, and accessing technical assistance for Atlan.
+
+
+# What's the availability of support?â
+
+Atlan support provides full coverage during business hours across most time zones. See alsoCustomer support.
+
+
+# Is there a limit on the number of API requests that can be performed?â
+
+Most automated operations that need to process many records follow one of these patterns:
+- Search-based extract
+- End-to-end bulk update
+These patterns minimise the total number of API calls because each request extracts or updates many records, so you're unlikely to hit rate limits.
+If you make raw API requests directly, different endpoints have different limits. As a rule of thumb, assumeabout 1,000 requests per minute per host(your Atlan domain). Whenever possible, adopt the patterns mentioned earlier to avoid these limits.
+
+
+# What's the recommended path for pagination of asset searches with scroll API?â
+
+Refer toPaging search resultsin the developer documentation for the recommended scroll API implementation.
+
+
+# Is Atlan compatible with data quality tools?â
+
+Yes. Atlan integrates with several data-quality and observability platforms:
+- Native integrations such asMonte Carlo,Soda, andAnomalo
+- Ability to surface quality scores and alerts in asset profiles
+- REST APIs to ingest additional quality metadata from any tool you choose
+For the latest list, seesupported sources.
+- api
+- rest-api
+- graphql
+- faq-support

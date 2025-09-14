@@ -1,0 +1,35 @@
+- Get StartedWhat is Atlan?Quick Start GuidesAdministratorsData consumersContributorsDevelopersAPI authenticationCustom solutionsSoftware development kits (SDKs)Atlan's open APICore ConceptsAdministrationSecurity & ComplianceReferencesFAQs
+- What is Atlan?
+- Quick Start GuidesAdministratorsData consumersContributorsDevelopersAPI authenticationCustom solutionsSoftware development kits (SDKs)Atlan's open API
+- Administrators
+- Data consumers
+- Contributors
+- DevelopersAPI authenticationCustom solutionsSoftware development kits (SDKs)Atlan's open API
+- API authentication
+- Custom solutions
+- Software development kits (SDKs)
+- Atlan's open API
+- Core Concepts
+- Administration
+- Security & Compliance
+- References
+- FAQs
+- Get Started
+- Quick Start Guides
+- Developers
+- Custom solutions
+
+
+# Custom solutions
+
+Atlan providescustom packagestailored to your unique use cases. These publicly-available extensions broaden the scope of ourout-of-the-box connectivity options.
+Reach out to your customer success manager to install any of the selected packages in your Atlan tenant:
+- Asset change notification-  sends email notifications when assets are created, updated, and/or deleted.
+- Asset export (advanced)-  exports a set of assets to different locations based on the filtering criteria you have applied.
+- Asset export (basic)-  identifies and extracts assets that have been enriched in Atlan. You can modify the resulting CSV file by updating the metadata for your assets, and then load it back into Atlan using theasset importpackage.
+- Asset import-  loads metadata from a CSV file that matches the format of one extracted using either of the asset export packages (basicoradvanced).
+- Lineage builder-  creates lineage between any source and target asset.
+- Lineage generator (no transformations)-  automatically detects assets with the same (or similar) name between two connections and creates lineage between them.
+- Relational assets builder-  creates (and updates) net-new relational assets: connections, databases, schemas, tables, views, materialized views, and columns.
+- integration
+- connectors

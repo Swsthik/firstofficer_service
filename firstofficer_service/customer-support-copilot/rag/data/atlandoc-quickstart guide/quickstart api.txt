@@ -1,0 +1,32 @@
+- Get StartedWhat is Atlan?Quick Start GuidesAdministratorsData consumersContributorsDevelopersAPI authenticationCustom solutionsSoftware development kits (SDKs)Atlan's open APICore ConceptsAdministrationSecurity & ComplianceReferencesFAQs
+- What is Atlan?
+- Quick Start GuidesAdministratorsData consumersContributorsDevelopersAPI authenticationCustom solutionsSoftware development kits (SDKs)Atlan's open API
+- Administrators
+- Data consumers
+- Contributors
+- DevelopersAPI authenticationCustom solutionsSoftware development kits (SDKs)Atlan's open API
+- API authentication
+- Custom solutions
+- Software development kits (SDKs)
+- Atlan's open API
+- Core Concepts
+- Administration
+- Security & Compliance
+- References
+- FAQs
+- Get Started
+- Quick Start Guides
+- Developers
+- Atlan's open API
+
+
+# Atlan's open API
+
+Like you, we hate being locked into closed, black-box platforms. That's why we built Atlan's core platform on leading open-source projects and made every action API-driven.
+Everything visible on Atlan is powered by APIs.
+Our mission is to help youactivate your metadata, to help your team do its best work. So we are gradually opening up these APIs for everyone.
+- For details of what's available, see ourdedicated developer portal.
+- To get started,create an API tokenfrom within Atlan.
+- api
+- rest-api
+- graphql

@@ -1,0 +1,39 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAdministrationCloud logging and monitoringGenerate HAR files and console logsTenant access managementTenant logsTenant monitoringTenant offboardingSecurity & ComplianceReferencesFAQs
+- What is Atlan?
+- Quick Start Guides
+- Core Concepts
+- AdministrationCloud logging and monitoringGenerate HAR files and console logsTenant access managementTenant logsTenant monitoringTenant offboarding
+- Cloud logging and monitoring
+- Generate HAR files and console logs
+- Tenant access management
+- Tenant logs
+- Tenant monitoring
+- Tenant offboarding
+- Security & Compliance
+- References
+- FAQs
+- Get Started
+- Administration
+- Tenant offboarding
+
+
+# Tenant offboarding
+
+An Atlan tenant consists of multiple infrastructure resources, such as EC2 nodes, S3 buckets, ALB, EKS, and IAM roles, Loft vcluster, and more. Offboarding an Atlan vcluster tenant involves removing all the infrastructure resources associated with that particular tenant or instance.Â
+While most of the resources can be deleted immediately without any data loss, we handle the cleanup of storage resources like S3 buckets with care.
+S3 buckets associated with a tenant are not immediately removed   -  they are retained for 30 days after a tenant is offboarded. This ensures that there is adisaster recovery mechanismin place if a tenant is offboarded by mistake or faces any unrecoverable errors.
+
+
+# Tenant decommissioningâ
+
+You canraise a support ticketfor tenant decommissioning. The customer success team at Atlan will notify the infrastructure support team responsible for executing tenant offboarding. These requests are usually resolved within the first 48 hours to ensure that no unnecessary costs are incurred for infra resources.
+
+
+# Frequently asked questionsâ
+
+Any customer-specific data in Atlan   -  for example, query logs, assets, service logs, and more   -  are stored in EBS volumes and S3 buckets.
+EBS volumes are immediately deleted during offboarding. However, S3 buckets are retained for a period of 30 days.
+- atlan
+- documentation
+- Tenant decommissioning
+- Frequently asked questions

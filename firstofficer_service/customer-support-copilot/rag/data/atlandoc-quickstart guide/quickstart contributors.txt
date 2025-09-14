@@ -1,0 +1,70 @@
+- Get StartedWhat is Atlan?Quick Start GuidesAdministratorsData consumersContributorsDevelopersCore ConceptsAdministrationSecurity & ComplianceReferencesFAQs
+- What is Atlan?
+- Quick Start GuidesAdministratorsData consumersContributorsDevelopers
+- Administrators
+- Data consumers
+- Contributors
+- Developers
+- Core Concepts
+- Administration
+- Security & Compliance
+- References
+- FAQs
+- Get Started
+- Quick Start Guides
+- Contributors
+
+
+# Contributors
+
+
+
+# Asset profileâ
+
+Theasset profilein Atlan gives you a quick and clear understanding of what a data asset contains. You can think of the asset profile as the TL;DR about your data.
+What's in an asset profile?
+- Summary: The numbers of columns and rows, certification status (e.g. verified, draft, etc.), owner of the asset, and more
+- Column Preview: An overview of column names and definitions
+- Sample Data: A snapshot of what the data looks like (with anything sensitive hidden, according to your policies)
+- Readme: An in-depth description of the asset that should provide all the context, knowledge, and links needed to fully understand the asset
+- Lineage: Visualization of how your data asset relates to other assets, which helps you figure out upstream and downstream dependencies
+
+
+# Glossaryâ
+
+The Atlanglossaryis a rich tool for defining and organizing your dataterminologyto improve transparency and share knowledge. No need to ask around about what a column name means. The glossary functions as a source of truth for teams to understand their data assets. Start keeping all your definitions in one (searchable!) place.
+The glossary provides key intel on your data assets so you can quickly understand important attributes of your data, such as...
+- Ownersof your data, so you know who to ask for clarification
+- Certificatestatus, to easily understand if the data is still in progress or ready to be used
+- Linked Assetsthat are relevant to the term, so you can explore other helpful material
+The glossary helps power Atlan's powerful search tool, so tagging and defining assets are critical to helping your team find what they need.
+
+
+# Discoveryâ
+
+We rely on search bars to find things in almost every corner of the internet. Atlan uses a similar search tool to help you explore your data assets. Thediscovery toolis Atlan's powerful in-platform search, powered by the terms, tags, and definitions you've added to your data.
+Here are a few of the things that make Atlan's discovery awesome:
+- Every attribute of your data is searchable in Atlan   -  saved SQL queries, schemas, links, and more. This lets you search far and wide to find exactly what you need.
+Discovery allows you to toggle the type of data asset you are looking for.
+- Intelligent keyword recognition sees through your typos to show exactly what you wanted, no matter what you actually typed.
+- Search assets from just about any page in Atlan usingCmd/Ctrl+Kor by clickingSearch assets across Atlanat the top of any page.
+- Control your search by using facets about your data (such as the verification status or owner) to find what's most important to you.
+- Sort by popularity to quickly discover what assets your teammates are using every day.
+
+
+# Insightsâ
+
+Atlan was built by data teams for data teams, so we know that querying your data is crucial to answering important business questions.
+SQL is the most common way that data teams query their data, so we wanted to make it easy for Atlan users to seamlessly query and share SQL work with their team.
+Atlan'sInsightsworkspace allows teams to find the data they need, query it, and save and manage all SQL queries in one place. You can write SQL queries from scratch or use the Visual Query Builder to write SQL scripts quicker.
+The Visual Query Builder is a great way to start building complex queries without fluency in SQL. Think of it as "fill in the blank" but for queries!
+Some of our favorite features about Insights:
+- Customize the SQL editor's look and feel through preferences
+- Examine a data asset's lineage alongside your SQL editor, so you can effortlessly understand your data asset in relation to other assets
+- Save, organize, and share your SQL queries
+- get-started
+- quick-start
+- Asset profile
+- Glossary
+- Discovery
+- Insights

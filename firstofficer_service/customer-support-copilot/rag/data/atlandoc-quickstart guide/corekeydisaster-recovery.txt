@@ -1,0 +1,109 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAuthentication and authorizationData and metadata persistenceEncryption and key managementHigh availability and disaster recovery (HA/DR)AdministrationSecurity & ComplianceReferencesFAQs
+- What is Atlan?
+- Quick Start Guides
+- Core ConceptsAuthentication and authorizationData and metadata persistenceEncryption and key managementHigh availability and disaster recovery (HA/DR)
+- Authentication and authorization
+- Data and metadata persistence
+- Encryption and key management
+- High availability and disaster recovery (HA/DR)
+- Administration
+- Security & Compliance
+- References
+- FAQs
+- Get Started
+- Core Concepts
+- High availability and disaster recovery (HA/DR)
+
+
+# High availability and disaster recovery (HA/DR)
+
+
+
+# High availability (HA)â
+
+Atlan uses Amazon Elastic Kubernetes Service (EKS) for high availability (HA).
+Amazon EKSruns and scales the Kubernetes control plane across multiple AWS Availability Zones to ensure high availability. It automatically scales control plane instances based on load, detects and replaces unhealthy control plane instances, and patches the control plane.
+The benefits of using this concept are:
+- Scalability and reliability help the system remain stable
+- Promotes self-healing to ensure that containers are running in a healthy state
+- Handles node failures gracefully
+- Auto-scaling enables automated cluster creation
+
+
+# Application HAâ
+
+Atlan ensures application HA through the following:
+- Multiple replicas for both stateless and stateful applications
+- Load balancing with services
+- Rolling updates to maintain the availability threshold
+- Pod-to-node distribution to ensure that critical application pods are running on dedicated nodes
+- Usage of inter-Availability Zone (AZ) data transfers to avoid single-zone failure impact
+
+
+# Disaster recovery (DR)â
+
+Atlan follows industry best practices for disaster recovery. Atlan uses Argo Workflows for orchestration to successfully implement a disaster recovery strategy and reduce production downtime, so that business impact is minimized in the event of an outage.
+If a disaster is detected, the Disaster Assessment Team   -  comprising key stakeholders from IT, platform, operations, and support   -  will be promptly notified through Atlanâs established communication channels. The team will conduct a thorough evaluation to determine the extent of the damage and prioritize remediation based on an internal list of critical services and applications.
+In case of a disaster, a tenant will be recreated, and the following actions performed to restore the tenant:
+- Onboard a new tenant with no data and a different domain.
+- Use Argo Workflows to restore the data from last backup.
+- Scale down the previous tenant.
+- Change the domain of the new tenant to that of the previous one.
+- Update the Cloudflare record with the load balancer of the newly onboarded tenant.
+All the aforementioned action items are automated. The entire process of restoring all the components of a tenant from backup takes around 3-4 hours. In case of data loss for any particular component, it can also be recovered from the last backup.
+Here are a few parameters that help reduce downtime and expedite the process of disaster recovery:
+
+
+# Infrastructureâ
+
+Single-tenant SaaSis the default deployment option for most Atlan users. In this model, Atlan manages the infrastructure needs and ensures that all instances are spread across multipleAvailability Zones(AZ) in each AWS Region where the user instance is deployed.
+Availability Zones are multiple, isolated locations within a single AWS Region.Multi-AZdeployments provide enhanced availability for instances within a single AWS Region. With multi-AZ, your data is synchronously replicated to standby in a different Availability Zone.
+Atlan currently does not support multi-region deployment.
+
+
+# Atlan service overviewâ
+
+The diagram below illustrates the relationships and communication flows between each service.Â The bottom-most layer shows the services that are entirely independent, such as Cassandra, Postgres, and more. Most of the other services depend on these to function.Â
+
+
+# Backups and restoreâ
+
+Atlan runs an automated daily backup of each tenant. By default, the backup is scheduled at 3:00 AM UTC, configurable as per the requirement of an organization.
+The backup of each tenant is stored in its respective cloud storage. The backups are encrypted at rest by the default cloud provider key. This key uses the Advanced Encryption Standard (AES) 256 algorithm. Since Atlan uses the cloud provider key, the key is rotated by the cloud provider.
+Atlan controls access to the cloud storage where the backup is stored, and only provides access in case of troubleshooting an issue. Each backup process captures a full backup of all the data, with no incremental backups being performed. Atlan also monitors the backup to ensure that backups are not skipped. Alerts are generated in case a backup run fails for the support team to examine the issue.
+The lifecycle policy for backups in the cloud provider is set to 15 days, which means Atlan will retain backups for all the components for 15 days.
+Backups of the following components are taken on a daily basis:
+- Argo Workflows
+- Elasticsearch
+- Cassandra
+- Redis
+- Postgres
+Atlan can restore a single component in case of data corruption for any single point of failure, such as a metastore and its components like Elasticsearch and Cassandra. It is also possible to do a full-cluster restore in case of an unintended operation or a data loss or corruption event.
+Argo Workflowspowers all the backup and restore packages in Atlan. It includes a retry mechanism in case of any errors while completing the steps in the workflow. It also sends alerts in case of entire package failure as part of observability.
+
+
+# Migrationâ
+
+Atlan has an easy process to migrate the application to other AWS Regions. In case of total region outage and the need for migrating an instance to another region or account, this migration activity will be performed via Atlanâs backup and restore packages.
+
+
+# RTO, RPO, and retentionâ
+
+Greater RTOs and RPOs as well as system recovery are crucial for ensuring that multiple mission-critical applications are quickly restored. It is now possible to minimize the impact of a disruption and perform a recovery within a few hours of an outage.
+- Atlan carries out a daily backup of all critical services once every 24 hours, so in a worst case scenario provides an RPO of 24 hours.
+- For all critical applications, RTO is less than 3 hours.
+- Atlan retains daily backups for 15 days.
+
+
+# Post-recovery validationâ
+
+The following post-recovery actions are performed:
+- Post restoration, Atlan conducts data integrity checks to ensure that the restored data is accurate and complete.
+- Atlan performs system tests to confirm that all components of the tenant are functioning correctly after restoration.
+- lineage
+- data-lineage
+- impact-analysis
+- High availability (HA)
+- Disaster recovery (DR)
+- RTO, RPO, and retention
+- Post-recovery validation

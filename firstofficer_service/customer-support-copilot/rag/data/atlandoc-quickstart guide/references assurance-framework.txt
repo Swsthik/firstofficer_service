@@ -1,0 +1,204 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAdministrationSecurity & ComplianceReferencesAtlan architectureProduct release stagesOur 3 pro tips for saving time with AtlanThe DataOps Culture CodeHow are product updates deployed?Quality assurance frameworkFAQs
+- What is Atlan?
+- Quick Start Guides
+- Core Concepts
+- Administration
+- Security & Compliance
+- ReferencesAtlan architectureProduct release stagesOur 3 pro tips for saving time with AtlanThe DataOps Culture CodeHow are product updates deployed?Quality assurance framework
+- Atlan architecture
+- Product release stages
+- Our 3 pro tips for saving time with Atlan
+- The DataOps Culture Code
+- How are product updates deployed?
+- Quality assurance framework
+- FAQs
+- Get Started
+- References
+- Quality assurance framework
+
+
+# Quality assurance framework
+
+Atlan has a robust quality assurance (QA) framework for delivering reliable, high-quality products that exceed user expectations and build trust. The QA strategies and processes implemented throughout the product development lifecycle have the following benefits to offer:
+- Rigorous testing and quality checks ensure that the product is reliable, functional, and user-friendly.
+- Thorough testing helps identify and mitigate potential defects and risks early in the development process   -  minimizing rework and reducing the time and effort for bug fixes.
+- Clear communication, sharing test results, and involving all stakeholders throughout the process fosters effective collaboration and alignment on quality goals.
+
+
+# Manual testing processâ
+
+Atlan usesTestmofor the manual testing process andJiraÂ for project management:
+
+
+# Test planningâ
+
+The objectives, scope, and test approach are defined for the manual testing phase. Testable requirements are identified and test cases prioritized based on risk analysis.
+
+
+# Test case designâ
+
+Once a feature is ready for testing, it is handed over to the QA team. Test scenarios are created based on user requirements. The product owner reviews these test scenarios and approves them for testing.
+
+
+# Manual testing executionâ
+
+Manual testing is performed using the approved test scenarios. Testing is conducted in different environments, includingbeta,staging, andproduction. Comprehensive testing takes place in the staging environment. Any issues identified during testing are documented using a bug reporting tool. Reported issues are then assigned to the development team for resolution.
+Manual testing covers the following areas:
+- Functional testing-  to verify that the feature functions according to specified requirements.
+- Security testing-  to identify vulnerabilities and ensure the security of user data and system resources.
+- Integration testing-  to validate the seamless integration of the feature with other components or systems.
+- Usability testing-  to evaluate the user-friendliness and intuitiveness of the feature.
+
+
+# Defect reportingâ
+
+Any deviations or defects encountered during testing are recorded. Steps to reproduce the issue are documented with screenshots or logs, if applicable, and a severity level is assigned to each issue.
+
+
+# Issue retesting and sanity testingâ
+
+After the development team has fixed the reported issues, the QA team retests the scenarios. A round of sanity tests is conducted to ensure the overall stability of the feature.
+
+
+# Test cycle closureâ
+
+Test results are evaluated, including defect metrics, test coverage, and overall quality. A test summary report is prepared that highlights the testing activities, challenges faced, and recommendations for improvement.
+
+
+# Automation testing processâ
+
+Atlan usesmablfor the test automation process:
+
+
+# Increased test coverageâ
+
+Automation testing allows Atlan to execute a large number of test cases across different scenarios, configurations, and environments. By automating repetitive and time-consuming tasks, Atlan is able to achieve a broader test coverage, ensuring that critical functionalities and edge cases are thoroughly validated.
+
+
+# Faster time-to-marketâ
+
+Automation testing significantly reduces the time required to execute test cases compared to manual testing. Atlan can accelerate the testing process and obtain quicker feedback on the quality of the product. This helps in meeting tight deadlines and release features faster.
+
+
+# Improved accuracy and consistencyâ
+
+Automated tests are executed with precision and consistency, minimizing human errors and ensuring accurate results. By eliminating manual intervention, Atlan reduces the risk of human-induced mistakes, resulting in reliable and repeatable test outcomes.
+
+
+# Regression testingâ
+
+Automation testing is particularly effective for regression testing, which involves retesting previously validated functionalities to ensure that new changes or fixes do not introduce unintended issues. By automating regression tests, Atlan can quickly and accurately verify that existing features are working as expected after modifications.
+
+
+# Continuous integration and deploymentâ
+
+Automation testing seamlessly integrates with Atlan's continuous integration and continuous delivery (CI/CD) pipeline. This enables Atlan to automate the execution of tests at various stages of the development process, such as after each code commit or prior to a deployment. By automating tests as part of the CI/CD process, Atlan ensures that software updates are thoroughly validated before being released.
+
+
+# Maintenance and reusabilityâ
+
+Automation testing scripts can be maintained and reused across multiple test cycles, saving time and effort. As the product evolves, the scripts can be updated to accommodate changes. This ensures that the automation suite is up-to-date and aligned with the latest functionalities.
+
+
+# Label-based testingâ
+
+Label-based testing incorporates mabl's automated testing capabilities into the CI/CD pipeline using labels. Here's how it works:
+- Triggering tests based on labels-  tests can be triggered based on specific labels in the CI/CD pipeline. For example, a particular set of mabl tests labeled asRegressionorSmokecan be executed during different stages of the pipeline, such as pre-production or post-deployment.
+- Test result reporting-  after executing the mabl tests, results are reported back to the CI/CD pipeline. This information includes the test outcomes, such as pass, fail, or blocked, along with any associated logs, screenshots, or other artifacts for further analysis.
+
+
+# Deployment processâ
+
+Once a feature has successfully passed manual and automation testing, it is ready for deployment:
+
+
+# Environment setupâ
+
+Target environments required for testing are set up and a base user is created for the environment to perform the test cases.Â Each environment closely resembles the intended production environment to ensure accurate testing and validation.
+
+
+# Build generationâ
+
+Once the code changes are ready for deployment, a build or package is generated that encapsulates the necessary files and resources for the software update. The build ensures that all components are packaged correctly and ready for deployment.
+
+
+# Automation testingâ
+
+Before deploying the software update to the target environment, a suite of automated tests is executed. These tests validate the functionality, performance, and stability of the software, ensuring that it meets Atlan's quality standards.
+
+
+# Monitoring and rollbackâ
+
+Once the deployment is completed, the application is closely monitored in the target environment. Monitoring tools and logs are used to identify any issues or anomalies. In case of critical failures or any unexpected issues, there is a rollback plan in place to revert to the previous version.
+
+
+# Continuous improvementâ
+
+The deployment process is continuously evaluated to identify areas for improvement. This includes capturing feedback, analyzing deployment metrics, and implementing changes to enhance efficiency, reliability, and quality.
+
+
+# Daily test reportsâ
+
+Tests are executed on a daily schedule to ensure the proper functioning of the product and promptly address any issues. The daily test reports include the following:
+
+
+# Test case execution statusâ
+
+Overall status of the test case execution for the day   -  including the number of cases that were executed, passed, failed, or blocked.
+
+
+# Test coverageâ
+
+Insights into the coverage of test cases across different functional areas, features, or modules. These help stakeholders understand the parts of the system that were tested and to what extent.
+
+
+# Defects or issuesâ
+
+Information on any defects or issues discovered during testing. This can encompass newly identified defects, severity and priority levels, steps to reproduce the issues, and any relevant supporting details.
+
+
+# Metrics and statisticsâ
+
+Metrics and statistics related to test case execution, such as the pass/fail ratio, defect density, test coverage percentage, or any other relevant metrics agreed upon by the QA team.
+
+
+# Summary and recommendationsâ
+
+Key findings, observations, and recommendations for further actions or improvements to help with decision making and prioritizing testing efforts.
+
+
+# Protocol for test failuresâ
+
+When a test fails, Atlan adheres to a specific protocol to address and resolve the failure:
+
+
+# Failure identificationâ
+
+Once a test fails, the specific test case or test suite that encountered the failure is promptly identified. This involves reviewing test logs, error messages, and any available diagnostic information to pinpoint the cause of the failure.
+
+
+# Root cause analysisâ
+
+A thorough root cause analysis is conducted to determine why the test failed. This may involve examining the test environment, reviewing test data, analyzing code changes, or investigating any external factors that could have influenced the failure.
+
+
+# Bug reportingâ
+
+If the test failure is determined to be due to a software defect, the bug is reported following a standard bug reporting process. The QA team provides detailed information regarding the failure, including steps to reproduce, relevant test data, and any supporting evidence or screenshots.
+
+
+# Bug resolutionâ
+
+Once the bug is reported, the development team takes appropriate action to address and resolve the defect. This includes analyzing the bug report, reproducing the issue, and implementing the necessary fixes. The bug resolution process follows Atlan's established software development lifecycle and bug prioritization guidelines.
+
+
+# Retestingâ
+
+After the bug fixes are implemented, the QA team retests to verify that the issue has been resolved and the test case has passed successfully. This is to ensure that the fix does not introduce any new issues or regressions.
+- atlan
+- documentation
+- Manual testing process
+- Automation testing process
+- Deployment process
+- Daily test reports
+- Protocol for test failures

@@ -1,0 +1,32 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAdministrationSecurity & ComplianceInfrastructure securityHow are resources isolated?Security monitoringCompliance standards and assessmentsIncident response planReferencesFAQs
+- What is Atlan?
+- Quick Start Guides
+- Core Concepts
+- Administration
+- Security & ComplianceInfrastructure securityHow are resources isolated?Security monitoringCompliance standards and assessmentsIncident response plan
+- Infrastructure security
+- How are resources isolated?
+- Security monitoring
+- Compliance standards and assessments
+- Incident response plan
+- References
+- FAQs
+- Get Started
+- Security & Compliance
+- How are resources isolated?
+
+
+# How are resources isolated?
+
+Each Atlan customer has their own isolated set of nodes within Kubernetes.
+- Deployments isolate all running services, including the metastore and its persistence in Cassandra and Elasticsearch.
+Deployments isolate all running services, including the metastore and its persistence in Cassandra and Elasticsearch.
+- The underlying Kubernetes control plane and networking layer (coredns) are shared between tenants. To achieve logical isolation, Loftâsvirtual clustersare implemented.
+The underlying Kubernetes control plane and networking layer (coredns) are shared between tenants. To achieve logical isolation, Loftâsvirtual clustersare implemented.
+- The compute resources (nodes, nodegroups) and storage are physically isolated between tenants.
+The compute resources (nodes, nodegroups) and storage are physically isolated between tenants.
+- Only Atlan's cloud team is able to manage theAWS,Azure, andGCPresources across these levels of isolation.
+Only Atlan's cloud team is able to manage theAWS,Azure, andGCPresources across these levels of isolation.
+Seesecurity.atlan.comfor the latest policies and standards, reports and certifications, architecture, diagrams and more.
+- atlan
+- documentation

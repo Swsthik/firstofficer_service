@@ -1,0 +1,65 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAdministrationCloud logging and monitoringGenerate HAR files and console logsTenant access managementTenant logsTenant monitoringTenant offboardingSecurity & ComplianceReferencesFAQs
+- What is Atlan?
+- Quick Start Guides
+- Core Concepts
+- AdministrationCloud logging and monitoringGenerate HAR files and console logsTenant access managementTenant logsTenant monitoringTenant offboarding
+- Cloud logging and monitoring
+- Generate HAR files and console logs
+- Tenant access management
+- Tenant logs
+- Tenant monitoring
+- Tenant offboarding
+- Security & Compliance
+- References
+- FAQs
+- Get Started
+- Administration
+- Tenant logs
+
+
+# Tenant logs
+
+Atlan can help you understand the events that occur in your tenants, including user and administrative actions. Learn more about logging and retention as follows:
+
+
+# Tenant logsâ
+
+Note the following:
+- Load balancer logs for Azure and GCP tenants are currently not enabled.
+- AuditSearch and SearchLog records are persisted forever in Elasticsearch. The 30-day retention period pertains to application logs written to logging Elasticsearch.
+- An example of block storage mentioned below is Amazon Elastic Block Store (EBS) for AWS.
+
+
+# Production tenantsâ
+
+
+
+# Proof of value (POV) tenantsâ
+
+
+
+# Atlan logsâ
+
+
+
+# Cloud storage lifecycleâ
+
+The cloud storage created for each tenant has its own lifecycle. The lifecycle policy is attached to paths in the cloud storage. The lifecycle policy applied to a production tenant is as follows:
+
+
+# Amazon Web Services (AWS)â
+
+
+
+# Microsoft Azureâ
+
+
+
+# Google Cloud Platform (GCP)â
+
+- lineage
+- data-lineage
+- impact-analysis
+- Tenant logs
+- Atlan logs
+- Cloud storage lifecycle

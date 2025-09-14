@@ -1,0 +1,32 @@
+- Get StartedWhat is Atlan?Quick Start GuidesAdministratorsData consumersContributorsDevelopersAPI authenticationCustom solutionsSoftware development kits (SDKs)Atlan's open APICore ConceptsAdministrationSecurity & ComplianceReferencesFAQs
+- What is Atlan?
+- Quick Start GuidesAdministratorsData consumersContributorsDevelopersAPI authenticationCustom solutionsSoftware development kits (SDKs)Atlan's open API
+- Administrators
+- Data consumers
+- Contributors
+- DevelopersAPI authenticationCustom solutionsSoftware development kits (SDKs)Atlan's open API
+- API authentication
+- Custom solutions
+- Software development kits (SDKs)
+- Atlan's open API
+- Core Concepts
+- Administration
+- Security & Compliance
+- References
+- FAQs
+- Get Started
+- Quick Start Guides
+- Developers
+- Software development kits (SDKs)
+
+
+# Software development kits (SDKs)
+
+You can integrate with Atlan in several ways. We recommend using one of oursoftware development kits (SDKs), if possible, which:
+- encode best practices,
+- are built for performance,
+- and add validations and simplifications not found in the raw REST APIs themselves.
+Our SDKs are nothing more than client libraries that wrap our underlying REST APIs. They prevent you from needing to reinvent the wheel by wrapping the REST APIs yourself.
+- api
+- rest-api
+- graphql

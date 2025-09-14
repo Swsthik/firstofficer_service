@@ -53,11 +53,6 @@ class EscalationDecisionEngine:
 
         # --- Response quality ---
         response_quality = 0.0
-        if draft_answer:
-            if len(draft_answer.split()) < 20:
-                response_quality += 0.2
-            if "no relevant information" in draft_answer.lower():
-                response_quality += 0.4
 
         # --- Weighted score ---
         weights = {

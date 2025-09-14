@@ -1,0 +1,60 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAdministrationCloud logging and monitoringGenerate HAR files and console logsTenant access managementTenant logsTenant monitoringTenant offboardingSecurity & ComplianceReferencesFAQs
+- What is Atlan?
+- Quick Start Guides
+- Core Concepts
+- AdministrationCloud logging and monitoringGenerate HAR files and console logsTenant access managementTenant logsTenant monitoringTenant offboarding
+- Cloud logging and monitoring
+- Generate HAR files and console logs
+- Tenant access management
+- Tenant logs
+- Tenant monitoring
+- Tenant offboarding
+- Security & Compliance
+- References
+- FAQs
+- Get Started
+- Administration
+- Tenant access management
+
+
+# Tenant access management
+
+For any Atlan tenant, there are three types of access required for troubleshooting an issue:
+- access to cloud resources
+- access to vCluster or dedicated Kubernetes (K8s) cluster
+- access to product
+
+
+# Access to cloud resourcesâ
+
+- Identify need for access   -  access to the cloud resources of a tenant is generally required to debug an issue related to infrastructure components. For any tenant, cloud resources include cloud storage, secrets, Kubernetes cluster, network rules, and more.
+- Request access   -  if an Atlan engineer troubleshooting an issue requires access to any cloud resource, the engineer must raise a formal request using Atlan's service request ticketing system with the appropriate justification.
+- Approval process   -  the request will be reviewed and require approval from a relevant authority, likely a manager or another team member responsible for access control.
+- Access granting   -  once approved, the IT team at Atlan will grant access to the resource for a specified period of time.
+- Access revocation   -  after the specified period of time is over or troubleshooting has been completed, the IT team will revoke access to avoid any unauthorized or prolonged access.
+
+
+# Access to clusterâ
+
+- Identify need for access   -  access to vCluster or dedicated Kubernetes (K8s) cluster is required to troubleshoot an issue related to Kubernetes resources.
+- Management of Kubernetes clusters   -  Atlan usesLoftfor managing K8s clusters and vclusters. All K8s clusters and vclusters are added to and managed from Loft.
+- Request access   -  if an Atlan engineer troubleshooting an issue requires access to a vcluster or dedicated cluster, the engineer must raise a formal request using Atlan's service request ticketing system with the appropriate justification.
+- Approval process   -  the request will be reviewed and require approval from a relevant authority, likely a manager or another team member responsible for access control.
+- Access granting   -  once approved, the IT team at Atlan will grant access to the resource for a specified period of time.
+- Access revocation   -  after the specified period of time is over or troubleshooting has been completed, the IT team will revoke access to avoid any unauthorized or prolonged access.
+
+
+# Access to productâ
+
+- Identify need for access   -  access to the product may be required to troubleshoot an issue with product features or connector workflows.
+- Creation of support user   -  Atlan creates a support user namedatlansupportwhile creating a tenant. The credentials for this user is stored with the IT team.
+- Security of credentials   -  the credentials for this user are securely stored in1Password, and managed by the IT team. Access to these credentials is tightly controlled, requiring explicit permission from the IT team to access them, and support user passwords are reset every 90 days.
+- Request access   -  if an Atlan engineer troubleshooting an issue requires access to the product, the engineer must raise a formal request using Atlan's service request ticketing system with the appropriate justification.
+- Approval process   -  the request will be reviewed and require approval from a relevant authority, likely a manager or another team member responsible for access control.
+- Access granting   -  once approved, the IT team at Atlan will share the password of the Atlan support user for a specified period of time.
+- Monitoring and logging   -  all actions performed using theatlansupportaccount are monitored and logged inKeycloak, with logs retained for 60 days.
+- atlan
+- documentation
+- Access to cloud resources
+- Access to cluster
+- Access to product

@@ -1,0 +1,43 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAdministrationSecurity & ComplianceInfrastructure securityHow are resources isolated?Security monitoringCompliance standards and assessmentsIncident response planReferencesFAQs
+- What is Atlan?
+- Quick Start Guides
+- Core Concepts
+- Administration
+- Security & ComplianceInfrastructure securityHow are resources isolated?Security monitoringCompliance standards and assessmentsIncident response plan
+- Infrastructure security
+- How are resources isolated?
+- Security monitoring
+- Compliance standards and assessments
+- Incident response plan
+- References
+- FAQs
+- Get Started
+- Security & Compliance
+- Security monitoring
+
+
+# Security monitoring
+
+Atlan has built-in monitoring systems that help users manage the behind-the-scenes infrastructure. These ensure adherence to the highest standards of security.
+
+
+# Full visibility into infrastructure performanceâ
+
+We provide admins complete visibility of CPU, memory, and storage metrics throughGrafana. These are industry-standard dashboards.
+
+
+# Slack alerts and notificationsâ
+
+For proactive alerting, Slack notifications can also be enabled across Atlanâs infrastructure.
+Seesecurity.atlan.comfor the latest policies and standards, reports and certifications, architecture, diagrams and more.
+- dashboards
+- visualization
+- analytics
+- alerts
+- monitoring
+- notifications
+- security
+- access-control
+- permissions
+- Full visibility into infrastructure performance
+- Slack alerts and notifications

@@ -1,6 +1,7 @@
 import os
 from typing import List, Dict
 from langchain_google_genai import ChatGoogleGenerativeAI
+from agent import ticket_agent
 from agent import rag_agent  # Full RAGAgent
 from dotenv import load_dotenv
 
@@ -49,6 +50,8 @@ class MultiQueryAgent:
                 "Factors": {},
                 "Reasoning": [],
                 "Sources": [],
+                "Ticket ID": None,
+                "Should Escalate": False
             }
             self.add_to_history("assistant", answer)
             self.last_log = log
@@ -56,98 +59,114 @@ class MultiQueryAgent:
             return answer
 
         # --- Decide if RAG is needed ---
-        prompt = f"""
-            You are a Customer Support Copilot. Given the following conversation, decide whether the user query requires knowledge from documentation or developer resources.
-            Respond with either "RAG" or "NO_RAG".
+        decision_prompt = f"""
+        You are a Customer Support Copilot. Given the following conversation, decide whether the user query requires knowledge from documentation or developer resources.
+        Respond with either "RAG" or "NO_RAG".
 
-            Conversation:
-            {context_text}
+        Conversation:
+        {context_text}
 
-            Decision:
-            """
-        decision_resp = llm.invoke(prompt).content.strip().upper()
+        Decision:
+        """
+        decision_resp = llm.invoke(decision_prompt).content.strip().upper()
+
+        factors = {}
+        reasoning = []
+        should_escalate = False
+        ticket_id = None
+        sources = []
 
         if "RAG" in decision_resp:
             # Call full RAGAgent
             rag_result = _rag_agent_instance.process_query(user_input)
 
-            # Escalation logic based on RAG factors
+            # Escalation based on RAG factors
             factors = rag_result.get("escalation", {}).get("factors", {})
-            reasoning = []
-            should_escalate = False
-
             if factors.get("sentiment_urgency", 0) >= 0.6:
                 should_escalate = True
                 reasoning.append("High urgency detected")
             if factors.get("topic_criticality", 0) >= 0.6:
                 should_escalate = True
                 reasoning.append("Critical topic")
-            if factors.get("response_quality", 0) >= 0.6:
-                should_escalate = True
-                reasoning.append("Low answer quality")
 
-            # Structured log
-            log = {
-                "Type": "ai_escalation" if should_escalate else "ai_response",
-                "Content": rag_result.get("draft_answer", ""),
-                "Classification": rag_result.get("classification", {}),
-                "Escalation Score": rag_result.get("escalation", {}).get("escalation_score", 0.0),
-                "Factors": factors,
-                "Reasoning": reasoning,
-                "Sources": rag_result.get("sources", []),
-            }
-            self.last_log = log
+            ticket_id = ticket_agent.create_ticket(
+                query=user_input,
+                classification=rag_result.get("classification", {}),
+                response=rag_result.get("draft_answer", ""),
+                escalation_info=rag_result.get("escalation", {}),
+            )
 
-            # Unified LLM response using retrieved content and escalation info
+            # LLM generates final answer using retrieved content
             combined_prompt = f"""
-                You are a helpful AI assistant.
-                - Answer the user's query using the retrieved content.
-                - Conversation context is provided below.
-                - Escalation Required: {should_escalate}
-                - Escalation Reasoning: {" | ".join(reasoning) if reasoning else "N/A"}
+            You are a helpful AI assistant.
+            - Answer the user's query using the retrieved content.
+            - Conversation context is provided below.
+            - Escalation Required: {should_escalate}
+            - Escalation Reasoning: {" | ".join(reasoning) if reasoning else "N/A"}
 
-                Retrieved Content:
-                {rag_result.get("draft_answer", "No relevant content found")}
+            Retrieved Content:
+            {rag_result.get("draft_answer", "No relevant content found")}
 
-                Conversation Context:
-                {context_text}
+            Conversation Context:
+            {context_text}
 
-                User Query:
-                {user_input}
+            User Query:
+            {user_input}
 
-                Respond conversationally and helpfully.
-                - If Escalation Required is True, politely inform the user that their query has also been routed to our support team.
-                - Include all relevant information from the retrieved content in your response.
-                """
-
+            Respond conversationally and helpfully.
+            - If Escalation Required is True, politely inform the user that their query has also been routed to our support team.
+            - Include all relevant information from the retrieved content in your response.
+            """
             answer = llm.invoke(combined_prompt).content.strip()
+            sources = rag_result.get("sources", [])
+            log_type = "ai_escalation" if should_escalate else "ai_response"
 
         else:
-            # Normal AI assistant fallback
+            # Normal fallback
             fallback_prompt = f"""
-                You are a helpful AI assistant. Continue the conversation with the user based on the following context:
-                {context_text}
-                Respond conversationally and politely.
-                """
+            You are a helpful AI assistant. Continue the conversation with the user based on the following context:
+            {context_text}
+            Respond conversationally and politely.
+            """
             answer = llm.invoke(fallback_prompt).content.strip()
-            log = {
-                "Type": "ai_response",
-                "Content": answer,
-                "Classification": "N/A",
-                "Escalation Score": 0.0,
-                "Factors": {},
-                "Reasoning": [],
-                "Sources": [],
-            }
-            self.last_log = log
+            log_type = "ai_response"
 
-        # Add response to history and print structured log
+        # --- Response Quality Check on final LLM answer ---
+        response_quality = 0.7
+        low_quality_markers = [
+            "no relevant content",
+            "not enough information",
+            "cannot find",
+            "no information available",
+            "unknown",
+        ]
+        if any(marker in answer.lower() for marker in low_quality_markers):
+            response_quality = 0.5
+            should_escalate = True
+            reasoning.append("Low answer quality")
+
+        factors["response_quality"] = response_quality
+
+        # Build structured log
+        log = {
+            "Type": log_type,
+            "Content": answer,
+            "Classification": rag_result.get("classification", {}) if "rag_result" in locals() else "N/A",
+            "Escalation Score": rag_result.get("escalation", {}).get("escalation_score", 0.0) if "rag_result" in locals() else 0.0,
+            "Factors": factors,
+            "Reasoning": reasoning,
+            "Sources": sources,
+            "Ticket ID": ticket_id,
+            "Should Escalate": should_escalate,
+        }
+
         self.add_to_history("assistant", answer)
+        self.last_log = log
         print("\nLog:", log)
 
         # Append sources to answer for UI
-        if log.get("Sources"):
-            answer += "\n\nSources:\n" + "\n".join(f"- {s}" for s in log["Sources"])
+        if sources:
+            answer += "\n\nSources:\n" + "\n".join(f"- {s}" for s in sources)
 
         return answer
 
@@ -157,14 +176,9 @@ _agent_instance = MultiQueryAgent()
 
 
 def handle_message(user_query, return_log=False):
-    """
-    Wrapper for app.py compatibility.
-    Returns (response, log) if return_log=True, else just response.
-    """
     response = _agent_instance.generate_response(user_query)
     if return_log:
-        last_log = getattr(_agent_instance, "last_log", None)
-        return response, last_log
+        return response, getattr(_agent_instance, "last_log", None)
     return response
 
 

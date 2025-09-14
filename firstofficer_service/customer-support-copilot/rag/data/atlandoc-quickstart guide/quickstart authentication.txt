@@ -1,0 +1,61 @@
+- Get StartedWhat is Atlan?Quick Start GuidesAdministratorsData consumersContributorsDevelopersAPI authenticationCustom solutionsSoftware development kits (SDKs)Atlan's open APICore ConceptsAdministrationSecurity & ComplianceReferencesFAQs
+- What is Atlan?
+- Quick Start GuidesAdministratorsData consumersContributorsDevelopersAPI authenticationCustom solutionsSoftware development kits (SDKs)Atlan's open API
+- Administrators
+- Data consumers
+- Contributors
+- DevelopersAPI authenticationCustom solutionsSoftware development kits (SDKs)Atlan's open API
+- API authentication
+- Custom solutions
+- Software development kits (SDKs)
+- Atlan's open API
+- Core Concepts
+- Administration
+- Security & Compliance
+- References
+- FAQs
+- Get Started
+- Quick Start Guides
+- Developers
+- API authentication
+
+
+# API authentication
+
+You will need to be anadmin userto create a bearer token. However, you can share the token with anyone to give them programmatic access.
+To create a bearer token:
+- From the left menu of any screen, clickAdmin.
+- UnderWorkspace, clickAPI tokens.
+- In the upper right of theAPI tokenstable, click theGenerate API tokenbutton and enter the following details:ForName, enter a name for your API token   -  for example, the system or application that will use this token.(Optional) ForDescription, enter a description for your API token   -  for example, its intended use. You can also add or change the description later.(Optional) ForPersonas, select anyasset-level permissionsyou want to give to the token. You can also add these later.(Optional) ForCollections, select anyquery collectionsyou want to provide access to the token. You can also add these later.(Optional) If you would like the token to be temporary, forExpiry, choose the time after which the token should automatically become invalid.At the bottom right, click theSavebutton.(Optional) If and when you no longer need your API token, on an active token's row, click the trash icon to delete your API token and then click theDeletebutton to confirm deletion.
+- ForName, enter a name for your API token   -  for example, the system or application that will use this token.
+- (Optional) ForDescription, enter a description for your API token   -  for example, its intended use. You can also add or change the description later.
+- (Optional) ForPersonas, select anyasset-level permissionsyou want to give to the token. You can also add these later.
+- (Optional) ForCollections, select anyquery collectionsyou want to provide access to the token. You can also add these later.
+- (Optional) If you would like the token to be temporary, forExpiry, choose the time after which the token should automatically become invalid.
+- At the bottom right, click theSavebutton.
+- (Optional) If and when you no longer need your API token, on an active token's row, click the trash icon to delete your API token and then click theDeletebutton to confirm deletion.
+Remember to copy or download the token now   -  this is your only opportunity to do so. (If you've already forgotten, just delete the API token and create a new one.)
+
+
+# Use the bearer tokenâ
+
+You must authenticate all requests to Atlan's APIs. You can authenticate your requests by sending the following header:
+So, for example, if the API token you copied had the valueeyJhbGciOi..., you would use the header:
+Note that the value of theAuthorizationheader is the combination of the wordBearer, a space, and then the token's value. The token copied from Atlan does not include thisBearerprefix.
+
+
+# Token permissionsâ
+
+By default, each API token will have the permissions of anadmin user,withoutconnection admin privileges. This means the token is able to:
+- Call administrative API endpoints. For example, to create users and groups.
+- Call governance API endpoints. For example, to create governance objects like tags, custom metadata, personas and purposes.
+The API token will only be able to access connections (and assets within them) that the token itself created. Even connections withAll Adminsset as connection admins will not be accessible by the token, without a persona assigned to the token.
+To provide access to any connections and assets, you need to add one or morepersonasto the token that have access to that connection's assets.
+Once personas are assigned to the token, the token will be able to:
+- Create, read, update, delete, and search glossaries (and their content) that are accessible by those assigned personas.
+- Create, read, update, delete, and search any assets that are accessible by those personas.
+- api
+- rest-api
+- graphql
+- Use the bearer token
+- Token permissions

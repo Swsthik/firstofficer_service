@@ -1,0 +1,106 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAdministrationSecurity & ComplianceReferencesFAQsGetting Started and OnboardingBasic Platform UsageSupport and Technical Help
+- What is Atlan?
+- Quick Start Guides
+- Core Concepts
+- Administration
+- Security & Compliance
+- References
+- FAQsGetting Started and OnboardingBasic Platform UsageSupport and Technical Help
+- Getting Started and Onboarding
+- Basic Platform Usage
+- Support and Technical Help
+- Get Started
+- FAQs
+- Basic Platform Usage
+
+
+# Basic Platform Usage
+
+Essential information about using Atlan's core features, from browser requirements to data querying and asset management.
+
+
+# Which browsers does Atlan support?â
+
+Atlan supports browsers for which all functionalities can be validated. Atlan recommends using Google Chrome for an optimal user experience.
+
+
+# What's the availability of Atlan?â
+
+Atlan software is constantly available (24x7). You'll be notified in advance if Atlan experiences any downtime or outage. See alsoHigh availability and disaster recovery (HA/DR).
+
+
+# How does Atlan access the data for queries?â
+
+Atlan pushes all queries to the source. Each query generated in Atlan is a pushdown SQL query into the underlying source database. This data is neither stored nor cached anywhere in Atlan. It's encrypted in transit using AWS Key Management Service (AWS KMS). See alsoEncryption and key management.
+In addition, Atlan appliesaccess policiesto the results before displaying them.
+
+
+# Why replace my current IDE with Atlan?â
+
+Atlan'sInsightsfeature is far and beyond any other IDE:
+- It provides a quick preview of the tables and data.
+- Scheduled queries- you can create a collection of saved queries and schedule the output to be delivered to users via email.
+- Visual Query Builder- querying for people who aren't proficient in SQL.
+- Parameterization- add variables to your SQL queries that can be edited by users during runtime.
+
+
+# Can I use Python or R to query data?â
+
+Atlan currently supports using Python to query data. Refer to thedeveloper documentationto learn more. Support for R is unavailable.
+
+
+# Can I switch off the query feature for data security concerns?â
+
+You can block all users from querying data across all data assets. You'll need to be an admin user totoggle the Insights option offfrom the admin workspace.
+
+
+# What types of files can be received into Atlan?â
+
+Atlan supports catalogingfilesthrough APIs. Thesupported file typesinclude document, Excel, PPT, CSV, TXT, JSON, XML, and ZIP files.
+
+
+# Can I export all the data from Atlan?â
+
+Atlan enables you to export all your assets or afiltered subset of assetsand asset metadata to Google Sheets and Microsoft Excel spreadsheets. Learn morehere.
+
+
+# How do I update my profile picture in Atlan?â
+
+To update your profile picture in Atlan:
+- In the top right of your instance, click your name, and then from the dropdown, clickProfile.
+- In theProfilesidebar, click the edit icon and then clickChange avatarto upload a new image.
+- (Optional) You can add or update other relevant details in your Atlan profile - for example, primary role, skills, and even your Slack member ID.
+- ClickSaveto save your changes.
+
+
+# Why does an emoji appear as one color in the menu and another on Atlan UI?â
+
+Emojis may appear differently across different browsers and operating systems. This is because emojis are rendered by the browser or operating system, and each has its own way of displaying them. For a consistent experience, consider using Google Chrome.
+
+
+# Why is the count of assets in the connection dropdown different than the asset pill?â
+
+When you select asupported sourcefrom theConnectordropdown, theAllassets tab displays an exact count of assets for each connection. If you haven't selected a connector, then theAllassets tab displays a rounded count of all assets in your Atlan instance.
+
+
+# Disabling all assets viewâ
+
+Here are a few things to know aboutrestricting asset visibility:
+
+
+# What's the default view for users with multiple personas or purposes?â
+
+The default view depends on the alphabetical order of thepersonasorpurposesthat the member and guest users belong to. Personas are first sorted alphabetically, and if the user doesn't belong to any persona, then purposes are sorted next to determine the default view on theAssetspage.
+
+
+# Can access to glossaries be restricted?â
+
+Yes, an Atlan admin candisable all glossaries view.
+
+
+# Can users view linked assets they don't have access to for announcements?â
+
+Member and guest users are able to view the names of linked assets in theannouncementson the homepage. However, if they open the asset profile of a restricted asset, they'll encounter aNot foundpage.
+- atlan
+- documentation
+- faq-platform

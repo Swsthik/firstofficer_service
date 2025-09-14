@@ -1,0 +1,63 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAdministrationCloud logging and monitoringGenerate HAR files and console logsTenant access managementTenant logsTenant monitoringTenant offboardingSecurity & ComplianceReferencesFAQs
+- What is Atlan?
+- Quick Start Guides
+- Core Concepts
+- AdministrationCloud logging and monitoringGenerate HAR files and console logsTenant access managementTenant logsTenant monitoringTenant offboarding
+- Cloud logging and monitoring
+- Generate HAR files and console logs
+- Tenant access management
+- Tenant logs
+- Tenant monitoring
+- Tenant offboarding
+- Security & Compliance
+- References
+- FAQs
+- Get Started
+- Administration
+- Generate HAR files and console logs
+
+
+# Generate HAR files and console logs
+
+Atlan is built onREST APIs, so you can see the requests being sent by the UI to the API gateway through your browser's developer console.
+To help Atlan troubleshoot issues, you may be asked to create and send a HAR file and browser console logs:
+- Console or network logsfrequently provide critical error details that are required to determine the underlying cause of the issue or bug that you are experiencing.
+- HAR filesinclude all the network traffic from when you started recording, including sensitive information like passwords and private keys. To avoid including such information in a HAR file, Atlan recommends using a text editor to manually edit the file and remove any sensitive content before sending it to Atlan support.
+
+
+# Generate in Google Chromeâ
+
+- LaunchGoogle Chromeand navigate to the relevant webpage in Chrome.
+LaunchGoogle Chromeand navigate to the relevant webpage in Chrome.
+- In the upper-right corner of your screen, click the three vertical dots.Â
+In the upper-right corner of your screen, click the three vertical dots.Â
+- From theChromemenu, clickMore Toolsand then clickDeveloper Tools.
+From theChromemenu, clickMore Toolsand then clickDeveloper Tools.
+- In the left menu, click on theNetworktab and then selectFetch/XHRas your filtering option.
+In the left menu, click on theNetworktab and then selectFetch/XHRas your filtering option.
+- Under theNetworktab, clickPreserve log.Â A red circle will appear on the left to show that you have started recording the network log. If you see a black circle, click on it to turn it red and start recording.
+Under theNetworktab, clickPreserve log.Â A red circle will appear on the left to show that you have started recording the network log. If you see a black circle, click on it to turn it red and start recording.
+- To allow Google Chrome to record the interaction between the browser and website, refresh the page. Confirm if you can view new entries in the console.
+To allow Google Chrome to record the interaction between the browser and website, refresh the page. Confirm if you can view new entries in the console.
+- Next to the red circle icon, click the circle slash icon to clear logs.
+Next to the red circle icon, click the circle slash icon to clear logs.
+- Replicate the issue that you experienced in the browser. For example, if it's a particular click that triggers an error, perform this action so that the error is recorded in the console.
+Replicate the issue that you experienced in the browser. For example, if it's a particular click that triggers an error, perform this action so that the error is recorded in the console.
+- Once the page has loaded, navigate to theConsoletabÂ and right-click in the console box. SelectSave as...and enter a name for the file.
+Once the page has loaded, navigate to theConsoletabÂ and right-click in the console box. SelectSave as...and enter a name for the file.
+- Return to theNetworktab and right-click the element that triggered an error. This is typically marked in red in the console. ClickSave as HAR with contentto save the HAR file.
+Return to theNetworktab and right-click the element that triggered an error. This is typically marked in red in the console. ClickSave as HAR with contentto save the HAR file.
+- (Recommended) To remove any sensitive information from the HAR file:
+(Recommended) To remove any sensitive information from the HAR file:
+- Open the HAR file in a text editor of your choice.
+Open the HAR file in a text editor of your choice.
+- Search for all instances of passwords and replace the values with a placeholder value such as*****. For example, in the following sample password content, you can replace<YourPrivateKey>and<YourPrivateKeyPassword>Â with placeholder values:"headersSize": -1,"bodySize": 3762,"postData": {"mimeType": "application/json", "text": "{\"host\":\"<YourHostName>\",\"port\":<port>,\"authType\":\"keypair\",\"username\":\"PRD_SDCSHOP_TU_ETL_CATALOG\",\"password\":\"-----BEGIN ENCRYPTED PRIVATE KEY-----\\<YourPrivateKey>\\n-----END ENCRYPTED PRIVATE KEY-----\",\"extra\":{\"role\":\"GLOBAL_TALEND_CATALOG_DBADMIN\",\"warehouse\":\"PRD_SDCSHOP_ETL\",\"private_key_password\":\"<YourPrivateKeyPassword>\"},\"connectorConfigName\":\"atlan-connectors-snowflake\",\"query\":\"show atlan schemas\",\"schemaExcludePattern\":[\"INFORMATION_SCHEMA\"]}"}}
+Search for all instances of passwords and replace the values with a placeholder value such as*****. For example, in the following sample password content, you can replace<YourPrivateKey>and<YourPrivateKeyPassword>Â with placeholder values:
+- Save the HAR file.
+Save the HAR file.
+- Upload the HAR file and browser console log to your Atlan support ticket.
+Upload the HAR file and browser console log to your Atlan support ticket.
+- api
+- rest-api
+- graphql
+- Generate in Google Chrome

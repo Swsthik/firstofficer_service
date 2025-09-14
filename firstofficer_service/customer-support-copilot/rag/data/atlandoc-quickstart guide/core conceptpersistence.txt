@@ -1,0 +1,54 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAuthentication and authorizationData and metadata persistenceEncryption and key managementHigh availability and disaster recovery (HA/DR)AdministrationSecurity & ComplianceReferencesFAQs
+- What is Atlan?
+- Quick Start Guides
+- Core ConceptsAuthentication and authorizationData and metadata persistenceEncryption and key managementHigh availability and disaster recovery (HA/DR)
+- Authentication and authorization
+- Data and metadata persistence
+- Encryption and key management
+- High availability and disaster recovery (HA/DR)
+- Administration
+- Security & Compliance
+- References
+- FAQs
+- Get Started
+- Core Concepts
+- Data and metadata persistence
+
+
+# Data and metadata persistence
+
+Atlan is a fully virtualized solution that does not involve movingdatafrom existing storage layers. Atlan crawlsmetadatafrom upstream data sources and stores it in a secure VPC (virtual private cloud).
+Atlan pushes any queries to existing processing layers. For example, directly to your database, warehouse, or a processing layer such as Athena or Presto on top of blob storage. So thedataitself stays put   -  Atlan does not move or store it.
+Not sure on the difference betweendataandmetadata? Try ourhelpful primer.
+
+
+# Data previews and queriesâ
+
+Atlan gives users the ability to see sample data previews for a data asset as well as the results for any queries run on Atlan.
+In both cases, Atlan pushes the request upstream to the data source, and shows a 100-row sample of the result to Atlan users. Atlan does not cache any of this data. So each time a user previews or queries data, it is re-queried from the source.
+Every time a user runs a query, Atlan streams query results in batches directly from your data source. Since the data is streamed in real-time from the data source, there is no need to persist the query results in Atlan's cache or storage layer. This ensures that the data displayed is always up to date and accurate, eliminating the need for storing intermediate query results.
+
+
+# Metadata storageâ
+
+Atlan stores the metadata it collects and creates in applications and databases within the VPC. This includes:
+- asset metadata
+- user data
+
+
+# Asset metadataâ
+
+Atlan stores asset metadata, including lineage, in:
+- Apache Atlas, a graph database layer that stores entity relationships and attributes
+- Elasticsearch, to optimize search on the product
+- Cassandra, as the persistence back-end
+
+
+# User dataâ
+
+Atlan stores data on users, roles, and groups in its own PostgreSQL database. Keycloak uses this information for access and identity management.
+Atlan hashes all sensitive fields like passwords and stores them securely. Any user data transmitted over the internet is SSL-encrypted over HTTPS.
+- upstream-dependencies
+- data-sources
+- Data previews and queries
+- Metadata storage

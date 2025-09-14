@@ -1,0 +1,68 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAuthentication and authorizationData and metadata persistenceEncryption and key managementHigh availability and disaster recovery (HA/DR)AdministrationSecurity & ComplianceReferencesFAQs
+- What is Atlan?
+- Quick Start Guides
+- Core ConceptsAuthentication and authorizationData and metadata persistenceEncryption and key managementHigh availability and disaster recovery (HA/DR)
+- Authentication and authorization
+- Data and metadata persistence
+- Encryption and key management
+- High availability and disaster recovery (HA/DR)
+- Administration
+- Security & Compliance
+- References
+- FAQs
+- Get Started
+- Core Concepts
+- Encryption and key management
+
+
+# Encryption and key management
+
+Atlan has adopted global industry standards in security practices and solutions. Amazon S3 server-side encryption secures the S3 bucket launched by Atlan.
+Atlan uses AES-256 as the SSE algorithm in the S3 bucket. All the EBS (Elastic Block Storage) launched by Atlan is encrypted. Atlan uses encrypted storage classes to provision persistent volumes to the microservices running inside the Kubernetes cluster.
+
+
+# Key and credential managementâ
+
+Atlan usesHashiCorp Vaultto manage the following:
+- Keys   -  Vault manages encryption keys to encrypt sensitive data at rest and in transit.
+- SecretsÂ   -  Vault encrypts and securely stores secrets such as API keys, tokens, and credentials.
+- Passwords   -  passwords are hashed and stored encrypted.
+
+
+# Data in transitâ
+
+Atlan uses standard encryption to protect data in transit.
+Atlan uses hypertext transfer protocol secure (HTTPS) for secure communication when data is in transit. This protocol is encrypted using Transport Layer Security (TLS).
+Two-factor authentication (2FA) is also supported for accessing resources.
+
+
+# Data at restâ
+
+Data-At-Rest Encryption (DARE) is the encryption of data stored in different storage components and not moving through networks.
+
+
+# Cloud storageâ
+
+Atlan encrypts the data at rest in different cloud resources like volumes and cloud storage using cloud provider-managed keys.
+- Amazon S3   -  Atlan usesserver-side encryption with Amazon S3 managed keys (SSE-S3)to encrypt the data at rest in Amazon S3. This encryption uses 256-bit Advanced Encryption Standard Galois/Counter Mode (AES-GCM) to encrypt all uploaded objects.
+- Azure Blob Storage   -  Atlan usesMicrosoft-managed keysto encrypt the data at rest in Azure Blob Storage. This encryption uses 256-bit AES encryption and is FIPS 140-2 compliant.
+- Google Cloud Storage   -  Atlan usesGoogle-managed keysto encrypt the data at rest in Google Cloud Storage. This encryption uses AES-256 using Galois/Counter Mode (GCM) to encrypt all uploaded objects.
+
+
+# Volumesâ
+
+Volumes are used by the StatefulSet running in the tenants. These volumes are encrypted at rest by the cloud provider-managed keys.
+- Amazon Web Services (AWS)   -  Atlan uses the defaultAmazon Elastic Block Store (EBS) encryptionfor encrypting the data at rest in all the volumes. Amazon EBS encrypts volume with a data key using industry-standard AES-256 data encryption.
+- Microsoft Azure   -  Atlan usesAzure Storage encryption, which uses server-side encryption (SSE), for encrypting the data at rest in all the volumes. Data in Azure managed disks is encrypted transparently using 256-bit AES encryption, one of the strongest block ciphers available, and is FIPS 140-2 compliant.
+- Google Cloud Platform (GCP)   -  Atlan uses Google-managed encryption to encrypt the data at rest in all the volumes. This encryption uses the Advanced Encryption Standard (AES) algorithm, AES-256.
+
+
+# Over the internetâ
+
+Communication between the client and Atlan public endpoints is always conducted over hypertext transfer protocol secure (HTTPS). HTTPS is encrypted in order to increase the security of data transfer. Any user data transmitted over the internet is SSL-encrypted over HTTPS.
+- security
+- access-control
+- permissions
+- Key and credential management
+- Data in transit
+- Data at rest

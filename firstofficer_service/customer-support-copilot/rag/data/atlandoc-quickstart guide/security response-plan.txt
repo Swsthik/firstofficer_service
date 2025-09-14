@@ -1,0 +1,53 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAdministrationSecurity & ComplianceInfrastructure securityHow are resources isolated?Security monitoringCompliance standards and assessmentsIncident response planReferencesFAQs
+- What is Atlan?
+- Quick Start Guides
+- Core Concepts
+- Administration
+- Security & ComplianceInfrastructure securityHow are resources isolated?Security monitoringCompliance standards and assessmentsIncident response plan
+- Infrastructure security
+- How are resources isolated?
+- Security monitoring
+- Compliance standards and assessments
+- Incident response plan
+- References
+- FAQs
+- Get Started
+- Security & Compliance
+- Incident response plan
+
+
+# Incident response plan
+
+Atlan's incident response plan for any potential network security incidents is as follows:
+
+
+# Incident response processâ
+
+For any critical issues, the Incident Response Team at Atlan will follow a structured process designed to investigate, contain, and remediate the threat as well as recover systems and services. The process includes:
+- Event reported   -  initial notification of the incident.
+- Triage and analysisÂ   -  assessment of the incident's severity and potential impact.
+- InvestigationÂ   -  detailed examination to understand the cause and scope.
+- Containment and neutralizationÂ   -  actions to limit the impact and prevent further exploitation.
+- Recovery and vulnerability remediationÂ   -  restoration of systems and addressing vulnerabilities.
+- Hardening and detection improvementsÂ   -  enhancing security measures and detection capabilities to prevent future incidents.
+Key details about this process are as follows:
+- Incident managerÂ   -  oversees incident response efforts.
+- War roomÂ   -  a central location, either physical or virtual (for example, Slack), dedicated to managing the incident.
+- Recurring meetingsÂ   -  regular meetings to review the incident status until resolution.
+- NotificationÂ   -  legal and executive staff will be informed as required.
+
+
+# Incident severity levelsâ
+
+
+
+# Incident reportingâ
+
+Atlan will report any breaches to customers, consumers, data subjects, and regulators without undue delay and in accordance with allÂ contractual commitments and applicable legislation.
+If any users become aware of an information security incident, potential incident, imminent incident, unauthorized access, policy violation, security weakness, or suspicious activity, pleasenotify Atlan supportimmediately.
+- security
+- access-control
+- permissions
+- Incident response process
+- Incident severity levels
+- Incident reporting

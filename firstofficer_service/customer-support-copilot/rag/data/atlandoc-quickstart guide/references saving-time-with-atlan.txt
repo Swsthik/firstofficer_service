@@ -1,0 +1,61 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAdministrationSecurity & ComplianceReferencesAtlan architectureProduct release stagesOur 3 pro tips for saving time with AtlanThe DataOps Culture CodeHow are product updates deployed?Quality assurance frameworkFAQs
+- What is Atlan?
+- Quick Start Guides
+- Core Concepts
+- Administration
+- Security & Compliance
+- ReferencesAtlan architectureProduct release stagesOur 3 pro tips for saving time with AtlanThe DataOps Culture CodeHow are product updates deployed?Quality assurance framework
+- Atlan architecture
+- Product release stages
+- Our 3 pro tips for saving time with Atlan
+- The DataOps Culture Code
+- How are product updates deployed?
+- Quality assurance framework
+- FAQs
+- Get Started
+- References
+- Our 3 pro tips for saving time with Atlan
+
+
+# Our 3 pro tips for saving time with Atlan
+
+There are a lot of incredibly time-saving functionalities built into Atlan. Here are three pro tips that you can use to save time for you and your team!
+
+
+# Search from anywhere in Atlanâ
+
+Atlan supports powerful, intelligent search. Start your search from anywhere in Atlan to find the data asset you're looking for.
+You can also enter a keyword in the search bar and filter your results by a specific type of asset. For instance, enter the keywordproductin the search bar and then click theTablefilter to view table results for your searched keyword.
+You can useCmd/Ctrl + Kto open the search page fromanywherein Atlan.
+
+
+# Collaborate with your teamâ
+
+Use Atlan's seamlessSlackorMicrosoft Teamsintegration to share updates with your team. Don't waste time adding the correct link   -  just click theSlackorTeamsicon in Atlan to post directly on a Slack or Microsoft Teams channel. You can also add your message as a resource to the asset.
+
+
+# Refine your search using filtersâ
+
+Use the filters in the left panel of theAssetsworkspace to refine your search. Check out our three best pro tips for using filters!
+
+
+# Search by certification statusâ
+
+Certificatesin Atlan are a useful tool for letting your team know the status of an asset. You can search by certification status to only find the assets you need.
+
+
+# Search by owners or data contributorsâ
+
+Want to find out what your teammate is working on? Looking for a dashboard that your manager is delegating to you? Use theOwnersfilter to search by assetownerin Atlan.
+You can also search by other user roles. To do this, you first need toset up custom metadataproperties to represent those other roles. Then you can filter by those custom metadata properties to find assets with any Atlan user who has that role for the asset.
+
+
+# Search by lineageâ
+
+Want to only find assets with a completedlineage? You can filter your search by assets that have data lineage using theHas lineagefilter listed underProperties.Â
+Try using these 3 pro tips to make Atlan a powerful part of your team's tool kit.
+- atlan
+- documentation
+- Search from anywhere in Atlan
+- Collaborate with your team
+- Refine your search using filters

@@ -1,0 +1,25 @@
+- Get StartedWhat is Atlan?Quick Start GuidesCore ConceptsAdministrationSecurity & ComplianceInfrastructure securityHow are resources isolated?Security monitoringCompliance standards and assessmentsIncident response planReferencesFAQs
+- What is Atlan?
+- Quick Start Guides
+- Core Concepts
+- Administration
+- Security & ComplianceInfrastructure securityHow are resources isolated?Security monitoringCompliance standards and assessmentsIncident response plan
+- Infrastructure security
+- How are resources isolated?
+- Security monitoring
+- Compliance standards and assessments
+- Incident response plan
+- References
+- FAQs
+- Get Started
+- Security & Compliance
+- Compliance standards and assessments
+
+
+# Compliance standards and assessments
+
+Atlan adheres to various industry standards and regulations to ensure the security, privacy, and integrity of the platform. This entails conducting both external audits and internal assessments to continuously improve compliance standards.
+Following is an overview of Atlan's key compliance certifications and internal assessment practices:
+- security
+- access-control
+- permissions
