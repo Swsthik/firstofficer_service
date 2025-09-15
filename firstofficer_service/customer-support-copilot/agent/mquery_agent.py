@@ -3,6 +3,7 @@ from typing import List, Dict
 from langchain_google_genai import ChatGoogleGenerativeAI
 from agent import ticket_agent
 from agent import rag_agent  # Full RAGAgent
+from agent import quality_agent
 from dotenv import load_dotenv
 
 # --- Load environment and initialize LLM ---
@@ -20,6 +21,7 @@ llm = ChatGoogleGenerativeAI(
 # Initialize a single RAGAgent instance
 _rag_agent_instance = rag_agent.RAGAgent()
 
+_quality_agent = quality_agent.QualityAgent()
 
 class MultiQueryAgent:
     def __init__(self):
@@ -132,22 +134,18 @@ class MultiQueryAgent:
             log_type = "ai_response"
 
         # --- Response Quality Check on final LLM answer ---
-        response_quality = 0.7
-        low_quality_markers = [
-            "no relevant content",
-            "not enough information",
-            "cannot find",
-            "no information available",
-            "unknown",
-            "not contain information",
-            "I couldn't find any information",
-        ]
-        if any(marker in answer.lower() for marker in low_quality_markers):
-            response_quality = 0.5
-            should_escalate = True
-            reasoning.append("Low answer quality")
+        context_found = rag_result.get("context_found", True) if "rag_result" in locals() else True
 
-        factors["response_quality"] = response_quality
+        qa_eval = _quality_agent.evaluate(
+            user_query=user_input,
+            final_response=answer,
+            context_found=context_found
+        )
+
+        factors["response_quality"] = qa_eval["response_quality"]
+        should_escalate = should_escalate or qa_eval["should_escalate"]
+        reasoning.extend(qa_eval["reasoning"])
+
 
         # Build structured log
         log = {
